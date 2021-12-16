@@ -1,0 +1,20 @@
+/* 
+ Localizable.strings
+ SpaceOdyssey
+ 
+ Created by NIKOLAI BORISOV on 09.12.2021.
+ 
+ */
+
+// MARK: - VCTitle
+
+"spaceOdyssey" = "Space Odyssey";
+
+// MARK: - Errors
+
+"JSONParsingError" = "JSON parsing error";
+"NoInternetConnection" = "No internet connection";
+"ServerIsNotResponding" = "Server is not responding";
+"URLIsNotValid" = "URL is not valid";
+"NoData" = "No data";
+"SomethingWrongWithUrlSessionData" = "Something wrong with URL session data";
