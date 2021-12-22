@@ -1,6 +1,6 @@
 # SpaceByNasa
 
-Explore the Space using NASA's API. Track all asteroids. See photos from Mars and photos of our Earth at specific time. 
+Explore Space using NASA's API. Track all asteroids. See photos from Mars and photos of our Earth at specific time. 
 
 App Stack:
 
