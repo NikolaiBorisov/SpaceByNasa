@@ -76,7 +76,7 @@ final class MarsRoverView: UIView {
             marsRoverCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
             marsRoverCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             marsRoverCollectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
-            marsRoverCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+            marsRoverCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20)
         ])
     }
     

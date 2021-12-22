@@ -55,8 +55,8 @@ final class MarsRoverCell: UICollectionViewCell {
     
     // MARK: - Public Methods
     
-    public func configureCell(with item: MarsRoverDTO, indexPath: IndexPath) {
-        let url = item.photos[indexPath.row].imgSrc
+    public func configureCell(with item: Photo) {
+        let url = item.imgSrc
         activityIndicator.startAnimating()
         guard let url = URL(string: url) else { return }
         imageCachingService.getImageWith(url: url) { [weak self] image in

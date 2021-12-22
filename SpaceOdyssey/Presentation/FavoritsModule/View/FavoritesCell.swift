@@ -71,8 +71,8 @@ final class FavoritesCell: UICollectionViewCell {
     
     // MARK: - Public Methods
     
-    public func configureCellWith(item: [Favorite], indexPath: IndexPath) {
-        guard let image = item[indexPath.row].img else { return }
+    public func configureCell(with item: Favorite) {
+        guard let image = item.img else { return }
         activityIndicator.startAnimating()
         favoritesImageView.image = UIImage(data: image)
         activityIndicator.stopAnimating()

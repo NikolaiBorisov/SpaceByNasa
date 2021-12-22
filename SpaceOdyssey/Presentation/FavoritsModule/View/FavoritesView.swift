@@ -68,7 +68,7 @@ final class FavoritesView: UIView {
             favoritesCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
             favoritesCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             favoritesCollectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            favoritesCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+            favoritesCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20)
         ])
     }
     

@@ -69,12 +69,12 @@ extension FavoritesViewController: UICollectionViewDataSource {
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
         let cell: FavoritesCell = collectionView.dequeueCell(for: indexPath)
-        var item = viewModel.imgArrayCD
-        cell.configureCellWith(item: item, indexPath: indexPath)
+        let item = viewModel.imgArrayCD[indexPath.row]
+        cell.configureCell(with: item)
         cell.onDeleteButtonTapped = { [weak self] in
             guard let self = self else { return }
-            self.viewModel.coreDataManager.delete(object: item[indexPath.row])
-            item.remove(at: indexPath.row)
+            self.viewModel.coreDataManager.delete(object: item)
+            self.viewModel.imgArrayCD.remove(at: indexPath.row)
             collectionView.reloadData()
         }
         return cell

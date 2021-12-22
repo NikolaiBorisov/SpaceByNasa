@@ -100,8 +100,8 @@ extension MarsRoverCollectionViewController: UICollectionViewDataSource {
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
         let cell: MarsRoverCell = collectionView.dequeueCell(for: indexPath)
-        guard let item = viewModel.marsRoverPhotos else { return UICollectionViewCell() }
-        cell.configureCell(with: item, indexPath: indexPath)
+        guard let item = viewModel.marsRoverPhotos?.photos[indexPath.row] else { return UICollectionViewCell() }
+        cell.configureCell(with: item)
         return cell
     }
     

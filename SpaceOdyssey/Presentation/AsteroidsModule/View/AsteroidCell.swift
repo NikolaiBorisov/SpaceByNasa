@@ -123,13 +123,13 @@ final class AsteroidCell: UITableViewCell {
             })
     }
     
-    public func configureCell(with item: AsteroidDTO, indexPath: IndexPath) {
-        let name = item.nearEarthObjects[indexPath.row].nameLimited
-        let fullName = item.nearEarthObjects[indexPath.row].name
-        let magnitude = item.nearEarthObjects[indexPath.row].absoluteMagnitudeH
-        let diameter = item.nearEarthObjects[indexPath.row].estimatedDiameter.kilometers.estimatedDiameterMax
-        let isHazardous = item.nearEarthObjects[indexPath.row].isPotentiallyHazardousAsteroid
-        let firstDiscovered = item.nearEarthObjects[indexPath.row].orbitalData.firstObservationDate
+    public func configureCell(with item: NearEarthObject) {
+        let name = item.nameLimited
+        let fullName = item.name
+        let magnitude = item.absoluteMagnitudeH
+        let diameter = item.estimatedDiameter.kilometers.estimatedDiameterMax
+        let isHazardous = item.isPotentiallyHazardousAsteroid
+        let firstDiscovered = item.orbitalData.firstObservationDate
         nameLabel.text = "Name: \(name)"
         fullNameLabel.text = "Full Name: \(fullName)"
         absoluteMagnitudeLabel.text = "Magnitude(h): \(magnitude)"

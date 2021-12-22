@@ -79,7 +79,7 @@ final class AsteroidView: UIView {
             asteroidTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             asteroidTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             asteroidTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            asteroidTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+            asteroidTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20)
         ])
     }
     

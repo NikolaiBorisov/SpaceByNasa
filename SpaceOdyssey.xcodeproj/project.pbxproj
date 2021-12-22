@@ -13,6 +13,7 @@
 		FA0445A12762518A00597761 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0445A02762518A00597761 /* CategoriesViewModel.swift */; };
 		FA0445A32762586E00597761 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0445A22762586E00597761 /* UIFont+Extension.swift */; };
 		FA0445A627625C3000597761 /* NasaCategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0445A527625C3000597761 /* NasaCategoriesModel.swift */; };
+		FA11B6CD2773224900E89634 /* SpaceOdysseyCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11B6CC2773224900E89634 /* SpaceOdysseyCellProtocol.swift */; };
 		FA11F27B276632C000C61C87 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F27A276632C000C61C87 /* MusicPlayerViewController.swift */; };
 		FA11F27D276632F500C61C87 /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F27C276632F500C61C87 /* MusicPlayerView.swift */; };
 		FA11F27F2766700000C61C87 /* Zemlyane.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA11F27E27666FFF00C61C87 /* Zemlyane.mp3 */; };
@@ -108,6 +109,7 @@
 		FA0445A02762518A00597761 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		FA0445A22762586E00597761 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		FA0445A527625C3000597761 /* NasaCategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaCategoriesModel.swift; sourceTree = "<group>"; };
+		FA11B6CC2773224900E89634 /* SpaceOdysseyCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceOdysseyCellProtocol.swift; sourceTree = "<group>"; };
 		FA11F27A276632C000C61C87 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		FA11F27C276632F500C61C87 /* MusicPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerView.swift; sourceTree = "<group>"; };
 		FA11F27E27666FFF00C61C87 /* Zemlyane.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Zemlyane.mp3; sourceTree = "<group>"; };
@@ -253,6 +255,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		FA11B6CB2773221F00E89634 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA11B6CC2773224900E89634 /* SpaceOdysseyCellProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		FA11F2772766326A00C61C87 /* MusicPlayerModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +354,7 @@
 		FA314642276215E300FE997E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				FA11B6CB2773221F00E89634 /* Protocols */,
 				FA314669276215E300FE997E /* LaunchScreen */,
 				FA6476D32765E7F400519921 /* TabBar */,
 				FA04459627624E1100597761 /* CategoriesModule */,
@@ -927,6 +938,7 @@
 				FA6476D22765D9E400519921 /* InternetAvailabilityService.swift in Sources */,
 				FA43D67E27689EE8005B9C87 /* FavoritesCell.swift in Sources */,
 				FA31467E276215E300FE997E /* SingleImageViewController.swift in Sources */,
+				FA11B6CD2773224900E89634 /* SpaceOdysseyCellProtocol.swift in Sources */,
 				FA43D67A27689D1B005B9C87 /* FavoritesViewController.swift in Sources */,
 				FA314688276215E400FE997E /* MarsRoverCollectionViewController.swift in Sources */,
 				FA43D6852768CD1A005B9C87 /* FavoriteSpaceOdyssey.xcdatamodeld in Sources */,

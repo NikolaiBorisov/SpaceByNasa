@@ -81,8 +81,8 @@ extension AsteroidViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: AsteroidCell = tableView.dequeueCell(for: indexPath)
-        guard let item = viewModel.asteroidData else { return UITableViewCell() }
-        cell.configureCell(with: item, indexPath: indexPath)
+        guard let item = viewModel.asteroidData?.nearEarthObjects[indexPath.row] else { return UITableViewCell() }
+        cell.configureCell(with: item)
         return cell
     }
     

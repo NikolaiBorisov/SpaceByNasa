@@ -50,7 +50,7 @@ final class EPICView: UIView {
         activityIndicator.setupActivityIndicatorOn(view: self)
     }
     
-    // MARK: - Public Methods
+    // MARK: - Actions
     
     @objc private func refreshData(sender: UIRefreshControl) {
         refreshControlPulled?()
@@ -77,7 +77,7 @@ final class EPICView: UIView {
             epicTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             epicTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             epicTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            epicTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
+            epicTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20)
         ])
     }
     

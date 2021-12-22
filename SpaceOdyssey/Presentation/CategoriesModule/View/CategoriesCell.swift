@@ -58,7 +58,6 @@ final class CategoriesCell: UITableViewCell {
         setupView()
         addSubviews()
         setupLayout()
-        setupButtonAction()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -96,15 +95,8 @@ final class CategoriesCell: UITableViewCell {
     
     // MARK: - Private Methods
     
-    private func setupButtonAction() {
-    }
-    
-    @objc private func onButtonTapped() {
-    }
-    
     private func setupNasaLogo() {
-        nasaLogoImageView.layer.cornerCurve = .continuous
-        nasaLogoImageView.layer.cornerRadius = nasaLogoImageView.frame.height / 2
+        nasaLogoImageView.roundViewWith(cornerRadius: nasaLogoImageView.frame.height / 2)
     }
     
     private func setupView() {

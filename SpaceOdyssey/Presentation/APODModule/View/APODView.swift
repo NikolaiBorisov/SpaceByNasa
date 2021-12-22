@@ -79,7 +79,7 @@ final class APODView: UIView {
             apodTableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             apodTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             apodTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            apodTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -10)
+            apodTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20)
         ])
     }
     
