@@ -1,5 +1,5 @@
 //
-//  AppCoordinator.swift
+//  MainCoordinator.swift
 //  SpaceOdyssey
 //
 //  Created by NIKOLAI BORISOV on 22.12.2021.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol AppCoordinator: Coordinator {
+protocol MainCoordinator: Coordinator {
     func pushAPODScreen()
     func pushAsteroidsScreen()
     func pushEPICModuleScreen()
@@ -15,7 +15,7 @@ protocol AppCoordinator: Coordinator {
     func pushSingleImageScreen()
 }
 
-final class AppCoordinatorImpl: AppCoordinator {
+final class MainCoordinatorImpl: MainCoordinator {
     
     // MARK: - Public Properties
     
@@ -38,8 +38,7 @@ final class AppCoordinatorImpl: AppCoordinator {
     // MARK: - Public Methods
     
     public func start() {
-        let vc = screenFactory.createCategoriesScreen()
-        pushController(controller: vc, animated: true)
+        presentMainScene()
     }
     
     func pushAPODScreen() {
@@ -65,6 +64,13 @@ final class AppCoordinatorImpl: AppCoordinator {
     func pushSingleImageScreen() {
         let vc = screenFactory.createSingleImageScreen(coordinator: self)
         pushController(controller: vc, animated: true)
+    }
+    
+    // MARK: - Private Methods
+    
+    private func presentMainScene() {
+        let tabBar = screenFactory.createTabBarController()
+        tabBar.selectedIndex = 1
     }
     
 }

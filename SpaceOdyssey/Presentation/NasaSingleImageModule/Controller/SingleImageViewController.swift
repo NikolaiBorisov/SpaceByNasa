@@ -15,6 +15,7 @@ final class SingleImageViewController: UIViewController, LoadableInfoAlertContro
     
     public var viewModel = SingleImageViewModel()
     public lazy var mainView = SingleImageView(subscriber: self)
+    public weak var coordinator: MainCoordinatorImpl?
     
     // MARK: - Private Properties
     

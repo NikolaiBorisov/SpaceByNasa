@@ -13,6 +13,7 @@ final class AsteroidViewController: UIViewController, LoadableErrorAlertControll
     // MARK: - Public Properties
     
     public var viewModel = AsteroidViewModel()
+    public weak var coordinator: MainCoordinatorImpl?
     
     // MARK: - Life Cycle
     

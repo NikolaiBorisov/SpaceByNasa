@@ -13,6 +13,7 @@ final class APODViewController: UIViewController, LoadableErrorAlertController {
     // MARK: - Public Properties
     
     public var viewModel = APODViewModel()
+    public weak var coordinator: MainCoordinatorImpl?
     
     // MARK: - Life Cycle
     

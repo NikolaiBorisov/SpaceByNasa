@@ -8,40 +8,45 @@
 import UIKit
 
 protocol ScreenFactory {
-    func createCategoriesScreen() -> UIViewController
-    func createAPODScreen(coordinator: AppCoordinator) -> UIViewController
-    func createEPICScreen(coordinator: AppCoordinator) -> UIViewController
-    func createAsteroidsScreen(coordinator: AppCoordinator) -> UIViewController
-    func createMarsRoverScreen(coordinator: AppCoordinator) -> UIViewController
-    func createSingleImageScreen(coordinator: AppCoordinator) -> UIViewController
+    func createCategoriesScreen(coordinator: MainCoordinator) -> UIViewController
+    func createAPODScreen(coordinator: MainCoordinator) -> UIViewController
+    func createEPICScreen(coordinator: MainCoordinator) -> UIViewController
+    func createAsteroidsScreen(coordinator: MainCoordinator) -> UIViewController
+    func createMarsRoverScreen(coordinator: MainCoordinator) -> UIViewController
+    func createSingleImageScreen(coordinator: MainCoordinator) -> UIViewController
+    func createTabBarController() -> UITabBarController
 }
 
 final class ScreenFactoryImpl: ScreenFactory {
     
     // MARK: - Public Methods
     
-    public func createCategoriesScreen() -> UIViewController {
+    public func createCategoriesScreen(coordinator: MainCoordinator) -> UIViewController {
         return CategoriesViewController()
     }
     
-    public func createAPODScreen(coordinator: AppCoordinator) -> UIViewController {
+    public func createAPODScreen(coordinator: MainCoordinator) -> UIViewController {
         return APODViewController()
     }
     
-    public func createEPICScreen(coordinator: AppCoordinator) -> UIViewController {
+    public func createEPICScreen(coordinator: MainCoordinator) -> UIViewController {
         return EPICViewController()
     }
     
-    public func createAsteroidsScreen(coordinator: AppCoordinator) -> UIViewController {
+    public func createAsteroidsScreen(coordinator: MainCoordinator) -> UIViewController {
         return AsteroidViewController()
     }
     
-    public func createMarsRoverScreen(coordinator: AppCoordinator) -> UIViewController {
+    public func createMarsRoverScreen(coordinator: MainCoordinator) -> UIViewController {
         return MarsRoverCollectionViewController()
     }
     
-    public func createSingleImageScreen(coordinator: AppCoordinator) -> UIViewController {
+    public func createSingleImageScreen(coordinator: MainCoordinator) -> UIViewController {
         return SingleImageViewController()
+    }
+    
+    public func createTabBarController() -> UITabBarController {
+        return TabBarController()
     }
     
 }

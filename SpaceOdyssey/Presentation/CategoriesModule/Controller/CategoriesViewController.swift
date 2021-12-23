@@ -10,6 +10,10 @@ import UIKit
 /// Class displays the categories of NASAData
 final class CategoriesViewController: UIViewController {
     
+    // MARK: - Public Properties
+    
+    public weak var coordinator: MainCoordinatorImpl?
+    
     // MARK: - Private Properties
     
     private var viewModel = CategoriesViewModel()

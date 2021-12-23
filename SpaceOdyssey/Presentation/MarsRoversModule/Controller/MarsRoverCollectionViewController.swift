@@ -13,6 +13,7 @@ final class MarsRoverCollectionViewController: UIViewController, LoadableErrorAl
     // MARK: - Public Properties
     
     public var viewModel = MarsRoverViewModel()
+    public weak var coordinator: MainCoordinatorImpl?
     
     // MARK: - Initializers
     

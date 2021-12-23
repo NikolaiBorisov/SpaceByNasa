@@ -13,6 +13,7 @@ final class EPICViewController: UIViewController, LoadableErrorAlertController, 
     // MARK: - Public Properties
     
     public var viewModel = EPICViewModel()
+    public weak var coordinator: MainCoordinatorImpl?
     
     // MARK: - Life Cycle
     

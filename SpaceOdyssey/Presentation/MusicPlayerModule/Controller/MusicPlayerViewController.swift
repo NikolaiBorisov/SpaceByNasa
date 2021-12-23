@@ -18,7 +18,10 @@ protocol MusicPlayerViewControllerDelegate: AnyObject {
 /// Class displays the music player
 final class MusicPlayerViewController: UIViewController {
     
-    weak var delegate: MusicPlayerViewControllerDelegate?
+    // MARK: - Public Properties
+    
+    public weak var delegate: MusicPlayerViewControllerDelegate?
+    public weak var coordinator: MainCoordinatorImpl?
     
     // MARK: - Private Properties
     

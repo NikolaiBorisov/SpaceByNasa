@@ -67,7 +67,7 @@
 		FA6476D72765E84F00519921 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476D62765E84F00519921 /* TabBarController.swift */; };
 		FA6476DC2765EB3500519921 /* NasaTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476DB2765EB3500519921 /* NasaTabBarView.swift */; };
 		FAB5DF9D27732A2A0008BE67 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DF9C27732A2A0008BE67 /* Coordinator.swift */; };
-		FAB5DF9F27732F8A0008BE67 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DF9E27732F8A0008BE67 /* AppCoordinator.swift */; };
+		FAB5DF9F27732F8A0008BE67 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DF9E27732F8A0008BE67 /* MainCoordinator.swift */; };
 		FAB5DFA127733C2E0008BE67 /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DFA027733C2D0008BE67 /* ScreenFactory.swift */; };
 		FACEFFFA276B51A800B0F2A1 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEFFF9276B51A800B0F2A1 /* FileManager.swift */; };
 		FACF007E2764823F00A7F9EA /* LoadableErrorAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF007D2764823F00A7F9EA /* LoadableErrorAlertController+Extension.swift */; };
@@ -171,7 +171,7 @@
 		FA6476D62765E84F00519921 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FA6476DB2765EB3500519921 /* NasaTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaTabBarView.swift; sourceTree = "<group>"; };
 		FAB5DF9C27732A2A0008BE67 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		FAB5DF9E27732F8A0008BE67 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		FAB5DF9E27732F8A0008BE67 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		FAB5DFA027733C2D0008BE67 /* ScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactory.swift; sourceTree = "<group>"; };
 		FACEFFF9276B51A800B0F2A1 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		FACF007D2764823F00A7F9EA /* LoadableErrorAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoadableErrorAlertController+Extension.swift"; sourceTree = "<group>"; };
@@ -669,7 +669,7 @@
 			isa = PBXGroup;
 			children = (
 				FAB5DF9C27732A2A0008BE67 /* Coordinator.swift */,
-				FAB5DF9E27732F8A0008BE67 /* AppCoordinator.swift */,
+				FAB5DF9E27732F8A0008BE67 /* MainCoordinator.swift */,
 				FAB5DFA027733C2D0008BE67 /* ScreenFactory.swift */,
 			);
 			path = AppCoordinator;
@@ -1002,7 +1002,7 @@
 				FA314696276215E400FE997E /* AppError.swift in Sources */,
 				FA314684276215E400FE997E /* APODView.swift in Sources */,
 				FA31469B276215E400FE997E /* UICollectionView+Extension.swift in Sources */,
-				FAB5DF9F27732F8A0008BE67 /* AppCoordinator.swift in Sources */,
+				FAB5DF9F27732F8A0008BE67 /* MainCoordinator.swift in Sources */,
 				FA31467F276215E300FE997E /* SingleImageView.swift in Sources */,
 				FA314687276215E400FE997E /* MarsRoverViewModel.swift in Sources */,
 				FA314686276215E400FE997E /* ActivityIndicatorView.swift in Sources */,

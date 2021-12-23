@@ -10,6 +10,10 @@ import UIKit
 /// Class displays saved favourites photos
 final class FavoritesViewController: UIViewController {
     
+    // MARK: - Public Properties
+    
+    public weak var coordinator: MainCoordinatorImpl?
+    
     // MARK: - Private Properties
     
     private var viewModel = FavoritesViewModel()
