@@ -13,7 +13,10 @@ final class APODViewController: UIViewController, LoadableErrorAlertController {
     // MARK: - Public Properties
     
     public var viewModel = APODViewModel()
-    public weak var coordinator: MainCoordinatorImpl?
+    
+    // MARK: - Private Properties
+    
+    private let coordinator: MainCoordinator
     
     // MARK: - Life Cycle
     
@@ -34,6 +37,17 @@ final class APODViewController: UIViewController, LoadableErrorAlertController {
         super.viewWillAppear(animated)
         
         setupNavBar()
+    }
+    
+    // MARK: - Initializers
+    
+    init(coordinator: MainCoordinator) {
+        self.coordinator = coordinator
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Private Methods

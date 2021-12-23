@@ -38,7 +38,8 @@ final class MainCoordinatorImpl: MainCoordinator {
     // MARK: - Public Methods
     
     public func start() {
-        presentMainScene()
+        let vc = screenFactory.createCategoriesScreen(coordinator: self)
+        pushController(controller: vc, animated: true)
     }
     
     func pushAPODScreen() {
@@ -64,13 +65,6 @@ final class MainCoordinatorImpl: MainCoordinator {
     func pushSingleImageScreen() {
         let vc = screenFactory.createSingleImageScreen(coordinator: self)
         pushController(controller: vc, animated: true)
-    }
-    
-    // MARK: - Private Methods
-    
-    private func presentMainScene() {
-        let tabBar = screenFactory.createTabBarController()
-        tabBar.selectedIndex = 1
     }
     
 }

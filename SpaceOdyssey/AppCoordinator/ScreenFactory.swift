@@ -14,7 +14,7 @@ protocol ScreenFactory {
     func createAsteroidsScreen(coordinator: MainCoordinator) -> UIViewController
     func createMarsRoverScreen(coordinator: MainCoordinator) -> UIViewController
     func createSingleImageScreen(coordinator: MainCoordinator) -> UIViewController
-    func createTabBarController() -> UITabBarController
+    func createTabBarController(coordinator: MainCoordinator) -> UITabBarController
 }
 
 final class ScreenFactoryImpl: ScreenFactory {
@@ -22,11 +22,11 @@ final class ScreenFactoryImpl: ScreenFactory {
     // MARK: - Public Methods
     
     public func createCategoriesScreen(coordinator: MainCoordinator) -> UIViewController {
-        return CategoriesViewController()
+        return CategoriesViewController(coordinator: coordinator)
     }
     
     public func createAPODScreen(coordinator: MainCoordinator) -> UIViewController {
-        return APODViewController()
+        return APODViewController(coordinator: coordinator)
     }
     
     public func createEPICScreen(coordinator: MainCoordinator) -> UIViewController {
@@ -45,8 +45,8 @@ final class ScreenFactoryImpl: ScreenFactory {
         return SingleImageViewController()
     }
     
-    public func createTabBarController() -> UITabBarController {
-        return TabBarController()
+    public func createTabBarController(coordinator: MainCoordinator) -> UITabBarController {
+        return TabBarController(coordinator: coordinator)
     }
     
 }

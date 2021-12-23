@@ -10,13 +10,10 @@ import UIKit
 /// Class displays the categories of NASAData
 final class CategoriesViewController: UIViewController {
     
-    // MARK: - Public Properties
-    
-    public weak var coordinator: MainCoordinatorImpl?
-    
     // MARK: - Private Properties
     
     private var viewModel = CategoriesViewModel()
+    private let coordinator: MainCoordinator
     
     // MARK: - Life Cycle
     
@@ -32,6 +29,17 @@ final class CategoriesViewController: UIViewController {
         setupNavBar()
         viewModel.playMusic()
         setupDelegate()
+    }
+    
+    // MARK: - Initializers
+    
+    init(coordinator: MainCoordinator) {
+        self.coordinator = coordinator
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Private Methods
@@ -98,7 +106,7 @@ extension CategoriesViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         switch indexPath.row {
         case 0:
-            let vc = APODViewController()
+            let vc = APODViewController(coordinator: coordinator)
             vc.viewModel.navBarTitle = viewModel.categories[indexPath.row].title
             navigationController?.pushViewController(vc, animated: true)
         case 1:

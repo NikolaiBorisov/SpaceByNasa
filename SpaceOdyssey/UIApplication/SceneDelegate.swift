@@ -16,7 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     // MARK: - Private Properties
     
-    private var coordinator: MainCoordinatorImpl?
+    private let coordinator: MainCoordinator = {
+        let nc = UINavigationController()
+        return MainCoordinatorImpl(navigationController: nc)
+    }()
     
     // MARK: - Public Methods
     
@@ -30,7 +33,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // MARK: - Private Methods
     
     private func createInitialViewController() -> UIViewController {
-        return TabBarController()
+        return TabBarController(coordinator: coordinator)
     }
     
 }

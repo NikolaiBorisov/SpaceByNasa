@@ -12,6 +12,8 @@ final class TabBarController: UITabBarController {
     
     // MARK: - Private Properties
     
+    private let coordinator: MainCoordinator
+    
     private lazy var centralTabBarButton: UIButton = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.setBackgroundImage(UIImage(named: "nasaLogoTabBar"), for: .normal)
@@ -43,6 +45,17 @@ final class TabBarController: UITabBarController {
         setupCentralTabBarButton()
     }
     
+    // MARK: - Initializers
+    
+    init(coordinator: MainCoordinator) {
+        self.coordinator = coordinator
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: - Private Methods
     
     private func setupView() {
@@ -69,12 +82,14 @@ final class TabBarController: UITabBarController {
     }
     
     private func setupTabBarItem() {
+        coordinator.start()
+        
         guard let image1 = UIImage(systemName: "music.note.list"),
               let image2 = UIImage(systemName: "star") else { return }
         
         viewControllers = [
             createNavController(for: MusicPlayerViewController(), title: "Music", image: image1),
-            createNavController(for: CategoriesViewController(), title: "Categories", image: nil),
+            createNavController(for: CategoriesViewController(coordinator: coordinator), title: "Categories", image: nil),
             createNavController(for: FavoritesViewController(), title: "Favorites", image: image2)
         ]
     }
