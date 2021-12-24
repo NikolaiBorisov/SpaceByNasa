@@ -99,14 +99,12 @@ final class EPICCell: UITableViewCell {
     // MARK: - Private Methods
     
     private func setupEPICImageWith(date: String, image: String) {
-        guard let url = URL(string: StringURL.epicURLImage(date, image)) else { return }
+        let url = StringURL.epicURLImage(date, image)
         activityIndicator.startAnimating()
-        imageCachingService.getImageWith(url: url) { [weak self] image in
+        epicImageView.setupImageFor(view: epicImageView, service: imageCachingService, url: url) { [weak self] in
             guard let self = self else { return }
-            self.epicImageView.image = image
             self.activityIndicator.stopAnimating()
         }
-        
     }
     
     private func setupView() {
@@ -114,8 +112,7 @@ final class EPICCell: UITableViewCell {
     }
     
     private func setupEpicImageView() {
-        epicImageView.layer.cornerCurve = .continuous
-        epicImageView.layer.cornerRadius = epicImageView.frame.width / 2
+        epicImageView.roundViewWith(cornerRadius: epicImageView.frame.width / 2)
     }
     
     private func addSubviews() {

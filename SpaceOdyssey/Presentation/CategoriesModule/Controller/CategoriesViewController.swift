@@ -53,7 +53,7 @@ final class CategoriesViewController: UIViewController {
     
     private func setupNavBar() {
         setupNavBarWith(
-            title: Localization.vcTitle,
+            title: Localization.mainVCTitle,
             font: viewModel.isRuLocale ? .avenirNextDemiBoldOfSize(25) : .avenirNextDemiBoldOfSize(35)
         )
     }
@@ -82,12 +82,13 @@ extension CategoriesViewController: UITableViewDataSource {
         let cell: CategoriesCell = tableView.dequeueCell(for: indexPath)
         let item = viewModel.categories[indexPath.row]
         cell.configureCell(with: item)
+        cell.animateCell(at: indexPath)
         return cell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 0.0))
-        let headerLabel = HeaderViewLabelFactory.generateLabelOn(view: tableView, withText: "Choose Category")
+        let headerLabel = HeaderViewLabelFactory.generateLabelOn(view: tableView, withText: AppHeader.categoriesHeader)
         headerView.addSubview(headerLabel)
         return headerView
     }
@@ -104,25 +105,13 @@ extension CategoriesViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let title = viewModel.categories[indexPath.row].title
         switch indexPath.row {
-        case 0:
-            let vc = APODViewController(coordinator: coordinator)
-            vc.viewModel.navBarTitle = viewModel.categories[indexPath.row].title
-            navigationController?.pushViewController(vc, animated: true)
-        case 1:
-            let vc = AsteroidViewController()
-            vc.viewModel.navBarTitle = viewModel.categories[indexPath.row].title
-            navigationController?.pushViewController(vc, animated: true)
-        case 2:
-            let vc = EPICViewController()
-            vc.viewModel.navBarTitle = viewModel.categories[indexPath.row].title
-            navigationController?.pushViewController(vc, animated: true)
-        case 3:
-            let vc = MarsRoverCollectionViewController()
-            vc.viewModel.navBarTitle = viewModel.categories[indexPath.row].title
-            navigationController?.pushViewController(vc, animated: true)
-        default:
-            return
+        case 0: coordinator.pushAPODScreenWith(title: title)
+        case 1: coordinator.pushAsteroidsScreenWith(title: title)
+        case 2: coordinator.pushEPICScreenWith(title: title)
+        case 3: coordinator.pushMarsRoverScreenWith(title: title)
+        default: return
         }
     }
     

@@ -18,6 +18,7 @@ final class SingleImageViewModel {
     public var isAPODVC: Bool?
     public var isEPICVC: Bool?
     public var isMarsRover: Bool?
+    public var infoText = ""
     
     // MARK: - Public Methods
     

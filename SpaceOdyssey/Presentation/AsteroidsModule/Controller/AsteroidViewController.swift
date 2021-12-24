@@ -13,7 +13,10 @@ final class AsteroidViewController: UIViewController, LoadableErrorAlertControll
     // MARK: - Public Properties
     
     public var viewModel = AsteroidViewModel()
-    public weak var coordinator: MainCoordinatorImpl?
+    
+    // MARK: - Private Properties
+    
+    private let coordinator: MainCoordinator
     
     // MARK: - Life Cycle
     
@@ -34,6 +37,21 @@ final class AsteroidViewController: UIViewController, LoadableErrorAlertControll
         super.viewWillAppear(animated)
         
         setupNavBar()
+    }
+    
+    // MARK: - Initializers
+    
+    init(
+        coordinator: MainCoordinator,
+        title: String
+    ) {
+        self.coordinator = coordinator
+        self.viewModel.navBarTitle = title
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Private Methods
@@ -89,7 +107,7 @@ extension AsteroidViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 0.0))
-        let headerLabel = HeaderViewLabelFactory.generateLabelOn(view: tableView, withText: "Information")
+        let headerLabel = HeaderViewLabelFactory.generateLabelOn(view: tableView, withText: AppHeader.asteroidHeader)
         headerView.addSubview(headerLabel)
         return headerView
     }

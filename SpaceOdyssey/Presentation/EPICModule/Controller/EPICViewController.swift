@@ -13,7 +13,10 @@ final class EPICViewController: UIViewController, LoadableErrorAlertController, 
     // MARK: - Public Properties
     
     public var viewModel = EPICViewModel()
-    public weak var coordinator: MainCoordinatorImpl?
+    
+    // MARK: - Private Properties
+    
+    private let coordinator: MainCoordinator
     
     // MARK: - Life Cycle
     
@@ -28,18 +31,28 @@ final class EPICViewController: UIViewController, LoadableErrorAlertController, 
         setupView()
         getDataHandler()
         callBackHandler()
-        showInfoAlertWith(
-            title: "Note",
-            message: "Loading Earth's Photos Takes a Little Bit More Time.\nPlease be Patient, We Are Working on It\n🌎",
-            completionOK: {}) {
-                self.navigationController?.popToRootViewController(animated: true)
-            }
+        alertHandler()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         setupNavBar()
+    }
+    
+    // MARK: - Initializers
+    
+    init(
+        coordinator: MainCoordinator,
+        title: String
+    ) {
+        self.coordinator = coordinator
+        self.viewModel.navBarTitle = title
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Private Methods
@@ -70,6 +83,15 @@ final class EPICViewController: UIViewController, LoadableErrorAlertController, 
         navigationItem.backButtonTitle = ""
     }
     
+    private func alertHandler() {
+        showInfoAlertWith(
+            title: "Note",
+            message: "Loading Earth's Photos Takes a Little Bit More Time.\nPlease be Patient, We Are Working on It\n🌎",
+            completionOK: {}) {
+                self.coordinator.popToRoot(animated: true)
+            }
+    }
+    
 }
 
 // MARK: - UITableViewDataSource
@@ -90,6 +112,7 @@ extension EPICViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let cell = cell as? EPICCell else { return }
+        guard viewModel.isFirstLoaded else { return }
         cell.animateCell(at: indexPath)
     }
     
@@ -115,11 +138,11 @@ extension EPICViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 0.0))
         if section == 0 {
-            let headerLabel = HeaderViewLabelFactory.generateLabelOn(view: tableView, withText: "Description")
+            let headerLabel = HeaderViewLabelFactory.generateLabelOn(view: tableView, withText: AppHeader.EPICHeader1)
             headerView.addSubview(headerLabel)
             return headerView
         } else {
-            let headerLabel = HeaderViewLabelFactory.generateLabelOn(view: tableView, withText: "Pictures")
+            let headerLabel = HeaderViewLabelFactory.generateLabelOn(view: tableView, withText: AppHeader.EPICHeader2)
             headerView.addSubview(headerLabel)
             return headerView
         }
@@ -141,20 +164,24 @@ extension EPICViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let vc = SingleImageViewController()
         if indexPath.section == 0 {
             print("No action required")
         } else {
-            let navBarTitle = viewModel.epicData[indexPath.row].date
-            let lat = viewModel.epicData[indexPath.row].centroidCoordinates.lat
-            let lon = viewModel.epicData[indexPath.row].centroidCoordinates.lon
             guard let cell = tableView.cellForRow(at: indexPath) as? EPICCell,
                   let image = cell.epicImageView.image else { return }
-            vc.viewModel.navBarTitle = "Taken at: \(navBarTitle.dropFirst(10))"
-            vc.viewModel.singleImage = image
-            vc.viewModel.isEPICVC = true
-            vc.mainView.epicAndMarsInfoLabel.text = "Lat: \(String(format: "%.2f", lat))\nLon: \(String(format: "%.2f", lon))"
-            navigationController?.pushViewController(vc, animated: false)
+            
+            let title = "Taken at: \(viewModel.epicData[indexPath.row].date.dropFirst(10))"
+            let lat = viewModel.epicData[indexPath.row].centroidCoordinates.lat.reduceNumbers()
+            let lon = viewModel.epicData[indexPath.row].centroidCoordinates.lon.reduceNumbers()
+            coordinator.pushSingleImageScreenWith(
+                title: title,
+                image: image,
+                url: "",
+                isAPODVC: false,
+                isEPICVC: true,
+                isMarsRover: false,
+                infoText: "Lat: \(lat)\nLon: \(lon)"
+            )
         }
     }
     

@@ -15,10 +15,10 @@ final class SingleImageViewController: UIViewController, LoadableInfoAlertContro
     
     public var viewModel = SingleImageViewModel()
     public lazy var mainView = SingleImageView(subscriber: self)
-    public weak var coordinator: MainCoordinatorImpl?
     
     // MARK: - Private Properties
     
+    private let coordinator: MainCoordinator
     private var coreDataManager = CoreDataManagerImpl.shared
     
     // MARK: - Life Cycle
@@ -38,6 +38,33 @@ final class SingleImageViewController: UIViewController, LoadableInfoAlertContro
         setupHDButton()
         setupEPICInfoLabel()
         setupMarsRoverInfoLabel()
+    }
+    
+    // MARK: - Initializers
+    
+    init(
+        coordinator: MainCoordinator,
+        title: String,
+        image: UIImage,
+        url: String,
+        isAPODVC: Bool,
+        isEPICVC: Bool,
+        isMarsRover: Bool,
+        infoText: String
+    ) {
+        self.coordinator = coordinator
+        self.viewModel.navBarTitle = title
+        self.viewModel.singleImage = image
+        self.viewModel.hdURL = url
+        self.viewModel.isAPODVC = isAPODVC
+        self.viewModel.isEPICVC = isEPICVC
+        self.viewModel.isMarsRover = isMarsRover
+        self.viewModel.infoText = infoText
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Private Methods
@@ -88,9 +115,11 @@ final class SingleImageViewController: UIViewController, LoadableInfoAlertContro
             }
             if self.viewModel.isEPICVC ?? false {
                 self.mainView.animateEPICAndMarsInfoLabel()
+                self.mainView.epicAndMarsInfoLabel.text = self.viewModel.infoText
             }
             if self.viewModel.isMarsRover ?? false {
                 self.mainView.animateEPICAndMarsInfoLabel()
+                self.mainView.epicAndMarsInfoLabel.text = self.viewModel.infoText
             }
         }
         
@@ -109,8 +138,7 @@ final class SingleImageViewController: UIViewController, LoadableInfoAlertContro
                     self.showInfoAlertWith(
                         title: "Photo Successfully Saved to Favorites",
                         message: "Open Favorites?") {
-                            let vc = FavoritesViewController()
-                            return self.navigationController?.pushViewController(vc, animated: true)
+                            self.coordinator.pushFavoritesScreen()
                         } completionCancel: {}
                     return self.mainView.saveButton.isHidden = true
                 } completionCancel: {}

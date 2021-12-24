@@ -11,7 +11,7 @@ import UIKit
 final class AccessoryViewFactory {
     
     static func generateAccessoryViewWith(color: UIColor) -> UIImageView {
-        let image = UIImage(systemName: "chevron.right")
+        let image = AppImage.chevronRight
         let accessoryImage = UIImageView(frame:CGRect(
             x: 0,
             y: 0,

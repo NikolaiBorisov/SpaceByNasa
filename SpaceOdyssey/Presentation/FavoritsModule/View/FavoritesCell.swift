@@ -34,7 +34,7 @@ final class FavoritesCell: UICollectionViewCell {
     
     public var deleteButton: UIButton = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setBackgroundImage(UIImage(systemName: "trash"), for: .normal)
+        $0.setBackgroundImage(AppImage.trash, for: .normal)
         $0.tintColor = .cyan
         $0.alpha = 0
         return $0

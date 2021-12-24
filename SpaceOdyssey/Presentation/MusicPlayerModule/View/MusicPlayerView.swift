@@ -36,7 +36,7 @@ final class MusicPlayerView: UIView {
     private var screenWidth = UIScreen.main.bounds.width
     
     private lazy var playButton: UIButton = {
-        $0.setBackgroundImage(UIImage(systemName: "play.circle"), for: .normal)
+        $0.setBackgroundImage(AppImage.play, for: .normal)
         $0.tintColor = .cyan
         $0.backgroundColor = .black
         $0.clipsToBounds = true
@@ -44,7 +44,7 @@ final class MusicPlayerView: UIView {
     }(UIButton(type: .system))
     
     private lazy var pauseButton: UIButton = {
-        $0.setBackgroundImage(UIImage(systemName: "pause.circle"), for: .normal)
+        $0.setBackgroundImage(AppImage.pause, for: .normal)
         $0.tintColor = .cyan
         $0.backgroundColor = .black
         $0.clipsToBounds = true
@@ -52,7 +52,7 @@ final class MusicPlayerView: UIView {
     }(UIButton(type: .system))
     
     private lazy var stopButton: UIButton = {
-        $0.setBackgroundImage(UIImage(systemName: "stop.circle"), for: .normal)
+        $0.setBackgroundImage(AppImage.stop, for: .normal)
         $0.tintColor = .cyan
         $0.backgroundColor = .black
         $0.clipsToBounds = true
@@ -60,7 +60,7 @@ final class MusicPlayerView: UIView {
     }(UIButton(type: .system))
     
     private lazy var nextButton: UIButton = {
-        $0.setBackgroundImage(UIImage(systemName: "forward.circle"), for: .normal)
+        $0.setBackgroundImage(AppImage.next, for: .normal)
         $0.tintColor = .cyan
         $0.backgroundColor = .black
         $0.clipsToBounds = true

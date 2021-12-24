@@ -8,13 +8,11 @@
 import UIKit
 
 extension UIFont {
-    
     static var avenirNextMediumOfSize = { (size: CGFloat) in
-        UIFont(name: "Avenir Next Medium", size: size) ?? UIFont.systemFont(ofSize: size)
+        UIFont(name: AppFont.avenirNextMedium, size: size) ?? UIFont.systemFont(ofSize: size)
     }
     
     static var avenirNextDemiBoldOfSize = { (size: CGFloat) in
-        UIFont(name: "Avenir Next Demi Bold", size: size) ?? UIFont.systemFont(ofSize: size)
+        UIFont(name: AppFont.avenirNextDemiBold, size: size) ?? UIFont.systemFont(ofSize: size)
     }
-    
 }

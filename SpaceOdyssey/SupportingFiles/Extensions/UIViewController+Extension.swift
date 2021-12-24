@@ -22,7 +22,7 @@ extension UIViewController {
             .foregroundColor: UIColor.white,
             .font: font ?? .systemFont(ofSize: 35)
         ]
-        appearance.backgroundImage = UIImage(named: "moon")
+        appearance.backgroundImage = AppImage.moon
         
         navBar.tintColor = .white
         navBar.standardAppearance = appearance

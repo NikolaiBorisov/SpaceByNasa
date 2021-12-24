@@ -29,8 +29,4 @@ final class MusicPlayer {
         }
     }
     
-    // Во вью контроллере есть label и в нем надо отобразить название текущего трека, как это можно сделать?
-    
-   // var trackLabel = player?.url?.absoluteString
-    
 }

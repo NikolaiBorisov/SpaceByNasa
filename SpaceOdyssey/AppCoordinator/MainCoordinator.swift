@@ -8,11 +8,22 @@
 import UIKit
 
 protocol MainCoordinator: Coordinator {
-    func pushAPODScreen()
-    func pushAsteroidsScreen()
-    func pushEPICModuleScreen()
-    func pushMarsRoverScreen()
-    func pushSingleImageScreen()
+    func pushAPODScreenWith(title: String)
+    func pushAsteroidsScreenWith(title: String)
+    func pushEPICScreenWith(title: String)
+    func pushMarsRoverScreenWith(title: String)
+    func pushFavoritesScreen()
+    func pushMusicPlayerScreen()
+    
+    func pushSingleImageScreenWith(
+        title: String,
+        image: UIImage,
+        url: String,
+        isAPODVC: Bool,
+        isEPICVC: Bool,
+        isMarsRover: Bool,
+        infoText: String
+    )
 }
 
 final class MainCoordinatorImpl: MainCoordinator {
@@ -42,28 +53,55 @@ final class MainCoordinatorImpl: MainCoordinator {
         pushController(controller: vc, animated: true)
     }
     
-    func pushAPODScreen() {
-        let vc = screenFactory.createAPODScreen(coordinator: self)
+    func pushAPODScreenWith(title: String) {
+        let vc = screenFactory.createAPODScreenWith(coordinator: self, title: title)
         pushController(controller: vc, animated: true)
     }
     
-    func pushAsteroidsScreen() {
-        let vc = screenFactory.createAsteroidsScreen(coordinator: self)
+    func pushAsteroidsScreenWith(title: String) {
+        let vc = screenFactory.createAsteroidsScreen(coordinator: self, title: title)
         pushController(controller: vc, animated: true)
     }
     
-    func pushEPICModuleScreen() {
-        let vc = screenFactory.createEPICScreen(coordinator: self)
+    func pushEPICScreenWith(title: String) {
+        let vc = screenFactory.createEPICScreen(coordinator: self, title: title)
         pushController(controller: vc, animated: true)
     }
     
-    func pushMarsRoverScreen() {
-        let vc = screenFactory.createMarsRoverScreen(coordinator: self)
+    func pushMarsRoverScreenWith(title: String) {
+        let vc = screenFactory.createMarsRoverScreen(coordinator: self, title: title)
         pushController(controller: vc, animated: true)
     }
     
-    func pushSingleImageScreen() {
-        let vc = screenFactory.createSingleImageScreen(coordinator: self)
+    func pushFavoritesScreen() {
+        let vc = screenFactory.createFavoritesScreen(coordinator: self)
+        pushController(controller: vc, animated: true)
+    }
+    
+    func pushMusicPlayerScreen() {
+        let vc = screenFactory.createMusicPlayerScreen(coordinator: self)
+        pushController(controller: vc, animated: true)
+    }
+    
+    func pushSingleImageScreenWith(
+        title: String,
+        image: UIImage,
+        url: String,
+        isAPODVC: Bool,
+        isEPICVC: Bool,
+        isMarsRover: Bool,
+        infoText: String
+    ) {
+        let vc = screenFactory.createSingleImageScreen(
+            coordinator: self,
+            title: title,
+            image: image,
+            url: url,
+            isAPODVC: isAPODVC,
+            isEPICVC: isEPICVC,
+            isMarsRover: isMarsRover,
+            infoText: infoText
+        )
         pushController(controller: vc, animated: true)
     }
     

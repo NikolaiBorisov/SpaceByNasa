@@ -17,6 +17,7 @@ final class EPICViewModel {
     public var epicData: [EpicDTO] = []
     public var epicData1: EpicDTO?
     public var navBarTitle = ""
+    public var isFirstLoaded = true
     
     // MARK: - Public Methods
     
@@ -31,6 +32,7 @@ final class EPICViewModel {
                 guard let self = self else { return }
                 self.epicData = epicData ?? []
                 self.epicData1 = epicData?.first
+                self.mainView.epicTableView.alpha = 1
                 self.mainView.epicTableView.reloadData()
                 self.mainView.activityIndicator.stopAnimating()
                 self.mainView.tableRefreshControl.endRefreshing()
@@ -41,6 +43,7 @@ final class EPICViewModel {
     public func setupCallback(completion: @escaping (AppError) -> Void?) {
         mainView.refreshControlPulled = { [weak self] in
             guard let self = self else { return }
+            self.isFirstLoaded = false
             self.getData(completion: completion)
         }
     }

@@ -66,6 +66,13 @@
 		FA6476D22765D9E400519921 /* InternetAvailabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476D12765D9E400519921 /* InternetAvailabilityService.swift */; };
 		FA6476D72765E84F00519921 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476D62765E84F00519921 /* TabBarController.swift */; };
 		FA6476DC2765EB3500519921 /* NasaTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476DB2765EB3500519921 /* NasaTabBarView.swift */; };
+		FA8B72B32775BB1D0030693B /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B72B22775BB1D0030693B /* Double+Extension.swift */; };
+		FA8B72B52775D86D0030693B /* UITabBarController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B72B42775D86D0030693B /* UITabBarController+Extension.swift */; };
+		FA8B72B72775DCAB0030693B /* AppImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B72B62775DCAB0030693B /* AppImage.swift */; };
+		FA8B72B92775E1CF0030693B /* AppMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B72B82775E1CF0030693B /* AppMusic.swift */; };
+		FA8B72BB2775E2EE0030693B /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B72BA2775E2EE0030693B /* AppFont.swift */; };
+		FA8B72BD2775E4B80030693B /* AppHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B72BC2775E4B80030693B /* AppHeader.swift */; };
+		FA8B72BF2775F55F0030693B /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B72BE2775F55F0030693B /* UIImageView+Extension.swift */; };
 		FAB5DF9D27732A2A0008BE67 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DF9C27732A2A0008BE67 /* Coordinator.swift */; };
 		FAB5DF9F27732F8A0008BE67 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DF9E27732F8A0008BE67 /* MainCoordinator.swift */; };
 		FAB5DFA127733C2E0008BE67 /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DFA027733C2D0008BE67 /* ScreenFactory.swift */; };
@@ -170,6 +177,13 @@
 		FA6476D12765D9E400519921 /* InternetAvailabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetAvailabilityService.swift; sourceTree = "<group>"; };
 		FA6476D62765E84F00519921 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FA6476DB2765EB3500519921 /* NasaTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaTabBarView.swift; sourceTree = "<group>"; };
+		FA8B72B22775BB1D0030693B /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		FA8B72B42775D86D0030693B /* UITabBarController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extension.swift"; sourceTree = "<group>"; };
+		FA8B72B62775DCAB0030693B /* AppImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImage.swift; sourceTree = "<group>"; };
+		FA8B72B82775E1CF0030693B /* AppMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMusic.swift; sourceTree = "<group>"; };
+		FA8B72BA2775E2EE0030693B /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		FA8B72BC2775E4B80030693B /* AppHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHeader.swift; sourceTree = "<group>"; };
+		FA8B72BE2775F55F0030693B /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		FAB5DF9C27732A2A0008BE67 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FAB5DF9E27732F8A0008BE67 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		FAB5DFA027733C2D0008BE67 /* ScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactory.swift; sourceTree = "<group>"; };
@@ -361,8 +375,8 @@
 		FA314642276215E300FE997E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				FA11B6CB2773221F00E89634 /* Protocols */,
 				FA314669276215E300FE997E /* LaunchScreen */,
+				FA11B6CB2773221F00E89634 /* Protocols */,
 				FA6476D32765E7F400519921 /* TabBar */,
 				FA04459627624E1100597761 /* CategoriesModule */,
 				FAE67EFF276320C000BBB2C1 /* APODModule */,
@@ -538,6 +552,10 @@
 				FA314673276215E300FE997E /* Localization.swift */,
 				FA314674276215E300FE997E /* AppError.swift */,
 				FA314675276215E300FE997E /* StringURL.swift */,
+				FA8B72B62775DCAB0030693B /* AppImage.swift */,
+				FA8B72B82775E1CF0030693B /* AppMusic.swift */,
+				FA8B72BA2775E2EE0030693B /* AppFont.swift */,
+				FA8B72BC2775E4B80030693B /* AppHeader.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -555,6 +573,9 @@
 				FA11F2802766990500C61C87 /* UIDevice+Extension.swift */,
 				FA43D6862768D301005B9C87 /* UIBarButtonItem+Extension.swift */,
 				FA1B31F9276A0EF1007F6922 /* UIViewController+Extension.swift */,
+				FA8B72B22775BB1D0030693B /* Double+Extension.swift */,
+				FA8B72B42775D86D0030693B /* UITabBarController+Extension.swift */,
+				FA8B72BE2775F55F0030693B /* UIImageView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -562,6 +583,7 @@
 		FA31467C276215E300FE997E /* Factory */ = {
 			isa = PBXGroup;
 			children = (
+				FAB5DFA027733C2D0008BE67 /* ScreenFactory.swift */,
 				FA31467D276215E300FE997E /* RefreshControlFactory.swift */,
 				FAE026842762879700F59038 /* NasaCategoryFactory.swift */,
 				FAF467BE276310B200A04E1C /* HeaderViewLabelFactory.swift */,
@@ -670,7 +692,6 @@
 			children = (
 				FAB5DF9C27732A2A0008BE67 /* Coordinator.swift */,
 				FAB5DF9E27732F8A0008BE67 /* MainCoordinator.swift */,
-				FAB5DFA027733C2D0008BE67 /* ScreenFactory.swift */,
 			);
 			path = AppCoordinator;
 			sourceTree = "<group>";
@@ -966,12 +987,15 @@
 				FA11F27D276632F500C61C87 /* MusicPlayerView.swift in Sources */,
 				FAE67F0C27633CD800BBB2C1 /* EPICViewController.swift in Sources */,
 				FA31468E276215E400FE997E /* ImageCachingService.swift in Sources */,
+				FA8B72B52775D86D0030693B /* UITabBarController+Extension.swift in Sources */,
+				FA8B72B72775DCAB0030693B /* AppImage.swift in Sources */,
 				FA04459E27624F6800597761 /* CategoriesCell.swift in Sources */,
 				FA31468A276215E400FE997E /* MarsRoverCell.swift in Sources */,
 				FAF467BF276310B200A04E1C /* HeaderViewLabelFactory.swift in Sources */,
 				FAB5DF9D27732A2A0008BE67 /* Coordinator.swift in Sources */,
 				FAE67F0E27633D3300BBB2C1 /* EPICView.swift in Sources */,
 				FA6476D02765D26600519921 /* LoadableInfoAlertController+Extension.swift in Sources */,
+				FA8B72B32775BB1D0030693B /* Double+Extension.swift in Sources */,
 				FAE026852762879700F59038 /* NasaCategoryFactory.swift in Sources */,
 				FA1B31FA276A0EF1007F6922 /* UIViewController+Extension.swift in Sources */,
 				FA314691276215E400FE997E /* NetworkDataFetcher.swift in Sources */,
@@ -993,6 +1017,7 @@
 				FA04459A27624E3D00597761 /* CategoriesViewController.swift in Sources */,
 				FA314697276215E400FE997E /* StringURL.swift in Sources */,
 				FACF00862764A65600A7F9EA /* AsteroidDTO.swift in Sources */,
+				FA8B72B92775E1CF0030693B /* AppMusic.swift in Sources */,
 				FA04459C27624EF800597761 /* CategoriesView.swift in Sources */,
 				FA31469A276215E400FE997E /* UIView+Extension.swift in Sources */,
 				FA11F27B276632C000C61C87 /* MusicPlayerViewController.swift in Sources */,
@@ -1002,12 +1027,14 @@
 				FA314696276215E400FE997E /* AppError.swift in Sources */,
 				FA314684276215E400FE997E /* APODView.swift in Sources */,
 				FA31469B276215E400FE997E /* UICollectionView+Extension.swift in Sources */,
+				FA8B72BF2775F55F0030693B /* UIImageView+Extension.swift in Sources */,
 				FAB5DF9F27732F8A0008BE67 /* MainCoordinator.swift in Sources */,
 				FA31467F276215E300FE997E /* SingleImageView.swift in Sources */,
 				FA314687276215E400FE997E /* MarsRoverViewModel.swift in Sources */,
 				FA314686276215E400FE997E /* ActivityIndicatorView.swift in Sources */,
 				FACF008A2764AB7C00A7F9EA /* AsteroidView.swift in Sources */,
 				FAE67F162763719200BBB2C1 /* AccessoryViewFactory.swift in Sources */,
+				FA8B72BB2775E2EE0030693B /* AppFont.swift in Sources */,
 				FA314685276215E400FE997E /* APODCell.swift in Sources */,
 				FACF00882764A97400A7F9EA /* AsteroidViewController.swift in Sources */,
 				FACF007E2764823F00A7F9EA /* LoadableErrorAlertController+Extension.swift in Sources */,
@@ -1022,6 +1049,7 @@
 				FA31468B276215E400FE997E /* MarsRoverView.swift in Sources */,
 				FAB5DFA127733C2E0008BE67 /* ScreenFactory.swift in Sources */,
 				FA0445A627625C3000597761 /* NasaCategoriesModel.swift in Sources */,
+				FA8B72BD2775E4B80030693B /* AppHeader.swift in Sources */,
 				FA314689276215E400FE997E /* MarsRoverDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

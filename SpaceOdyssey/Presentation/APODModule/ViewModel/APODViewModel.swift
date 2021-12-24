@@ -29,6 +29,7 @@ final class APODViewModel {
             case .success(let apodData):
                 guard let self = self else { return }
                 self.apodData = apodData
+                self.mainView.apodTableView.alpha = 1
                 self.mainView.apodTableView.reloadData()
                 self.mainView.activityIndicator.stopAnimating()
                 self.mainView.tableRefreshControl.endRefreshing()
