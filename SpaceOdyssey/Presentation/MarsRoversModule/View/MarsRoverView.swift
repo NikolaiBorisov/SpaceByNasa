@@ -22,6 +22,8 @@ final class MarsRoverView: UIView {
         collectionView.register(cell: MarsRoverCell.self)
         collectionView.backgroundColor = .black
         collectionView.showsVerticalScrollIndicator = true
+        guard let image = AppImage.backgroundImg else { return collectionView }
+        collectionView.setBackgroundWith(image: image)
         return collectionView
     }()
     
@@ -75,8 +77,8 @@ final class MarsRoverView: UIView {
         NSLayoutConstraint.activate([
             marsRoverCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
             marsRoverCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            marsRoverCollectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
-            marsRoverCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20)
+            marsRoverCollectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            marsRoverCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
     }
     

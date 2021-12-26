@@ -73,7 +73,6 @@ extension FavoritesViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
-        guard let cell = collectionView.cellForItem(at: indexPath) as? FavoritesCell else { return }
     }
     
     func collectionView(

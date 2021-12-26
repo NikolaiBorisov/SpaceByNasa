@@ -134,4 +134,8 @@ extension APODViewController: UITableViewDelegate {
         )
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        scrollView.scrollIndicators.vertical?.backgroundColor = .cyan
+    }
+    
 }

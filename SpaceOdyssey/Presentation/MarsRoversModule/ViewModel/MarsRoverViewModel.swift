@@ -20,7 +20,10 @@ final class MarsRoverViewModel {
     
     // MARK: - Public Methods
     
-    public func getMarsRoverPhotos(completion: @escaping (AppError) -> Void?) {
+    public func getMarsRoverPhotos(
+        completion: @escaping (AppError) -> Void?,
+        completionSuccess: @escaping () -> Void?
+    ) {
         mainView.activityIndicator.startAnimating()
         dataFetcherService.fetchMarsRoverPhotos { [weak self] result in
             switch result {
@@ -29,6 +32,7 @@ final class MarsRoverViewModel {
                 print(error)
             case .success(let photos):
                 guard let self = self else { return }
+                completionSuccess()
                 self.marsRoverPhotos = photos
                 self.mainView.marsRoverCollectionView.reloadData()
                 self.mainView.activityIndicator.stopAnimating()
@@ -40,7 +44,7 @@ final class MarsRoverViewModel {
     public func setupCallback(completion: @escaping (AppError) -> Void?) {
         mainView.refreshControlPulled = { [weak self] in
             guard let self = self else { return }
-            self.getMarsRoverPhotos(completion: completion)
+            self.getMarsRoverPhotos(completion: completion, completionSuccess: {})
         }
     }
     

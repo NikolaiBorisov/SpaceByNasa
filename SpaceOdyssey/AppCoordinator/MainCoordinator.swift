@@ -14,6 +14,7 @@ protocol MainCoordinator: Coordinator {
     func pushMarsRoverScreenWith(title: String)
     func pushFavoritesScreen()
     func pushMusicPlayerScreen()
+    func pushGalleryScreenWith(photos: [Photo])
     
     func pushSingleImageScreenWith(
         title: String,
@@ -80,6 +81,11 @@ final class MainCoordinatorImpl: MainCoordinator {
     
     func pushMusicPlayerScreen() {
         let vc = screenFactory.createMusicPlayerScreen(coordinator: self)
+        pushController(controller: vc, animated: true)
+    }
+    
+    func pushGalleryScreenWith(photos: [Photo]) {
+        let vc = screenFactory.createGalleryScreen(coordinator: self, photos: photos)
         pushController(controller: vc, animated: true)
     }
     
