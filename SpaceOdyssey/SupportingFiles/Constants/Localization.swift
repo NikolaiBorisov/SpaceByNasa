@@ -8,5 +8,7 @@
 import UIKit
 
 enum Localization {
-    static let vcTitle = "spaceOdyssey".localized()
+    static let mainVCTitle = "SpaceOdyssey".localized()
+    static let musicVCTitle = "SciFiMusic".localized()
+    static let favoritesVCTitle = "Favorites".localized()
 }

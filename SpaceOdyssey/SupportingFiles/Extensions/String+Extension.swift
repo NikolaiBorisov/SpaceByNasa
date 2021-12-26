@@ -11,7 +11,6 @@ import UIKit
 
 /// Use this extension for localization
 extension String {
-    
     static var errorNotLocalized: String {
         return "error_not_localized"
     }
@@ -30,5 +29,4 @@ extension String {
         }
         return result
     }
-    
 }

@@ -12,11 +12,13 @@ final class TabBarController: UITabBarController {
     
     // MARK: - Private Properties
     
+    private let coordinator: MainCoordinator
+    
     private lazy var centralTabBarButton: UIButton = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setBackgroundImage(UIImage(named: "nasaLogoTabBar"), for: .normal)
-        $0.isUserInteractionEnabled = false
+        $0.setBackgroundImage(AppImage.tabBarCentralButton, for: .normal)
         $0.layer.masksToBounds = true
+        $0.backgroundColor = .black
         return $0
     }(UIButton(type: .system))
     
@@ -30,11 +32,10 @@ final class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        startCoordinator()
         addSubviews()
-        setupView()
         setupTabBarItem()
         setupLayouts()
-        selectedIndex = 1
     }
     
     override func viewDidLayoutSubviews() {
@@ -43,40 +44,49 @@ final class TabBarController: UITabBarController {
         setupCentralTabBarButton()
     }
     
+    // MARK: - Initializers
+    
+    init(coordinator: MainCoordinator) {
+        self.coordinator = coordinator
+        super.init(nibName: nil, bundle: nil)
+        
+        setSelectedIndex()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: - Private Methods
     
-    private func setupView() {
-        centralTabBarButton.backgroundColor = .black
-    }
-    
     private func setupCentralTabBarButton() {
-        centralTabBarButton.roundViewWith(
-            cornerRadius: centralTabBarButton.frame.height / 2,
-            borderColor: .black,
-            borderWidth: 0
-        )
+        centralTabBarButton.roundViewWith(cornerRadius: centralTabBarButton.frame.height / 2)
     }
     
-    private func createNavController(
-        for rootViewController: UIViewController,
-        title: String,
-        image: UIImage? = nil
-    ) -> UIViewController {
-        let navController = UINavigationController(rootViewController: rootViewController)
-        navController.tabBarItem.title = title
-        navController.tabBarItem.image = image
-        return navController
+    private func setSelectedIndex() {
+        selectedIndex = 1
+    }
+    
+    private func startCoordinator() {
+        coordinator.start()
     }
     
     private func setupTabBarItem() {
-        guard let image1 = UIImage(systemName: "music.note.list"),
-              let image2 = UIImage(systemName: "star") else { return }
+        guard let musicVCImg = AppImage.musicVCItem,
+              let favoritesVCImg = AppImage.favoritesVCItem else { return }
         
-        viewControllers = [
-            createNavController(for: MusicPlayerViewController(), title: "Music", image: image1),
-            createNavController(for: CategoriesViewController(), title: "Categories", image: nil),
-            createNavController(for: FavoritesViewController(), title: "Favorites", image: image2)
-        ]
+        let musicVC = createNavController(
+            for: MusicPlayerViewController(coordinator: coordinator),
+               title: Localization.musicVCTitle,
+               image: musicVCImg
+        )
+        let categoriesVC = coordinator.navigationController
+        let favoritesVC = createNavController(
+            for: FavoritesViewController(coordinator: coordinator),
+               title: Localization.favoritesVCTitle,
+               image: favoritesVCImg
+        )
+        viewControllers = [musicVC, categoriesVC, favoritesVC]
     }
     
     private func addSubviews() {

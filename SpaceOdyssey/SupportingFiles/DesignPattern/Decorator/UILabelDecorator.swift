@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// Class adds insets for UILable
+/// Class adds insets for UILabel
 final class UILabelDecorator: UILabel {
     
     override func drawText(in rect: CGRect) {

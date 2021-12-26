@@ -103,12 +103,9 @@ final class APODCell: UITableViewCell {
     }
     
     public func configureCell(with item: ApodDTO) {
-        guard let imageURL = URL(string: item.url) else { return }
-        
         activityIndicator.startAnimating()
-        imageCachingService.getImageWith(url: imageURL) { [weak self] image in
+        apodImageView.setupImageFor(view: apodImageView, service: imageCachingService, url: item.url) { [weak self] in
             guard let self = self else { return }
-            self.apodImageView.image = image
             self.activityIndicator.stopAnimating()
         }
         
@@ -121,8 +118,7 @@ final class APODCell: UITableViewCell {
     // MARK: - Private Methods
     
     private func setupAPODImageView() {
-        apodImageView.layer.cornerCurve = .continuous
-        apodImageView.layer.cornerRadius = apodImageView.frame.width / 2
+        apodImageView.roundViewWith(cornerRadius: apodImageView.frame.width / 2)
     }
     
     private func setupView() {

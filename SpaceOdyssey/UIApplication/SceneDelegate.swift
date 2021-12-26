@@ -10,17 +10,30 @@ import UIKit
 @available (iOS 13, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
-    var window: UIWindow?
+    // MARK: - Public Properties
     
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+    public var window: UIWindow?
+    
+    // MARK: - Private Properties
+    
+    private let coordinator: MainCoordinator = {
+        let nc = UINavigationController()
+        return MainCoordinatorImpl(navigationController: nc)
+    }()
+    
+    // MARK: - Public Methods
+    
+    public func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = createInitialViewController()
         window?.makeKeyAndVisible()
     }
     
+    // MARK: - Private Methods
+    
     private func createInitialViewController() -> UIViewController {
-        return TabBarController()
+        return TabBarController(coordinator: coordinator)
     }
     
 }

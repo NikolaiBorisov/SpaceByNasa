@@ -23,6 +23,7 @@ final class APODView: UIView {
         $0.backgroundColor = .black
         $0.rowHeight = UITableView.automaticDimension
         $0.autoresizesSubviews = true
+        $0.alpha = 0
         return $0
     }(UITableView())
     

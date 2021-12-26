@@ -13,6 +13,7 @@ final class FavoritesViewController: UIViewController {
     // MARK: - Private Properties
     
     private var viewModel = FavoritesViewModel()
+    private let coordinator: MainCoordinator
     
     // MARK: - Life Cycle
     
@@ -35,11 +36,22 @@ final class FavoritesViewController: UIViewController {
         viewModel.fetchDataFromCoreData()
     }
     
+    // MARK: - Initializers
+    
+    init(coordinator: MainCoordinator) {
+        self.coordinator = coordinator
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: - Private Methods
     
     private func setupNavBar() {
         setupNavBarWith(
-            title: "Favorites",
+            title: Localization.favoritesVCTitle,
             font: .avenirNextDemiBoldOfSize(35)
         )
     }

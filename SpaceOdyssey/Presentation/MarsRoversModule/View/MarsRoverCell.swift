@@ -58,10 +58,8 @@ final class MarsRoverCell: UICollectionViewCell {
     public func configureCell(with item: Photo) {
         let url = item.imgSrc
         activityIndicator.startAnimating()
-        guard let url = URL(string: url) else { return }
-        imageCachingService.getImageWith(url: url) { [weak self] image in
+        marsRoverImageView.setupImageFor(view: marsRoverImageView, service: imageCachingService, url: url) { [weak self] in
             guard let self = self else { return }
-            self.marsRoverImageView.image = image
             self.activityIndicator.stopAnimating()
         }
     }

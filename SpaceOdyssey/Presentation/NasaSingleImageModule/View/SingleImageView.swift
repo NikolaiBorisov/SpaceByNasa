@@ -26,13 +26,14 @@ final class SingleImageView: UIView, UIGestureRecognizerDelegate {
         $0.contentMode = .scaleAspectFit
         $0.isUserInteractionEnabled = true
         $0.clipsToBounds = true
+        $0.alpha = 0
         $0.addGestureRecognizer(setupLongPressGestureRecognizer())
         return $0
     }(UIImageView())
     
     public var chevronLeftButton: UIButton = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setBackgroundImage(UIImage(systemName: "chevron.left.2"), for: .normal)
+        $0.setBackgroundImage(AppImage.chevronLeft2, for: .normal)
         $0.tintColor = .white
         $0.isHidden = true
         return $0
@@ -62,7 +63,7 @@ final class SingleImageView: UIView, UIGestureRecognizerDelegate {
     
     public var saveButton: UIButton = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setBackgroundImage(UIImage(systemName: "square.and.arrow.up.circle"), for: .normal)
+        $0.setBackgroundImage(AppImage.saveButtonIcon, for: .normal)
         $0.tintColor = .white
         return $0
     }(UIButton(type: .system))
@@ -87,7 +88,7 @@ final class SingleImageView: UIView, UIGestureRecognizerDelegate {
     
     private var chevronRightButton: UIButton = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.setBackgroundImage(UIImage(systemName: "chevron.right.2"), for: .normal)
+        $0.setBackgroundImage(AppImage.chevronRight2, for: .normal)
         $0.tintColor = .white
         return $0
     }(UIButton(type: .system))
@@ -207,17 +208,11 @@ final class SingleImageView: UIView, UIGestureRecognizerDelegate {
     
     private func setupView() {
         backgroundColor = .black
-        singleImageView.alpha = 0
         singleImageView.roundViewWith(cornerRadius: 10)
         
-        topInfoLabel.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-        topInfoLabel.roundViewWith(cornerRadius: 10, borderColor: .lightGray, borderWidth: 1)
-        
-        hdButton.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
-        hdButton.roundViewWith(cornerRadius: 10, borderColor: .lightGray, borderWidth: 1)
-        
-        epicAndMarsInfoLabel.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
-        epicAndMarsInfoLabel.roundViewWith(cornerRadius: 10, borderColor: .lightGray, borderWidth: 1)
+        topInfoLabel.roundViewWith(maskedCorners: [.layerMinXMaxYCorner, .layerMaxXMaxYCorner])
+        hdButton.roundViewWith(maskedCorners: [.layerMaxXMinYCorner, .layerMinXMinYCorner])
+        epicAndMarsInfoLabel.roundViewWith(maskedCorners: [.layerMaxXMinYCorner, .layerMinXMinYCorner])
     }
     
     private func addSubviews() {

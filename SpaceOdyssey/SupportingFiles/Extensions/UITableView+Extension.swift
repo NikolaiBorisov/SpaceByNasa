@@ -10,7 +10,6 @@ import UIKit
 // MARK: - Register and DequeueCell methods for UITableViewCell
 
 extension UITableView {
-    
     func register<T: UITableViewCell>(cell: T.Type) {
         register(T.self, forCellReuseIdentifier: T.identifier)
     }
@@ -18,6 +17,4 @@ extension UITableView {
     func dequeueCell<T: UITableViewCell>(for indexPath: IndexPath) -> T {
         return dequeueReusableCell(withIdentifier: T.identifier, for: indexPath) as! T
     }
-    
 }
-

@@ -7,7 +7,6 @@
 
 import UIKit
 
-// Extension contains stringURL for audio tracks and for NasaData
 enum StringURL {
     
     // MARK: - NASA APIKey
@@ -42,9 +41,15 @@ enum StringURL {
     
     static let marsRoverURL = "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=\(myAPIKey)"
     
-    // MARK: - MainThemeMusicURL
+    // MARK: - MusicURL
     
-    static let mainThemeMusic = Bundle.main.url(forResource: "Interstellar", withExtension: "mp3")
-    static let zemlyane = Bundle.main.url(forResource: "Zemlyane", withExtension: "mp3")
+    static let mainThemeMusic = Bundle.main.url(
+        forResource: AppMusic.interstellar,
+        withExtension: AppMusic.mp3
+    )
+    static let zemlyane = Bundle.main.url(
+        forResource: AppMusic.zemlyane,
+        withExtension: AppMusic.mp3
+    )
     
 }

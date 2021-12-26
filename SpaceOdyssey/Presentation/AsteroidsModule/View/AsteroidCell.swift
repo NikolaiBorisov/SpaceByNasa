@@ -16,7 +16,7 @@ final class AsteroidCell: UITableViewCell {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
-        $0.image = UIImage(named: "asteroid")
+        $0.image = AppImage.asteroid
         return $0
     }(UIImageView())
     
@@ -141,8 +141,7 @@ final class AsteroidCell: UITableViewCell {
     // MARK: - Private Methods
     
     private func setupAsteroidImageView() {
-        asteroidImageView.layer.cornerCurve = .continuous
-        asteroidImageView.layer.cornerRadius = asteroidImageView.frame.width / 2
+        asteroidImageView.roundViewWith(cornerRadius: asteroidImageView.frame.width / 2)
     }
     
     private func setupView() {

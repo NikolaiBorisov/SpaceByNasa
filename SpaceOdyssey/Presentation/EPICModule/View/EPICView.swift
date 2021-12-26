@@ -21,6 +21,7 @@ final class EPICView: UIView {
         $0.contentInsetAdjustmentBehavior = .never
         $0.separatorColor = .lightGray
         $0.backgroundColor = .black
+        $0.alpha = 0
         return $0
     }(UITableView())
     

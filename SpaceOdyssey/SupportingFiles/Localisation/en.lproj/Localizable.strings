@@ -8,7 +8,9 @@
 
 // MARK: - VCTitle
 
-"spaceOdyssey" = "Space Odyssey";
+"SpaceOdyssey" = "Space Odyssey";
+"SciFiMusic" = "Sci-Fi Music";
+"Favorites" = "Favorites";
 
 // MARK: - Errors
 

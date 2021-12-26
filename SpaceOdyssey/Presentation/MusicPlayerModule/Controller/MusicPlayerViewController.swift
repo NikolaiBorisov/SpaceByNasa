@@ -18,13 +18,15 @@ protocol MusicPlayerViewControllerDelegate: AnyObject {
 /// Class displays the music player
 final class MusicPlayerViewController: UIViewController {
     
-    weak var delegate: MusicPlayerViewControllerDelegate?
+    // MARK: - Public Properties
+    
+    public weak var delegate: MusicPlayerViewControllerDelegate?
     
     // MARK: - Private Properties
     
     private lazy var mainView = MusicPlayerView()
     private var isNextButtonPressed = false
-    private var musicPlayer = MusicPlayer()
+    private let coordinator: MainCoordinator
     
     // MARK: - Life Cycle
     
@@ -47,11 +49,23 @@ final class MusicPlayerViewController: UIViewController {
         mainView.showView(view: [mainView.nowIsPlayingLabel, mainView.playerContainerView])
     }
     
+    // MARK: - Initializers
+    
+    init(
+        coordinator: MainCoordinator
+    ) {
+        self.coordinator = coordinator
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     // MARK: - Private Methods
     
     private func setupNavBar() {
         setupNavBarWith(
-            title: "Sci-Fi Music",
+            title: Localization.musicVCTitle,
             font: .avenirNextDemiBoldOfSize(35)
         )
     }

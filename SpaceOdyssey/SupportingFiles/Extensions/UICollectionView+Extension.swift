@@ -10,7 +10,6 @@ import UIKit
 // MARK: - Register and DequeueCell methods for UICollectionViewCell
 
 extension UICollectionView {
-    
     func register<T: UICollectionViewCell>(cell: T.Type) {
         register(T.self, forCellWithReuseIdentifier: T.identifier)
     }
@@ -18,6 +17,4 @@ extension UICollectionView {
     func dequeueCell<T: UICollectionViewCell>(for indexPath: IndexPath) -> T {
         return dequeueReusableCell(withReuseIdentifier: T.identifier, for: indexPath) as! T
     }
-    
 }
-

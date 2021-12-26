@@ -46,7 +46,7 @@ final class CategoriesCell: UITableViewCell {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
-        $0.image = UIImage(named: "nasaLogo")
+        $0.image = AppImage.nasaLogo
         return $0
     }(UIImageView())
     

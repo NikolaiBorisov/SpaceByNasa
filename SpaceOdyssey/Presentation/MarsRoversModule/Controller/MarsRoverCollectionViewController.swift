@@ -14,9 +14,18 @@ final class MarsRoverCollectionViewController: UIViewController, LoadableErrorAl
     
     public var viewModel = MarsRoverViewModel()
     
+    // MARK: - Private Properties
+    
+    private let coordinator: MainCoordinator
+    
     // MARK: - Initializers
     
-    init() {
+    init(
+        coordinator: MainCoordinator,
+        title: String
+    ) {
+        self.coordinator = coordinator
+        self.viewModel.navBarTitle = title
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -83,16 +92,21 @@ extension MarsRoverCollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
         guard let cell = collectionView.cellForItem(at: indexPath) as? MarsRoverCell else { return }
-        let vc = SingleImageViewController()
+        guard let image = cell.marsRoverImageView.image else { return }
+        
+        let title = viewModel.marsRoverPhotos?.photos[indexPath.row].camera.fullName.rawValue ?? ""
         let landingDate = viewModel.marsRoverPhotos?.photos[indexPath.row].rover.landingDate
         let sol = viewModel.marsRoverPhotos?.photos[indexPath.row].sol
-        guard let navBarTitle = viewModel.marsRoverPhotos?.photos[indexPath.row].camera.fullName.rawValue else { return }
-        guard let image = cell.marsRoverImageView.image else { return }
-        vc.viewModel.singleImage = image
-        vc.viewModel.navBarTitle = navBarTitle
-        vc.viewModel.isMarsRover = true
-        vc.mainView.epicAndMarsInfoLabel.text = "Landed: \(landingDate ?? "")\nSol: \(sol ?? 0)"
-        navigationController?.pushViewController(vc, animated: true)
+        
+        coordinator.pushSingleImageScreenWith(
+            title: title,
+            image: image,
+            url: "",
+            isAPODVC: false,
+            isEPICVC: false,
+            isMarsRover: true,
+            infoText: "Landed: \(landingDate ?? "")\nSol: \(sol ?? 0)"
+        )
     }
     
     func collectionView(

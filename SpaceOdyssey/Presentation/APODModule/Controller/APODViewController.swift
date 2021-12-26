@@ -14,6 +14,10 @@ final class APODViewController: UIViewController, LoadableErrorAlertController {
     
     public var viewModel = APODViewModel()
     
+    // MARK: - Private Properties
+    
+    private let coordinator: MainCoordinator
+    
     // MARK: - Life Cycle
     
     override func loadView() {
@@ -33,6 +37,21 @@ final class APODViewController: UIViewController, LoadableErrorAlertController {
         super.viewWillAppear(animated)
         
         setupNavBar()
+    }
+    
+    // MARK: - Initializers
+    
+    init(
+        coordinator: MainCoordinator,
+        title: String
+    ) {
+        self.coordinator = coordinator
+        self.viewModel.navBarTitle = title
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     // MARK: - Private Methods
@@ -80,14 +99,14 @@ extension APODViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: APODCell = tableView.dequeueCell(for: indexPath)
-        guard let item = viewModel.apodData else { return UITableViewCell() }
+        guard let item = viewModel.apodData else { return cell }
         cell.configureCell(with: item)
         return cell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 0.0))
-        let headerLabel = HeaderViewLabelFactory.generateLabelOn(view: tableView, withText: "Information")
+        let headerLabel = HeaderViewLabelFactory.generateLabelOn(view: tableView, withText: AppHeader.APODHeader)
         headerView.addSubview(headerLabel)
         return headerView
     }
@@ -99,16 +118,20 @@ extension APODViewController: UITableViewDataSource {
 extension APODViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let cell = tableView.cellForRow(at: indexPath) as? APODCell,
-              let image = cell.apodImageView.image,
-              let url = viewModel.apodData?.hdurl else { return }
-        let vc = SingleImageViewController()
         tableView.deselectRow(at: indexPath, animated: true)
-        vc.viewModel.navBarTitle = viewModel.apodData?.title ?? ""
-        vc.viewModel.singleImage = image
-        vc.viewModel.hdURL = url
-        vc.viewModel.isAPODVC = true
-        navigationController?.pushViewController(vc, animated: false)
+        guard let cell = tableView.cellForRow(at: indexPath) as? APODCell,
+              let image = cell.apodImageView.image else { return }
+        let url = viewModel.apodData?.hdurl ?? ""
+        let title = viewModel.apodData?.title ?? ""
+        coordinator.pushSingleImageScreenWith(
+            title: title,
+            image: image,
+            url: url,
+            isAPODVC: true,
+            isEPICVC: false,
+            isMarsRover: false,
+            infoText: ""
+        )
     }
     
 }
