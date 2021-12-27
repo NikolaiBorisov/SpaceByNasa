@@ -46,9 +46,16 @@ final class GalleryCell: UICollectionViewCell {
     
     // MARK: - Public Methods
     
-    public func configureCell(with item: Photo) {
-        let url = item.imgSrc
-        galleryImageView.setupImageFor(view: galleryImageView, service: imageCachingService, url: url) {}
+    public func configureCellWith(marsItem: Photo?, favoriteItem: Favorite?, isMarsRover: Bool) {
+        switch isMarsRover {
+        case true:
+            guard let url = marsItem?.imgSrc else { return }
+            galleryImageView.setupImageFor(view: galleryImageView, service: imageCachingService, url: url) {}
+        case false:
+            guard let image = favoriteItem?.img else { return }
+            galleryImageView.image = UIImage(data: image)
+        }
+        
     }
     
     // MARK: - Private Methods

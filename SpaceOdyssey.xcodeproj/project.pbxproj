@@ -386,7 +386,6 @@
 			isa = PBXGroup;
 			children = (
 				FA314669276215E300FE997E /* LaunchScreen */,
-				FA11B6CB2773221F00E89634 /* Protocols */,
 				FA6476D32765E7F400519921 /* TabBar */,
 				FA04459627624E1100597761 /* CategoriesModule */,
 				FAE67EFF276320C000BBB2C1 /* APODModule */,
@@ -395,8 +394,9 @@
 				FA1A145E276513B10075AAF1 /* MarsRoversModule */,
 				FAE67F00276328A300BBB2C1 /* NasaSingleImageModule */,
 				FA11F2772766326A00C61C87 /* MusicPlayerModule */,
-				FA43D67627689CD5005B9C87 /* FavoritsModule */,
+				FAAED16C2779AA4700EB0D07 /* FavoritesModule */,
 				FA8ABFDD27786515002656F6 /* PhotoGalleryModule */,
+				FA11B6CB2773221F00E89634 /* Protocols */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -629,16 +629,6 @@
 			path = MusicService;
 			sourceTree = "<group>";
 		};
-		FA43D67627689CD5005B9C87 /* FavoritsModule */ = {
-			isa = PBXGroup;
-			children = (
-				FA43D67727689CF8005B9C87 /* Controller */,
-				FA43D67827689CFF005B9C87 /* View */,
-				FA43D67F2768A237005B9C87 /* ViewModel */,
-			);
-			path = FavoritsModule;
-			sourceTree = "<group>";
-		};
 		FA43D67727689CF8005B9C87 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -740,6 +730,16 @@
 				FA8ABFEA27786E43002656F6 /* ZoomAndSnapFlowLayout.swift */,
 			);
 			path = Subview;
+			sourceTree = "<group>";
+		};
+		FAAED16C2779AA4700EB0D07 /* FavoritesModule */ = {
+			isa = PBXGroup;
+			children = (
+				FA43D67727689CF8005B9C87 /* Controller */,
+				FA43D67827689CFF005B9C87 /* View */,
+				FA43D67F2768A237005B9C87 /* ViewModel */,
+			);
+			path = FavoritesModule;
 			sourceTree = "<group>";
 		};
 		FAB5DF9B277328200008BE67 /* AppCoordinator */ = {

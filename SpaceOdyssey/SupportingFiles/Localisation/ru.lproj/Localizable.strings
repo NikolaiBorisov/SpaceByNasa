@@ -11,7 +11,8 @@
 "SpaceOdyssey" = "Космическая Одиссея";
 "SciFiMusic" = "Музыка";
 "Favorites" = "Избранное";
-"Gallery" = "Галерея";
+"MarsGallery" = "Галерея «Марс»";
+"FavoritesGallery" = " Галерея «Избранное»";
 
 // MARK: - Errors
 

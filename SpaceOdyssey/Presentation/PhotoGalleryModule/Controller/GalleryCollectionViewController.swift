@@ -22,10 +22,14 @@ final class GalleryCollectionViewController: UIViewController {
     
     init(
         coordinator: MainCoordinator,
-        photos: [Photo]
+        marsPhotos: [Photo],
+        favoritesPhotos: [Favorite],
+        isMarsRover: Bool
     ) {
         self.coordinator = coordinator
-        self.viewModel.photoArray = photos
+        self.viewModel.marsPhotos = marsPhotos
+        self.viewModel.favoritesPhotos = favoritesPhotos
+        self.viewModel.isMarsRover = isMarsRover
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -55,7 +59,11 @@ final class GalleryCollectionViewController: UIViewController {
     }
     
     private func setupNavBar() {
-        title = Localization.gallery
+        if viewModel.isMarsRover ?? false {
+            title = Localization.marsGallery
+        } else {
+            title = Localization.favoritesGallery
+        }
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.backButtonTitle = ""
     }
@@ -67,7 +75,12 @@ final class GalleryCollectionViewController: UIViewController {
 extension GalleryCollectionViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.photoArray.count
+        switch viewModel.isMarsRover {
+        case true: return viewModel.marsPhotos.count
+        case false: return viewModel.favoritesPhotos.count
+        case .none: return 0
+        case .some(_): return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -79,9 +92,19 @@ extension GalleryCollectionViewController: UICollectionViewDataSource {
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
         let cell: GalleryCell = collectionView.dequeueCell(for: indexPath)
-        let item =  viewModel.photoArray[indexPath.row]
-        cell.configureCell(with: item)
-        return cell
+        guard let isMarsRover = viewModel.isMarsRover else { return cell }
+        switch viewModel.isMarsRover {
+        case true:
+            let item = viewModel.marsPhotos[indexPath.row]
+            cell.configureCellWith(marsItem: item, favoriteItem: nil, isMarsRover: isMarsRover)
+            return cell
+        case false:
+            let item = viewModel.favoritesPhotos[indexPath.row]
+            cell.configureCellWith(marsItem: nil, favoriteItem: item, isMarsRover: isMarsRover)
+            return cell
+        case .none: return cell
+        case .some(_): return cell
+        }
     }
     
 }
@@ -97,7 +120,7 @@ extension GalleryCollectionViewController: UICollectionViewDelegateFlowLayout {
     ) -> CGSize {
         return CGSize(
             width: viewModel.screenWidth / 2,
-            height: viewModel.isSmallDevice ? 250 : 350
+            height: viewModel.isSmallDevice ? 250 : 300
         )
     }
     

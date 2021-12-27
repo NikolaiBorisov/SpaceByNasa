@@ -16,7 +16,13 @@ protocol ScreenFactory {
     func createTabBarController(coordinator: MainCoordinator) -> UITabBarController
     func createFavoritesScreen(coordinator: MainCoordinator) -> UIViewController
     func createMusicPlayerScreen(coordinator: MainCoordinator) -> UIViewController
-    func createGalleryScreen(coordinator: MainCoordinator, photos: [Photo]) -> UIViewController
+    
+    func createGalleryScreen(
+        coordinator: MainCoordinator,
+        marsPhotos: [Photo],
+        favoritesPhotos: [Favorite],
+        isMarsRover: Bool
+    ) -> UIViewController
     
     func createSingleImageScreen(
         coordinator: MainCoordinator,
@@ -66,8 +72,18 @@ final class ScreenFactoryImpl: ScreenFactory {
         MusicPlayerViewController(coordinator: coordinator)
     }
     
-    func createGalleryScreen(coordinator: MainCoordinator, photos: [Photo]) -> UIViewController {
-        GalleryCollectionViewController(coordinator: coordinator, photos: photos)
+    func createGalleryScreen(
+        coordinator: MainCoordinator,
+        marsPhotos: [Photo],
+        favoritesPhotos: [Favorite],
+        isMarsRover: Bool
+    ) -> UIViewController {
+        GalleryCollectionViewController(
+            coordinator: coordinator,
+            marsPhotos: marsPhotos,
+            favoritesPhotos: favoritesPhotos,
+            isMarsRover: isMarsRover
+        )
     }
     
     public func createSingleImageScreen(

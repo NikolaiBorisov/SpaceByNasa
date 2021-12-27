@@ -53,7 +53,11 @@ final class MarsRoverCollectionViewController: UIViewController, LoadableErrorAl
     
     @objc private func onGalleryButtonTapped() {
         guard let photos = viewModel.marsRoverPhotos?.photos else { return }
-        coordinator.pushGalleryScreenWith(photos: photos)
+        coordinator.pushGalleryScreenWith(
+            marsPhotos: photos,
+            favoritesPhotos: [],
+            isMarsRover: true
+        )
     }
     
     // MARK: - Private Methods

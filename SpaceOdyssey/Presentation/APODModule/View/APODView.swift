@@ -17,6 +17,7 @@ final class APODView: UIView {
     public lazy var apodTableView: UITableView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.isScrollEnabled = true
+        $0.showsVerticalScrollIndicator = false
         $0.register(cell: APODCell.self)
         $0.contentInsetAdjustmentBehavior = .never
         $0.separatorColor = .lightGray
