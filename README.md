@@ -6,22 +6,22 @@ App Stack:
 
 1. UIKit
 2. Architecture pattern: MVVM;
-3. Design patterns: Factory Method, Delegate, Singleton; 
+3. Design patterns: Factory Method, Delegate, Coordinator; 
 4. Service layer: RestAPI, URLSession;
 5. Image Caching Service;
-6. No Storyboard, code only (no third-parties library);
+6. Code only (no third-parties library);
 7. UITableView, UICollectionView, UITabBarController(custom), UIAlertController(custom), UINavigationController, UIActivityViewController;
 8. InternetAvailabilityService;
-9. Working with API provided by NASA (using 4 different APIs);
-10. Sharing photos by long press;
+9. Working with APIs provided by NASA;
+10. Sharing photos;
 11. Saving photos to your library and to CoreData;
 12. Pull to refresh;
 13. Persistence layer: CoreData;
+14. Localization;
+15. Animation;
 
 In Progress:
 1. Music player;
-2. Localization;
-3. Coordinator(AppRouter);
 
 Screenshots:
 
