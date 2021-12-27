@@ -43,7 +43,7 @@ enum StringURL {
     
     // MARK: - MusicURL
     
-    static let mainThemeMusic = Bundle.main.url(
+    static let interstellar1 = Bundle.main.url(
         forResource: AppMusic.interstellar,
         withExtension: AppMusic.mp3
     )

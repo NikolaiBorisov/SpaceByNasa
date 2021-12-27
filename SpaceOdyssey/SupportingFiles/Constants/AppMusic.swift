@@ -8,7 +8,13 @@
 import UIKit
 
 enum AppMusic {
-    static let mp3 = "mp3" 
+    
+    // MARK: - Format
+    
+    static let mp3 = "mp3"
+    
+    // MARK: - Tracks
+    
     static let interstellar = "Interstellar"
     static let zemlyane = "Zemlyane"
 }

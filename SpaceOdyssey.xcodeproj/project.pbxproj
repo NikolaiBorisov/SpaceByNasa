@@ -65,6 +65,10 @@
 		FA49D2F42779D82700BDF807 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49D2F32779D82700BDF807 /* JSONParser.swift */; };
 		FA49D2F62779D9D900BDF807 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49D2F52779D9D900BDF807 /* JSON.swift */; };
 		FA49D2F82779DA3800BDF807 /* JSONDataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49D2F72779DA3800BDF807 /* JSONDataFetcherService.swift */; };
+		FA5CE81F2779F80F0083CD1C /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CE81E2779F80E0083CD1C /* Music.swift */; };
+		FA5CE8212779F89D0083CD1C /* MusicFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CE8202779F89D0083CD1C /* MusicFactory.swift */; };
+		FA5CE8242779F9A50083CD1C /* MusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CE8232779F9A50083CD1C /* MusicViewModel.swift */; };
+		FA5CE8262779FFD70083CD1C /* MusicPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CE8252779FFD60083CD1C /* MusicPlayerCell.swift */; };
 		FA6476D02765D26600519921 /* LoadableInfoAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476CF2765D26600519921 /* LoadableInfoAlertController+Extension.swift */; };
 		FA6476D22765D9E400519921 /* InternetAvailabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476D12765D9E400519921 /* InternetAvailabilityService.swift */; };
 		FA6476D72765E84F00519921 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476D62765E84F00519921 /* TabBarController.swift */; };
@@ -185,6 +189,10 @@
 		FA49D2F32779D82700BDF807 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		FA49D2F52779D9D900BDF807 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		FA49D2F72779DA3800BDF807 /* JSONDataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataFetcherService.swift; sourceTree = "<group>"; };
+		FA5CE81E2779F80E0083CD1C /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
+		FA5CE8202779F89D0083CD1C /* MusicFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicFactory.swift; sourceTree = "<group>"; };
+		FA5CE8232779F9A50083CD1C /* MusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewModel.swift; sourceTree = "<group>"; };
+		FA5CE8252779FFD60083CD1C /* MusicPlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerCell.swift; sourceTree = "<group>"; };
 		FA6476CF2765D26600519921 /* LoadableInfoAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoadableInfoAlertController+Extension.swift"; sourceTree = "<group>"; };
 		FA6476D12765D9E400519921 /* InternetAvailabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetAvailabilityService.swift; sourceTree = "<group>"; };
 		FA6476D62765E84F00519921 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -307,6 +315,8 @@
 			children = (
 				FA11F2782766328400C61C87 /* Controller */,
 				FA11F2792766328C00C61C87 /* View */,
+				FA5CE8222779F9890083CD1C /* ViewModel */,
+				FA5CE81D2779F7FE0083CD1C /* Model */,
 			);
 			path = MusicPlayerModule;
 			sourceTree = "<group>";
@@ -323,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				FA11F27C276632F500C61C87 /* MusicPlayerView.swift */,
+				FA5CE8252779FFD60083CD1C /* MusicPlayerCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -610,6 +621,7 @@
 				FAE026842762879700F59038 /* NasaCategoryFactory.swift */,
 				FAF467BE276310B200A04E1C /* HeaderViewLabelFactory.swift */,
 				FAE67F152763719200BBB2C1 /* AccessoryViewFactory.swift */,
+				FA5CE8202779F89D0083CD1C /* MusicFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -689,6 +701,22 @@
 				FA49D2F32779D82700BDF807 /* JSONParser.swift */,
 			);
 			path = JSONParserManager;
+			sourceTree = "<group>";
+		};
+		FA5CE81D2779F7FE0083CD1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA5CE81E2779F80E0083CD1C /* Music.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA5CE8222779F9890083CD1C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA5CE8232779F9A50083CD1C /* MusicViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		FA6476D32765E7F400519921 /* TabBar */ = {
@@ -1079,6 +1107,7 @@
 				FA04459E27624F6800597761 /* CategoriesCell.swift in Sources */,
 				FA31468A276215E400FE997E /* MarsRoverCell.swift in Sources */,
 				FAF467BF276310B200A04E1C /* HeaderViewLabelFactory.swift in Sources */,
+				FA5CE8212779F89D0083CD1C /* MusicFactory.swift in Sources */,
 				FAB5DF9D27732A2A0008BE67 /* Coordinator.swift in Sources */,
 				FAE67F0E27633D3300BBB2C1 /* EPICView.swift in Sources */,
 				FA6476D02765D26600519921 /* LoadableInfoAlertController+Extension.swift in Sources */,
@@ -1101,6 +1130,7 @@
 				FACEFFFA276B51A800B0F2A1 /* FileManager.swift in Sources */,
 				FA314683276215E400FE997E /* ApodDTO.swift in Sources */,
 				FA8ABFE627786953002656F6 /* GalleryView.swift in Sources */,
+				FA5CE81F2779F80F0083CD1C /* Music.swift in Sources */,
 				FA31468D276215E400FE997E /* SceneDelegate.swift in Sources */,
 				FA04459A27624E3D00597761 /* CategoriesViewController.swift in Sources */,
 				FA314697276215E400FE997E /* StringURL.swift in Sources */,
@@ -1120,6 +1150,8 @@
 				FAB5DF9F27732F8A0008BE67 /* MainCoordinator.swift in Sources */,
 				FA31467F276215E300FE997E /* SingleImageView.swift in Sources */,
 				FA314687276215E400FE997E /* MarsRoverViewModel.swift in Sources */,
+				FA5CE8262779FFD70083CD1C /* MusicPlayerCell.swift in Sources */,
+				FA5CE8242779F9A50083CD1C /* MusicViewModel.swift in Sources */,
 				FA314686276215E400FE997E /* ActivityIndicatorView.swift in Sources */,
 				FACF008A2764AB7C00A7F9EA /* AsteroidView.swift in Sources */,
 				FAE67F162763719200BBB2C1 /* AccessoryViewFactory.swift in Sources */,

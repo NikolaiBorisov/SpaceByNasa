@@ -13,4 +13,5 @@ enum AppHeader {
     static let asteroidHeader = "Information"
     static let EPICHeader1 = "Description"
     static let EPICHeader2 = "Pictures"
+    static let musicPlayerHeader = "Music Player"
 }

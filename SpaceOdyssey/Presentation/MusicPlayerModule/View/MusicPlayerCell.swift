@@ -1,18 +1,17 @@
 //
-//  CategoriesCell.swift
+//  MusicPlayerCell.swift
 //  SpaceOdyssey
 //
-//  Created by NIKOLAI BORISOV on 09.12.2021.
+//  Created by NIKOLAI BORISOV on 27.12.2021.
 //
 
 import UIKit
 
-/// Class contains UIElements and methods for CategoriesCell
-final class CategoriesCell: UITableViewCell {
+final class MusicPlayerCell: UITableViewCell {
     
-    // MARK: - Private Properties
+    // MARK: - Public Properties
     
-    private lazy var categoryTitleLabel: UILabel = {
+    public lazy var trackTitleLabel: UILabel = {
         $0.textAlignment = .left
         $0.textColor = .white
         $0.numberOfLines = 1
@@ -22,9 +21,11 @@ final class CategoriesCell: UITableViewCell {
         return $0
     }(UILabel())
     
-    private lazy var categorySubtitleLabel: UILabel = {
+    // MARK: - Private Properties
+    
+    private lazy var trackSubtitleLabel: UILabel = {
         $0.textAlignment = .left
-        $0.textColor = .lightGray
+        $0.textColor = .white
         $0.numberOfLines = 0
         $0.font = .avenirNextMediumOfSize(16)
         $0.adjustsFontSizeToFitWidth = true
@@ -38,11 +39,11 @@ final class CategoriesCell: UITableViewCell {
         $0.distribution = .fillProportionally
         $0.spacing = 5
         return $0
-    }(UIStackView(arrangedSubviews: [categoryTitleLabel, categorySubtitleLabel]))
+    }(UIStackView(arrangedSubviews: [trackTitleLabel, trackSubtitleLabel]))
     
-    private lazy var categoryIcon: UIImageView = {
+    private lazy var trackIcon: UIImageView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.contentMode = .scaleAspectFill
+        $0.contentMode = .scaleAspectFit
         $0.clipsToBounds = true
         return $0
     }(UIImageView())
@@ -85,16 +86,16 @@ final class CategoriesCell: UITableViewCell {
             })
     }
     
-    public func configureCell(with item: Category) {
-        categoryTitleLabel.text = item.title
-        categorySubtitleLabel.text = item.subTitle
-        categoryIcon.image = UIImage(named: item.image)
+    public func configureCell(with item: Music) {
+        trackTitleLabel.text = item.title
+        trackSubtitleLabel.text = "\(item.duration)"
+        trackIcon.image = item.icon
     }
     
     // MARK: - Private Methods
     
     private func setupNasaLogo() {
-        categoryIcon.roundViewWith(cornerRadius: categoryIcon.frame.height / 2)
+        trackIcon.roundViewWith(cornerRadius: 10, borderColor: .lightGray, borderWidth: 2)
     }
     
     private func setupView() {
@@ -106,19 +107,19 @@ final class CategoriesCell: UITableViewCell {
     
     private func addSubviews() {
         contentView.addSubview(labelStackView)
-        contentView.addSubview(categoryIcon)
+        contentView.addSubview(trackIcon)
     }
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
             labelStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            labelStackView.trailingAnchor.constraint(equalTo: categoryIcon.leadingAnchor, constant: -5),
+            labelStackView.trailingAnchor.constraint(equalTo: trackIcon.leadingAnchor, constant: -5),
             labelStackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             
-            categoryIcon.widthAnchor.constraint(equalToConstant: 50),
-            categoryIcon.heightAnchor.constraint(equalToConstant: 50),
-            categoryIcon.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            categoryIcon.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            trackIcon.widthAnchor.constraint(equalToConstant: 50),
+            trackIcon.heightAnchor.constraint(equalToConstant: 50),
+            trackIcon.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            trackIcon.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
     }
     

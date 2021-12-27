@@ -122,7 +122,7 @@ extension CategoriesViewController: UITableViewDelegate {
 extension CategoriesViewController: MusicPlayerViewControllerDelegate {
     func nextTrack(isNextButtonTapped: Bool) {
         guard let url1 = StringURL.zemlyane,
-              let url2 = StringURL.mainThemeMusic else { return }
+              let url2 = StringURL.interstellar1 else { return }
         switch isNextButtonTapped {
         case true:
             viewModel.musicPlayer.playSound(withURL: url1)
