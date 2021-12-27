@@ -12,7 +12,7 @@
 		FA04459E27624F6800597761 /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04459D27624F6800597761 /* CategoriesCell.swift */; };
 		FA0445A12762518A00597761 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0445A02762518A00597761 /* CategoriesViewModel.swift */; };
 		FA0445A32762586E00597761 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0445A22762586E00597761 /* UIFont+Extension.swift */; };
-		FA0445A627625C3000597761 /* NasaCategoriesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0445A527625C3000597761 /* NasaCategoriesModel.swift */; };
+		FA0445A627625C3000597761 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0445A527625C3000597761 /* Category.swift */; };
 		FA11B6CD2773224900E89634 /* SpaceOdysseyCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11B6CC2773224900E89634 /* SpaceOdysseyCellProtocol.swift */; };
 		FA11F27B276632C000C61C87 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F27A276632C000C61C87 /* MusicPlayerViewController.swift */; };
 		FA11F27D276632F500C61C87 /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F27C276632F500C61C87 /* MusicPlayerView.swift */; };
@@ -61,6 +61,10 @@
 		FA43D6812768A258005B9C87 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D6802768A258005B9C87 /* FavoritesViewModel.swift */; };
 		FA43D6852768CD1A005B9C87 /* FavoriteSpaceOdyssey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA43D6832768CD1A005B9C87 /* FavoriteSpaceOdyssey.xcdatamodeld */; };
 		FA43D68B2768D94F005B9C87 /* CoreDataManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D68A2768D94F005B9C87 /* CoreDataManagerImpl.swift */; };
+		FA49D2F12779D76000BDF807 /* categoriesJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = FA49D2F02779D76000BDF807 /* categoriesJSON.json */; };
+		FA49D2F42779D82700BDF807 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49D2F32779D82700BDF807 /* JSONParser.swift */; };
+		FA49D2F62779D9D900BDF807 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49D2F52779D9D900BDF807 /* JSON.swift */; };
+		FA49D2F82779DA3800BDF807 /* JSONDataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49D2F72779DA3800BDF807 /* JSONDataFetcherService.swift */; };
 		FA6476D02765D26600519921 /* LoadableInfoAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476CF2765D26600519921 /* LoadableInfoAlertController+Extension.swift */; };
 		FA6476D22765D9E400519921 /* InternetAvailabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476D12765D9E400519921 /* InternetAvailabilityService.swift */; };
 		FA6476D72765E84F00519921 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476D62765E84F00519921 /* TabBarController.swift */; };
@@ -123,7 +127,7 @@
 		FA04459D27624F6800597761 /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
 		FA0445A02762518A00597761 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		FA0445A22762586E00597761 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
-		FA0445A527625C3000597761 /* NasaCategoriesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaCategoriesModel.swift; sourceTree = "<group>"; };
+		FA0445A527625C3000597761 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		FA11B6CC2773224900E89634 /* SpaceOdysseyCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceOdysseyCellProtocol.swift; sourceTree = "<group>"; };
 		FA11F27A276632C000C61C87 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		FA11F27C276632F500C61C87 /* MusicPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerView.swift; sourceTree = "<group>"; };
@@ -177,6 +181,10 @@
 		FA43D6802768A258005B9C87 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		FA43D6842768CD1A005B9C87 /* FavoriteSpaceOdyssey.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteSpaceOdyssey.xcdatamodel; sourceTree = "<group>"; };
 		FA43D68A2768D94F005B9C87 /* CoreDataManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerImpl.swift; sourceTree = "<group>"; };
+		FA49D2F02779D76000BDF807 /* categoriesJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categoriesJSON.json; sourceTree = "<group>"; };
+		FA49D2F32779D82700BDF807 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		FA49D2F52779D9D900BDF807 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		FA49D2F72779DA3800BDF807 /* JSONDataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataFetcherService.swift; sourceTree = "<group>"; };
 		FA6476CF2765D26600519921 /* LoadableInfoAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoadableInfoAlertController+Extension.swift"; sourceTree = "<group>"; };
 		FA6476D12765D9E400519921 /* InternetAvailabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetAvailabilityService.swift; sourceTree = "<group>"; };
 		FA6476D62765E84F00519921 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -280,7 +288,8 @@
 		FA0445A427625C0C00597761 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FA0445A527625C3000597761 /* NasaCategoriesModel.swift */,
+				FA0445A527625C3000597761 /* Category.swift */,
+				FA49D2EF2779D34C00BDF807 /* JSON */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -354,6 +363,7 @@
 			children = (
 				FAB5DF9B277328200008BE67 /* AppCoordinator */,
 				FACEFFF7276B514000B0F2A1 /* FileManager */,
+				FA49D2F92779DFB600BDF807 /* JSONParserManager */,
 				FA43D6822768CC86005B9C87 /* CoreDataManager */,
 				FA314663276215E300FE997E /* NetworkManager */,
 				FA31469E27623EF500FE997E /* MusicManager */,
@@ -567,6 +577,7 @@
 				FA8B72B82775E1CF0030693B /* AppMusic.swift */,
 				FA8B72BA2775E2EE0030693B /* AppFont.swift */,
 				FA8B72BC2775E4B80030693B /* AppHeader.swift */,
+				FA49D2F52779D9D900BDF807 /* JSON.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -661,6 +672,23 @@
 				FA43D68A2768D94F005B9C87 /* CoreDataManagerImpl.swift */,
 			);
 			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+		FA49D2EF2779D34C00BDF807 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				FA49D2F02779D76000BDF807 /* categoriesJSON.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		FA49D2F92779DFB600BDF807 /* JSONParserManager */ = {
+			isa = PBXGroup;
+			children = (
+				FA49D2F72779DA3800BDF807 /* JSONDataFetcherService.swift */,
+				FA49D2F32779D82700BDF807 /* JSONParser.swift */,
+			);
+			path = JSONParserManager;
 			sourceTree = "<group>";
 		};
 		FA6476D32765E7F400519921 /* TabBar */ = {
@@ -1002,6 +1030,7 @@
 				FA11F27F2766700000C61C87 /* Zemlyane.mp3 in Resources */,
 				FA314692276215E400FE997E /* LaunchScreen.storyboard in Resources */,
 				FA314698276215E400FE997E /* Assets.xcassets in Resources */,
+				FA49D2F12779D76000BDF807 /* categoriesJSON.json in Resources */,
 				FA43D67527689AC0005B9C87 /* Interstellar.mp3 in Resources */,
 				FA314693276215E400FE997E /* Localizable.strings in Resources */,
 			);
@@ -1030,6 +1059,7 @@
 			files = (
 				FA6476D22765D9E400519921 /* InternetAvailabilityService.swift in Sources */,
 				FA43D67E27689EE8005B9C87 /* FavoritesCell.swift in Sources */,
+				FA49D2F42779D82700BDF807 /* JSONParser.swift in Sources */,
 				FA31467E276215E300FE997E /* SingleImageViewController.swift in Sources */,
 				FA8ABFE8277869F4002656F6 /* GalleryCell.swift in Sources */,
 				FA11B6CD2773224900E89634 /* SpaceOdysseyCellProtocol.swift in Sources */,
@@ -1058,6 +1088,7 @@
 				FA314691276215E400FE997E /* NetworkDataFetcher.swift in Sources */,
 				FA314699276215E400FE997E /* String+Extension.swift in Sources */,
 				FA31468F276215E400FE997E /* NetworkService.swift in Sources */,
+				FA49D2F62779D9D900BDF807 /* JSON.swift in Sources */,
 				FA31468C276215E400FE997E /* AppDelegate.swift in Sources */,
 				FA3146A427623FFF00FE997E /* MusicPlayer.swift in Sources */,
 				FA0445A12762518A00597761 /* CategoriesViewModel.swift in Sources */,
@@ -1104,11 +1135,12 @@
 				FA314682276215E400FE997E /* APODViewController.swift in Sources */,
 				FAE67F1027633E4800BBB2C1 /* EPICViewModel.swift in Sources */,
 				FACF008E2764AD8B00A7F9EA /* AsteroidViewModel.swift in Sources */,
+				FA49D2F82779DA3800BDF807 /* JSONDataFetcherService.swift in Sources */,
 				FA314690276215E400FE997E /* DataFetcherService.swift in Sources */,
 				FA31468B276215E400FE997E /* MarsRoverView.swift in Sources */,
 				FA8ABFE12778672D002656F6 /* GalleryCollectionViewController.swift in Sources */,
 				FAB5DFA127733C2E0008BE67 /* ScreenFactory.swift in Sources */,
-				FA0445A627625C3000597761 /* NasaCategoriesModel.swift in Sources */,
+				FA0445A627625C3000597761 /* Category.swift in Sources */,
 				FA8B72BD2775E4B80030693B /* AppHeader.swift in Sources */,
 				FA314689276215E400FE997E /* MarsRoverDTO.swift in Sources */,
 			);

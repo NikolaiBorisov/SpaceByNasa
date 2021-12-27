@@ -1,0 +1,22 @@
+[
+  {
+    "title": "APOD",
+    "subTitle": "Astronomy Picture of the Day",
+    "image": "apodIcon"
+  },
+  {
+    "title": "Asteroids NeoWs",
+    "subTitle": "Near Earth Object Web Service",
+    "image": "asteroidIcon"
+  },
+  {
+    "title": "EPIC",
+    "subTitle": "Earth Polychromatic Imaging Camera",
+    "image": "epicIcon"
+  },
+  {
+    "title": "Mars Rover Photos",
+    "subTitle": "Photos gathered by NASA's Curiosity, Opportunity, and Spirit rovers on Mars",
+    "image": "marsIcon"
+  }
+]

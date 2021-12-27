@@ -18,6 +18,7 @@ final class GalleryViewModel {
     public var isMarsRover: Bool?
     public let insetForSection = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     public var screenWidth = UIScreen.main.bounds.width
+    public var screenHeight = UIScreen.main.bounds.height
     public var isSmallDevice = UIDevice.isSmallDevice
 }
 

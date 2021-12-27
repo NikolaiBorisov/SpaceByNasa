@@ -29,6 +29,7 @@ final class CategoriesViewController: UIViewController {
         setupNavBar()
         viewModel.playMusic()
         setupDelegate()
+        viewModel.getData()
     }
     
     // MARK: - Initializers
@@ -82,7 +83,6 @@ extension CategoriesViewController: UITableViewDataSource {
         let cell: CategoriesCell = tableView.dequeueCell(for: indexPath)
         let item = viewModel.categories[indexPath.row]
         cell.configureCell(with: item)
-        cell.animateCell(at: indexPath)
         return cell
     }
     

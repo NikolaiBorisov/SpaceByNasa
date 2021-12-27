@@ -14,6 +14,18 @@ final class ZoomAndSnapFlowLayout: UICollectionViewFlowLayout {
     private let activeDistance: CGFloat = 100
     private let zoomFactor: CGFloat = 0.8
     
+    // MARK: - Initializers
+    
+    override init() {
+        super.init()
+        
+        scrollDirection = .horizontal
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: - Life Cycle
     
     override func prepare() {
