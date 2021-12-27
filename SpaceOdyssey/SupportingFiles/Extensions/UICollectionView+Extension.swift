@@ -18,3 +18,14 @@ extension UICollectionView {
         return dequeueReusableCell(withReuseIdentifier: T.identifier, for: indexPath) as! T
     }
 }
+
+// MARK: - BackgroundImage
+
+extension UICollectionView {
+    func setBackgroundWith(image: UIImage) {
+        let bgImage = UIImageView()
+        bgImage.image = image
+        bgImage.contentMode = .scaleToFill
+        self.backgroundView = bgImage
+    }
+}

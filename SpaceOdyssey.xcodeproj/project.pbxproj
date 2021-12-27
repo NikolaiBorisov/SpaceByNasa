@@ -60,12 +60,17 @@
 		FA43D67E27689EE8005B9C87 /* FavoritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D67D27689EE8005B9C87 /* FavoritesCell.swift */; };
 		FA43D6812768A258005B9C87 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D6802768A258005B9C87 /* FavoritesViewModel.swift */; };
 		FA43D6852768CD1A005B9C87 /* FavoriteSpaceOdyssey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA43D6832768CD1A005B9C87 /* FavoriteSpaceOdyssey.xcdatamodeld */; };
-		FA43D6872768D301005B9C87 /* UIBarButtonItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D6862768D301005B9C87 /* UIBarButtonItem+Extension.swift */; };
 		FA43D68B2768D94F005B9C87 /* CoreDataManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D68A2768D94F005B9C87 /* CoreDataManagerImpl.swift */; };
 		FA6476D02765D26600519921 /* LoadableInfoAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476CF2765D26600519921 /* LoadableInfoAlertController+Extension.swift */; };
 		FA6476D22765D9E400519921 /* InternetAvailabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476D12765D9E400519921 /* InternetAvailabilityService.swift */; };
 		FA6476D72765E84F00519921 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476D62765E84F00519921 /* TabBarController.swift */; };
 		FA6476DC2765EB3500519921 /* NasaTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476DB2765EB3500519921 /* NasaTabBarView.swift */; };
+		FA8ABFE12778672D002656F6 /* GalleryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8ABFE02778672D002656F6 /* GalleryCollectionViewController.swift */; };
+		FA8ABFE4277868DE002656F6 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8ABFE3277868DE002656F6 /* GalleryViewModel.swift */; };
+		FA8ABFE627786953002656F6 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8ABFE527786953002656F6 /* GalleryView.swift */; };
+		FA8ABFE8277869F4002656F6 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8ABFE7277869F4002656F6 /* GalleryCell.swift */; };
+		FA8ABFEB27786E43002656F6 /* ZoomAndSnapFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8ABFEA27786E43002656F6 /* ZoomAndSnapFlowLayout.swift */; };
+		FA8ABFED27788ACC002656F6 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8ABFEC27788ACC002656F6 /* UIScrollView+Extension.swift */; };
 		FA8B72B32775BB1D0030693B /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B72B22775BB1D0030693B /* Double+Extension.swift */; };
 		FA8B72B52775D86D0030693B /* UITabBarController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B72B42775D86D0030693B /* UITabBarController+Extension.swift */; };
 		FA8B72B72775DCAB0030693B /* AppImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B72B62775DCAB0030693B /* AppImage.swift */; };
@@ -171,12 +176,17 @@
 		FA43D67D27689EE8005B9C87 /* FavoritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCell.swift; sourceTree = "<group>"; };
 		FA43D6802768A258005B9C87 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
 		FA43D6842768CD1A005B9C87 /* FavoriteSpaceOdyssey.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteSpaceOdyssey.xcdatamodel; sourceTree = "<group>"; };
-		FA43D6862768D301005B9C87 /* UIBarButtonItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extension.swift"; sourceTree = "<group>"; };
 		FA43D68A2768D94F005B9C87 /* CoreDataManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerImpl.swift; sourceTree = "<group>"; };
 		FA6476CF2765D26600519921 /* LoadableInfoAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoadableInfoAlertController+Extension.swift"; sourceTree = "<group>"; };
 		FA6476D12765D9E400519921 /* InternetAvailabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetAvailabilityService.swift; sourceTree = "<group>"; };
 		FA6476D62765E84F00519921 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		FA6476DB2765EB3500519921 /* NasaTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaTabBarView.swift; sourceTree = "<group>"; };
+		FA8ABFE02778672D002656F6 /* GalleryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewController.swift; sourceTree = "<group>"; };
+		FA8ABFE3277868DE002656F6 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		FA8ABFE527786953002656F6 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		FA8ABFE7277869F4002656F6 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
+		FA8ABFEA27786E43002656F6 /* ZoomAndSnapFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomAndSnapFlowLayout.swift; sourceTree = "<group>"; };
+		FA8ABFEC27788ACC002656F6 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
 		FA8B72B22775BB1D0030693B /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		FA8B72B42775D86D0030693B /* UITabBarController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extension.swift"; sourceTree = "<group>"; };
 		FA8B72B62775DCAB0030693B /* AppImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImage.swift; sourceTree = "<group>"; };
@@ -376,7 +386,6 @@
 			isa = PBXGroup;
 			children = (
 				FA314669276215E300FE997E /* LaunchScreen */,
-				FA11B6CB2773221F00E89634 /* Protocols */,
 				FA6476D32765E7F400519921 /* TabBar */,
 				FA04459627624E1100597761 /* CategoriesModule */,
 				FAE67EFF276320C000BBB2C1 /* APODModule */,
@@ -385,7 +394,9 @@
 				FA1A145E276513B10075AAF1 /* MarsRoversModule */,
 				FAE67F00276328A300BBB2C1 /* NasaSingleImageModule */,
 				FA11F2772766326A00C61C87 /* MusicPlayerModule */,
-				FA43D67627689CD5005B9C87 /* FavoritsModule */,
+				FAAED16C2779AA4700EB0D07 /* FavoritesModule */,
+				FA8ABFDD27786515002656F6 /* PhotoGalleryModule */,
+				FA11B6CB2773221F00E89634 /* Protocols */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -571,11 +582,11 @@
 				FACF007D2764823F00A7F9EA /* LoadableErrorAlertController+Extension.swift */,
 				FA6476CF2765D26600519921 /* LoadableInfoAlertController+Extension.swift */,
 				FA11F2802766990500C61C87 /* UIDevice+Extension.swift */,
-				FA43D6862768D301005B9C87 /* UIBarButtonItem+Extension.swift */,
 				FA1B31F9276A0EF1007F6922 /* UIViewController+Extension.swift */,
 				FA8B72B22775BB1D0030693B /* Double+Extension.swift */,
 				FA8B72B42775D86D0030693B /* UITabBarController+Extension.swift */,
 				FA8B72BE2775F55F0030693B /* UIImageView+Extension.swift */,
+				FA8ABFEC27788ACC002656F6 /* UIScrollView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -616,16 +627,6 @@
 				FA3146A327623FFF00FE997E /* MusicPlayer.swift */,
 			);
 			path = MusicService;
-			sourceTree = "<group>";
-		};
-		FA43D67627689CD5005B9C87 /* FavoritsModule */ = {
-			isa = PBXGroup;
-			children = (
-				FA43D67727689CF8005B9C87 /* Controller */,
-				FA43D67827689CFF005B9C87 /* View */,
-				FA43D67F2768A237005B9C87 /* ViewModel */,
-			);
-			path = FavoritsModule;
 			sourceTree = "<group>";
 		};
 		FA43D67727689CF8005B9C87 /* Controller */ = {
@@ -685,6 +686,60 @@
 				FA6476DB2765EB3500519921 /* NasaTabBarView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FA8ABFDD27786515002656F6 /* PhotoGalleryModule */ = {
+			isa = PBXGroup;
+			children = (
+				FA8ABFDE27786531002656F6 /* Controller */,
+				FA8ABFDF27786539002656F6 /* View */,
+				FA8ABFE2277868C9002656F6 /* ViewModel */,
+			);
+			path = PhotoGalleryModule;
+			sourceTree = "<group>";
+		};
+		FA8ABFDE27786531002656F6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA8ABFE02778672D002656F6 /* GalleryCollectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA8ABFDF27786539002656F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA8ABFE527786953002656F6 /* GalleryView.swift */,
+				FA8ABFE7277869F4002656F6 /* GalleryCell.swift */,
+				FA8ABFE927786E13002656F6 /* Subview */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA8ABFE2277868C9002656F6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA8ABFE3277868DE002656F6 /* GalleryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA8ABFE927786E13002656F6 /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				FA8ABFEA27786E43002656F6 /* ZoomAndSnapFlowLayout.swift */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
+		FAAED16C2779AA4700EB0D07 /* FavoritesModule */ = {
+			isa = PBXGroup;
+			children = (
+				FA43D67727689CF8005B9C87 /* Controller */,
+				FA43D67827689CFF005B9C87 /* View */,
+				FA43D67F2768A237005B9C87 /* ViewModel */,
+			);
+			path = FavoritesModule;
 			sourceTree = "<group>";
 		};
 		FAB5DF9B277328200008BE67 /* AppCoordinator */ = {
@@ -976,6 +1031,7 @@
 				FA6476D22765D9E400519921 /* InternetAvailabilityService.swift in Sources */,
 				FA43D67E27689EE8005B9C87 /* FavoritesCell.swift in Sources */,
 				FA31467E276215E300FE997E /* SingleImageViewController.swift in Sources */,
+				FA8ABFE8277869F4002656F6 /* GalleryCell.swift in Sources */,
 				FA11B6CD2773224900E89634 /* SpaceOdysseyCellProtocol.swift in Sources */,
 				FA43D67A27689D1B005B9C87 /* FavoritesViewController.swift in Sources */,
 				FA314688276215E400FE997E /* MarsRoverCollectionViewController.swift in Sources */,
@@ -987,6 +1043,7 @@
 				FA11F27D276632F500C61C87 /* MusicPlayerView.swift in Sources */,
 				FAE67F0C27633CD800BBB2C1 /* EPICViewController.swift in Sources */,
 				FA31468E276215E400FE997E /* ImageCachingService.swift in Sources */,
+				FA8ABFED27788ACC002656F6 /* UIScrollView+Extension.swift in Sources */,
 				FA8B72B52775D86D0030693B /* UITabBarController+Extension.swift in Sources */,
 				FA8B72B72775DCAB0030693B /* AppImage.swift in Sources */,
 				FA04459E27624F6800597761 /* CategoriesCell.swift in Sources */,
@@ -1012,10 +1069,11 @@
 				FA43D68B2768D94F005B9C87 /* CoreDataManagerImpl.swift in Sources */,
 				FACEFFFA276B51A800B0F2A1 /* FileManager.swift in Sources */,
 				FA314683276215E400FE997E /* ApodDTO.swift in Sources */,
+				FA8ABFE627786953002656F6 /* GalleryView.swift in Sources */,
 				FA31468D276215E400FE997E /* SceneDelegate.swift in Sources */,
-				FA43D6872768D301005B9C87 /* UIBarButtonItem+Extension.swift in Sources */,
 				FA04459A27624E3D00597761 /* CategoriesViewController.swift in Sources */,
 				FA314697276215E400FE997E /* StringURL.swift in Sources */,
+				FA8ABFEB27786E43002656F6 /* ZoomAndSnapFlowLayout.swift in Sources */,
 				FACF00862764A65600A7F9EA /* AsteroidDTO.swift in Sources */,
 				FA8B72B92775E1CF0030693B /* AppMusic.swift in Sources */,
 				FA04459C27624EF800597761 /* CategoriesView.swift in Sources */,
@@ -1041,12 +1099,14 @@
 				FA0445A32762586E00597761 /* UIFont+Extension.swift in Sources */,
 				FA31469C276215E400FE997E /* UITableView+Extension.swift in Sources */,
 				FACF008C2764ABF900A7F9EA /* AsteroidCell.swift in Sources */,
+				FA8ABFE4277868DE002656F6 /* GalleryViewModel.swift in Sources */,
 				FA31469D276215E400FE997E /* RefreshControlFactory.swift in Sources */,
 				FA314682276215E400FE997E /* APODViewController.swift in Sources */,
 				FAE67F1027633E4800BBB2C1 /* EPICViewModel.swift in Sources */,
 				FACF008E2764AD8B00A7F9EA /* AsteroidViewModel.swift in Sources */,
 				FA314690276215E400FE997E /* DataFetcherService.swift in Sources */,
 				FA31468B276215E400FE997E /* MarsRoverView.swift in Sources */,
+				FA8ABFE12778672D002656F6 /* GalleryCollectionViewController.swift in Sources */,
 				FAB5DFA127733C2E0008BE67 /* ScreenFactory.swift in Sources */,
 				FA0445A627625C3000597761 /* NasaCategoriesModel.swift in Sources */,
 				FA8B72BD2775E4B80030693B /* AppHeader.swift in Sources */,

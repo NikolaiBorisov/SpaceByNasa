@@ -13,7 +13,7 @@ final class FavoritesViewModel {
     // MARK: - Public Properties
     
     public lazy var mainView = FavoritesView()
-    public var imgArrayCD: [Favorite] = []
+    public var favoritesPhotos: [Favorite] = []
     public let insetForSection = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     public var coreDataManager = CoreDataManagerImpl.shared
     
@@ -27,7 +27,7 @@ final class FavoritesViewModel {
     }
     
     public func fetchDataFromCoreData() {
-        imgArrayCD = coreDataManager.fetchData(for: Favorite.self)
+        favoritesPhotos = coreDataManager.fetchData(for: Favorite.self)
         mainView.favoritesCollectionView.reloadData()
     }
     

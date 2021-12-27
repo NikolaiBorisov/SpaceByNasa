@@ -31,3 +31,24 @@ extension UIViewController {
         navBar.prefersLargeTitles = true
     }
 }
+
+// MARK: - Create RightBarButtonItem
+
+extension UIViewController {
+    func setupRightNavItem(
+        _ target: Any,
+        action: Selector,
+        title: String? = nil,
+        icon: UIImage? = nil
+    ) -> UIBarButtonItem {
+        let rightBarButtonItem = UIBarButtonItem(
+            image: icon,
+            style: .plain,
+            target: target,
+            action: action
+        )
+        rightBarButtonItem.tintColor = .white
+        rightBarButtonItem.title = title
+        return rightBarButtonItem
+    }
+}

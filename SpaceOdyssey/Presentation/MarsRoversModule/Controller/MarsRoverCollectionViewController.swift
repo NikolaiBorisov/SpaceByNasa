@@ -49,6 +49,17 @@ final class MarsRoverCollectionViewController: UIViewController, LoadableErrorAl
         callBackHandler()
     }
     
+    // MARK: - Actions
+    
+    @objc private func onGalleryButtonTapped() {
+        guard let photos = viewModel.marsRoverPhotos?.photos else { return }
+        coordinator.pushGalleryScreenWith(
+            marsPhotos: photos,
+            favoritesPhotos: [],
+            isMarsRover: true
+        )
+    }
+    
     // MARK: - Private Methods
     
     private func getDataHandler() {
@@ -56,7 +67,7 @@ final class MarsRoverCollectionViewController: UIViewController, LoadableErrorAl
             self?.showErrorAlertWith(title: "Oops!", message: error, completion: {
                 self?.navigationController?.popToRootViewController(animated: true)
             })
-        }
+        } completionSuccess: { self.setupRightBarButtonItem() }
     }
     
     private func callBackHandler() {
@@ -76,6 +87,15 @@ final class MarsRoverCollectionViewController: UIViewController, LoadableErrorAl
         title = viewModel.navBarTitle
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.backButtonTitle = ""
+    }
+    
+    private func setupRightBarButtonItem() {
+        navigationItem.rightBarButtonItem = setupRightNavItem(
+            self,
+            action: #selector(onGalleryButtonTapped),
+            title: "",
+            icon: AppImage.chevronRight2
+        )
     }
     
 }
@@ -143,6 +163,10 @@ extension MarsRoverCollectionViewController: UICollectionViewDelegateFlowLayout 
         insetForSectionAt section: Int
     ) -> UIEdgeInsets {
         viewModel.insetForSection
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        scrollView.scrollIndicators.vertical?.backgroundColor = .cyan
     }
     
 }

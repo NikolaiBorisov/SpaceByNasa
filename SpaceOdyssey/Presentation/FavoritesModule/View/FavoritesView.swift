@@ -22,6 +22,8 @@ final class FavoritesView: UIView {
         collectionView.register(cell: FavoritesCell.self)
         collectionView.backgroundColor = .black
         collectionView.showsVerticalScrollIndicator = true
+        guard let image = AppImage.backgroundImg else { return collectionView }
+        collectionView.setBackgroundWith(image: image)
         return collectionView
     }()
     

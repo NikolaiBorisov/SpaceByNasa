@@ -28,6 +28,7 @@ final class FavoritesViewController: UIViewController {
         setupView()
         viewModel.setupCallback()
         setupNavBar()
+        setupRightBarButtonItem()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,6 +48,18 @@ final class FavoritesViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Actions
+    
+    @objc private func onGalleryButtonTapped() {
+        let vc = GalleryCollectionViewController(
+            coordinator: coordinator,
+            marsPhotos: [],
+            favoritesPhotos: viewModel.favoritesPhotos,
+            isMarsRover: false
+        )
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     // MARK: - Private Methods
     
     private func setupNavBar() {
@@ -61,6 +74,15 @@ final class FavoritesViewController: UIViewController {
         viewModel.mainView.favoritesCollectionView.dataSource = self
     }
     
+    private func setupRightBarButtonItem() {
+        navigationItem.rightBarButtonItem = setupRightNavItem(
+            self,
+            action: #selector(onGalleryButtonTapped),
+            title: "",
+            icon: AppImage.chevronRight2
+        )
+    }
+    
 }
 
 // MARK: - UICollectionViewDataSource
@@ -68,12 +90,11 @@ final class FavoritesViewController: UIViewController {
 extension FavoritesViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        viewModel.imgArrayCD.count
+        viewModel.favoritesPhotos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
-        guard let cell = collectionView.cellForItem(at: indexPath) as? FavoritesCell else { return }
     }
     
     func collectionView(
@@ -81,12 +102,12 @@ extension FavoritesViewController: UICollectionViewDataSource {
         cellForItemAt indexPath: IndexPath
     ) -> UICollectionViewCell {
         let cell: FavoritesCell = collectionView.dequeueCell(for: indexPath)
-        let item = viewModel.imgArrayCD[indexPath.row]
+        let item = viewModel.favoritesPhotos[indexPath.row]
         cell.configureCell(with: item)
         cell.onDeleteButtonTapped = { [weak self] in
             guard let self = self else { return }
             self.viewModel.coreDataManager.delete(object: item)
-            self.viewModel.imgArrayCD.remove(at: indexPath.row)
+            self.viewModel.favoritesPhotos.remove(at: indexPath.row)
             collectionView.reloadData()
         }
         return cell
