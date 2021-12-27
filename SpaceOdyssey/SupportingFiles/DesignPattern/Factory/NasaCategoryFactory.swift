@@ -10,12 +10,12 @@ import UIKit
 /// Class creates Categories for CategoriesViewController
 final class NasaCategoryFactory {
     
-    static func makeCategories() -> [NasaCategoriesModel] {
+    static func makeCategories() -> [Category] {
         let categories = [
-            NasaCategoriesModel(title: "APOD", subTitle: "Astronomy Picture of the Day"),
-            NasaCategoriesModel(title: "Asteroids NeoWs", subTitle: "Near Earth Object Web Service"),
-            NasaCategoriesModel(title: "EPIC", subTitle: "Earth Polychromatic Imaging Camera"),
-            NasaCategoriesModel(title: "Mars Rover Photos", subTitle: "Photos gathered by NASA's Curiosity, Opportunity, and Spirit rovers on Mars")
+            Category(title: "APOD", subTitle: "Astronomy Picture of the Day", image: "apodIcon"),
+            Category(title: "Asteroids NeoWs", subTitle: "Near Earth Object Web Service", image: "asteroidIcon"),
+            Category(title: "EPIC", subTitle: "Earth Polychromatic Imaging Camera", image: "epicIcon"),
+            Category(title: "Mars Rover Photos", subTitle: "Photos gathered by NASA's Curiosity, Opportunity, and Spirit rovers on Mars", image: "marsIcon")
         ]
         return categories
     }

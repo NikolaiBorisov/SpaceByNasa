@@ -14,7 +14,7 @@ final class CategoriesCell: UITableViewCell {
     
     // MARK: - Private Properties
     
-    private lazy var categoriesTitleLabel: UILabel = {
+    private lazy var categoryTitleLabel: UILabel = {
         $0.textAlignment = .left
         $0.textColor = .white
         $0.numberOfLines = 1
@@ -24,7 +24,7 @@ final class CategoriesCell: UITableViewCell {
         return $0
     }(UILabel())
     
-    private lazy var categoriesSubtitleLabel: UILabel = {
+    private lazy var categorySubtitleLabel: UILabel = {
         $0.textAlignment = .left
         $0.textColor = .lightGray
         $0.numberOfLines = 0
@@ -40,13 +40,12 @@ final class CategoriesCell: UITableViewCell {
         $0.distribution = .fillProportionally
         $0.spacing = 5
         return $0
-    }(UIStackView(arrangedSubviews: [categoriesTitleLabel, categoriesSubtitleLabel]))
+    }(UIStackView(arrangedSubviews: [categoryTitleLabel, categorySubtitleLabel]))
     
-    private lazy var nasaLogoImageView: UIImageView = {
+    private lazy var categoryIcon: UIImageView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.contentMode = .scaleAspectFill
         $0.clipsToBounds = true
-        $0.image = AppImage.nasaLogo
         return $0
     }(UIImageView())
     
@@ -88,15 +87,16 @@ final class CategoriesCell: UITableViewCell {
             })
     }
     
-    public func configureCell(with item: NasaCategoriesModel) {
-        categoriesTitleLabel.text = item.title
-        categoriesSubtitleLabel.text = item.subTitle
+    public func configureCell(with item: Category) {
+        categoryTitleLabel.text = item.title
+        categorySubtitleLabel.text = item.subTitle
+        categoryIcon.image = UIImage(named: item.image)
     }
     
     // MARK: - Private Methods
     
     private func setupNasaLogo() {
-        nasaLogoImageView.roundViewWith(cornerRadius: nasaLogoImageView.frame.height / 2)
+        categoryIcon.roundViewWith(cornerRadius: categoryIcon.frame.height / 2)
     }
     
     private func setupView() {
@@ -108,19 +108,19 @@ final class CategoriesCell: UITableViewCell {
     
     private func addSubviews() {
         contentView.addSubview(labelStackView)
-        contentView.addSubview(nasaLogoImageView)
+        contentView.addSubview(categoryIcon)
     }
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
             labelStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
-            labelStackView.trailingAnchor.constraint(equalTo: nasaLogoImageView.leadingAnchor),
+            labelStackView.trailingAnchor.constraint(equalTo: categoryIcon.leadingAnchor, constant: -5),
             labelStackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             
-            nasaLogoImageView.widthAnchor.constraint(equalToConstant: 50),
-            nasaLogoImageView.heightAnchor.constraint(equalToConstant: 50),
-            nasaLogoImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            nasaLogoImageView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            categoryIcon.widthAnchor.constraint(equalToConstant: 50),
+            categoryIcon.heightAnchor.constraint(equalToConstant: 50),
+            categoryIcon.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            categoryIcon.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
     }
     

@@ -120,7 +120,7 @@ extension GalleryCollectionViewController: UICollectionViewDelegateFlowLayout {
     ) -> CGSize {
         return CGSize(
             width: viewModel.screenWidth / 2,
-            height: viewModel.isSmallDevice ? 250 : 300
+            height: viewModel.screenHeight / 2.5
         )
     }
     
