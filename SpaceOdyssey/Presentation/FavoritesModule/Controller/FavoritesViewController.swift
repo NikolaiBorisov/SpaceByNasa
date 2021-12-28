@@ -139,4 +139,8 @@ extension FavoritesViewController: UICollectionViewDelegateFlowLayout {
         viewModel.insetForSection
     }
     
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        scrollView.scrollIndicators.vertical?.backgroundColor = .cyan
+    }
+    
 }

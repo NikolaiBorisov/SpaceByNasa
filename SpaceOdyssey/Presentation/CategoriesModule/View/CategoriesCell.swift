@@ -10,8 +10,6 @@ import UIKit
 /// Class contains UIElements and methods for CategoriesCell
 final class CategoriesCell: UITableViewCell {
     
-    // MARK: - Public Properties
-    
     // MARK: - Private Properties
     
     private lazy var categoryTitleLabel: UILabel = {
@@ -68,24 +66,10 @@ final class CategoriesCell: UITableViewCell {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        setupNasaLogo()
+        setupCategoryIcon()
     }
     
     // MARK: - Public Methods
-    
-    /// Animate cell appearance
-    public func animateCell(at indexPath: IndexPath) {
-        transform = CGAffineTransform(translationX: 0, y: contentView.frame.height)
-        UIView.animate(
-            withDuration: 0.3,
-            delay: 0.02 * Double(indexPath.row),
-            animations: { [self] in
-                transform = CGAffineTransform(
-                    translationX: contentView.frame.width,
-                    y: contentView.frame.height
-                )
-            })
-    }
     
     public func configureCell(with item: Category) {
         categoryTitleLabel.text = item.title
@@ -95,7 +79,7 @@ final class CategoriesCell: UITableViewCell {
     
     // MARK: - Private Methods
     
-    private func setupNasaLogo() {
+    private func setupCategoryIcon() {
         categoryIcon.roundViewWith(cornerRadius: categoryIcon.frame.height / 2)
     }
     

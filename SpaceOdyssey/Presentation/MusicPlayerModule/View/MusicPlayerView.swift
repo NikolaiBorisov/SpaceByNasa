@@ -13,37 +13,39 @@ final class MusicPlayerView: UIView {
     // MARK: - Public Properties
     
     public var playButtonWasTapped: (() -> Void)?
-    public var pauseButtonWasTapped: (() -> Void)?
-    public var stopButtonWasTapped: (() -> Void)?
+    public var pauseButtonWasTapped: ((Bool) -> Void)?
+    public var stopButtonWasTapped: ((Bool) -> Void)?
     public var nextButtonWasTapped: (() -> Void)?
     
-    public let nowIsPlayingLabel: UILabel = {
+    public var isStopTapped = true
+    public var isPauseTapped = true
+    
+    public var cellHeight: CGFloat = 120
+    
+    public lazy var musicTableView: UITableView = {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.isScrollEnabled = true
+        $0.register(cell: MusicPlayerCell.self)
+        $0.backgroundColor = .black
+        $0.contentInsetAdjustmentBehavior = .never
+        $0.separatorColor = .lightGray
+        guard let image = AppImage.backgroundImg else { return $0 }
+        $0.setBackgroundWith(image: image)
+        return $0
+    }(UITableView())
+    
+    public let nowIsPlayingLabel: UILabelInsets = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.textAlignment = .center
-        $0.textColor = .white
+        $0.textColor = .cyan
         $0.alpha = 0
+        $0.font = .avenirNextMediumOfSize(18)
+        $0.adjustsFontSizeToFitWidth = true
+        $0.minimumScaleFactor = 0.3
         return $0
-    }(UILabel())
+    }(UILabelInsets())
     
-    public lazy var playerContainerView: UIView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.alpha = 0
-        return $0
-    }(UIView())
-    
-    // MARK: - Private Properties
-    
-    private var screenWidth = UIScreen.main.bounds.width
-    
-    private lazy var playButton: UIButton = {
-        $0.setBackgroundImage(AppImage.play, for: .normal)
-        $0.tintColor = .cyan
-        $0.backgroundColor = .black
-        $0.clipsToBounds = true
-        return $0
-    }(UIButton(type: .system))
-    
-    private lazy var pauseButton: UIButton = {
+    public lazy var pauseButton: UIButton = {
         $0.setBackgroundImage(AppImage.pause, for: .normal)
         $0.tintColor = .cyan
         $0.backgroundColor = .black
@@ -51,8 +53,40 @@ final class MusicPlayerView: UIView {
         return $0
     }(UIButton(type: .system))
     
-    private lazy var stopButton: UIButton = {
+    public lazy var stopButton: UIButton = {
         $0.setBackgroundImage(AppImage.stop, for: .normal)
+        $0.tintColor = .cyan
+        $0.backgroundColor = .black
+        $0.clipsToBounds = true
+        return $0
+    }(UIButton(type: .system))
+    
+    public lazy var buttonStackView: UIStackView = {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.axis = .horizontal
+        $0.distribution = .fillEqually
+        $0.spacing = 5
+        $0.layoutMargins = UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20)
+        $0.isLayoutMarginsRelativeArrangement = true
+        $0.alpha = 0
+        return $0
+    }(UIStackView(arrangedSubviews: [playButton, pauseButton, stopButton, nextButton]))
+    
+    // MARK: - Private Properties
+    
+    private var screenWidth = UIScreen.main.bounds.width
+    
+    private let nowIsPlayingLabelHeader: UILabel = {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.textAlignment = .center
+        $0.textColor = .white
+        $0.font = .avenirNextMediumOfSize(18)
+        $0.text = "Now is playing:"
+        return $0
+    }(UILabel())
+    
+    private lazy var playButton: UIButton = {
+        $0.setBackgroundImage(AppImage.play, for: .normal)
         $0.tintColor = .cyan
         $0.backgroundColor = .black
         $0.clipsToBounds = true
@@ -66,14 +100,6 @@ final class MusicPlayerView: UIView {
         $0.clipsToBounds = true
         return $0
     }(UIButton(type: .system))
-    
-    private lazy var buttonStackView: UIStackView = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.axis = .horizontal
-        $0.distribution = .fillEqually
-        $0.spacing = 10
-        return $0
-    }(UIStackView(arrangedSubviews: [playButton, pauseButton, stopButton, nextButton]))
     
     // MARK: - Initializers
     
@@ -97,9 +123,9 @@ final class MusicPlayerView: UIView {
         case playButton:
             playButtonWasTapped?()
         case pauseButton:
-            pauseButtonWasTapped?()
+            pauseButtonWasTapped?(isPauseTapped)
         case stopButton:
-            stopButtonWasTapped?()
+            stopButtonWasTapped?(isStopTapped)
         case nextButton:
             nextButtonWasTapped?()
         default: return
@@ -109,7 +135,7 @@ final class MusicPlayerView: UIView {
     // MARK: - Public Methods
     
     public func configureNowIsPlayingLabel() {
-        nowIsPlayingLabel.text = StringURL.mainThemeMusic?.lastPathComponent
+        nowIsPlayingLabel.text = StringURL.interstellar1?.lastPathComponent
     }
     
     /// Animate UIView
@@ -134,33 +160,37 @@ final class MusicPlayerView: UIView {
     
     private func setupView() {
         backgroundColor = .black
-        playerContainerView.backgroundColor = .black
-        playerContainerView.roundViewWith(cornerRadius: 10, borderColor: .lightGray, borderWidth: 2)
-        nowIsPlayingLabel.roundViewWith(cornerRadius: 10, borderColor: .lightGray, borderWidth: 2)
+        buttonStackView.roundViewWith(cornerRadius: 10, borderColor: .cyan, borderWidth: 2)
+        nowIsPlayingLabel.roundViewWith(cornerRadius: 10, borderColor: .cyan, borderWidth: 2)
+        musicTableView.roundViewWith(cornerRadius: 10, borderColor: .cyan, borderWidth: 2)
     }
     
     private func addSubviews() {
         addSubview(nowIsPlayingLabel)
-        addSubview(playerContainerView)
-        playerContainerView.addSubview(buttonStackView)
+        nowIsPlayingLabel.addSubview(nowIsPlayingLabelHeader)
+        addSubview(buttonStackView)
+        addSubview(musicTableView)
     }
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
             nowIsPlayingLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            nowIsPlayingLabel.bottomAnchor.constraint(equalTo: playerContainerView.topAnchor, constant: -10),
-            nowIsPlayingLabel.heightAnchor.constraint(equalToConstant: 30),
-            nowIsPlayingLabel.widthAnchor.constraint(equalToConstant: screenWidth / 1.5),
+            nowIsPlayingLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
+            nowIsPlayingLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            nowIsPlayingLabel.heightAnchor.constraint(equalToConstant: 60),
             
-            playerContainerView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            playerContainerView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            playerContainerView.heightAnchor.constraint(equalToConstant: 100),
-            playerContainerView.widthAnchor.constraint(equalToConstant: screenWidth / 1.5),
+            nowIsPlayingLabelHeader.centerXAnchor.constraint(equalTo: centerXAnchor),
+            nowIsPlayingLabelHeader.topAnchor.constraint(equalTo: nowIsPlayingLabel.topAnchor),
             
-            buttonStackView.topAnchor.constraint(equalTo: playerContainerView.topAnchor, constant: 10),
-            buttonStackView.bottomAnchor.constraint(equalTo: playerContainerView.bottomAnchor, constant: -10),
-            buttonStackView.leadingAnchor.constraint(equalTo: playerContainerView.leadingAnchor, constant: 10),
-            buttonStackView.trailingAnchor.constraint(equalTo: playerContainerView.trailingAnchor, constant: -10)
+            buttonStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            buttonStackView.topAnchor.constraint(equalTo: nowIsPlayingLabel.bottomAnchor, constant: 5),
+            buttonStackView.heightAnchor.constraint(equalToConstant: 70),
+            buttonStackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            
+            musicTableView.topAnchor.constraint(equalTo: buttonStackView.bottomAnchor, constant: 10),
+            musicTableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            musicTableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10),
+            musicTableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20)
         ])
     }
     

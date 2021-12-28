@@ -16,7 +16,6 @@
 		FA11B6CD2773224900E89634 /* SpaceOdysseyCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11B6CC2773224900E89634 /* SpaceOdysseyCellProtocol.swift */; };
 		FA11F27B276632C000C61C87 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F27A276632C000C61C87 /* MusicPlayerViewController.swift */; };
 		FA11F27D276632F500C61C87 /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F27C276632F500C61C87 /* MusicPlayerView.swift */; };
-		FA11F27F2766700000C61C87 /* Zemlyane.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA11F27E27666FFF00C61C87 /* Zemlyane.mp3 */; };
 		FA11F2812766990600C61C87 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F2802766990500C61C87 /* UIDevice+Extension.swift */; };
 		FA1B31FA276A0EF1007F6922 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1B31F9276A0EF1007F6922 /* UIViewController+Extension.swift */; };
 		FA31462A2762157400FE997E /* SpaceOdysseyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3146292762157400FE997E /* SpaceOdysseyTests.swift */; };
@@ -54,7 +53,6 @@
 		FA31469C276215E400FE997E /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31467B276215E300FE997E /* UITableView+Extension.swift */; };
 		FA31469D276215E400FE997E /* RefreshControlFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31467D276215E300FE997E /* RefreshControlFactory.swift */; };
 		FA3146A427623FFF00FE997E /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3146A327623FFF00FE997E /* MusicPlayer.swift */; };
-		FA43D67527689AC0005B9C87 /* Interstellar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA43D67427689AC0005B9C87 /* Interstellar.mp3 */; };
 		FA43D67A27689D1B005B9C87 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D67927689D1A005B9C87 /* FavoritesViewController.swift */; };
 		FA43D67C27689D73005B9C87 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D67B27689D73005B9C87 /* FavoritesView.swift */; };
 		FA43D67E27689EE8005B9C87 /* FavoritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D67D27689EE8005B9C87 /* FavoritesCell.swift */; };
@@ -65,6 +63,10 @@
 		FA49D2F42779D82700BDF807 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49D2F32779D82700BDF807 /* JSONParser.swift */; };
 		FA49D2F62779D9D900BDF807 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49D2F52779D9D900BDF807 /* JSON.swift */; };
 		FA49D2F82779DA3800BDF807 /* JSONDataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49D2F72779DA3800BDF807 /* JSONDataFetcherService.swift */; };
+		FA5CE81F2779F80F0083CD1C /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CE81E2779F80E0083CD1C /* Track.swift */; };
+		FA5CE8212779F89D0083CD1C /* MusicFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CE8202779F89D0083CD1C /* MusicFactory.swift */; };
+		FA5CE8242779F9A50083CD1C /* MusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CE8232779F9A50083CD1C /* MusicViewModel.swift */; };
+		FA5CE8262779FFD70083CD1C /* MusicPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CE8252779FFD60083CD1C /* MusicPlayerCell.swift */; };
 		FA6476D02765D26600519921 /* LoadableInfoAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476CF2765D26600519921 /* LoadableInfoAlertController+Extension.swift */; };
 		FA6476D22765D9E400519921 /* InternetAvailabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476D12765D9E400519921 /* InternetAvailabilityService.swift */; };
 		FA6476D72765E84F00519921 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476D62765E84F00519921 /* TabBarController.swift */; };
@@ -82,6 +84,18 @@
 		FA8B72BB2775E2EE0030693B /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B72BA2775E2EE0030693B /* AppFont.swift */; };
 		FA8B72BD2775E4B80030693B /* AppHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B72BC2775E4B80030693B /* AppHeader.swift */; };
 		FA8B72BF2775F55F0030693B /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B72BE2775F55F0030693B /* UIImageView+Extension.swift */; };
+		FAA25213277AEAC000D4CE8E /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25212277AEAC000D4CE8E /* DateFormatters.swift */; };
+		FAA25215277AF17700D4CE8E /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25214277AF17700D4CE8E /* UITableViewCell+Extension.swift */; };
+		FAA25217277AF5CF00D4CE8E /* S.T.A.Y. (Interstellar Main Theme).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAA25216277AF5CF00D4CE8E /* S.T.A.Y. (Interstellar Main Theme).mp3 */; };
+		FAA25219277AF8A200D4CE8E /* First Step(OST Interstellar).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAA25218277AF8A200D4CE8E /* First Step(OST Interstellar).mp3 */; };
+		FAA2521B277AF8A800D4CE8E /* Mountains(OST Interstellar).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAA2521A277AF8A800D4CE8E /* Mountains(OST Interstellar).mp3 */; };
+		FAA2521D277B1B7D00D4CE8E /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2521C277B1B7D00D4CE8E /* UIImage+Extension.swift */; };
+		FAA25220277B1E6900D4CE8E /* equaliser.gif in Resources */ = {isa = PBXBuildFile; fileRef = FAA2521F277B1E6900D4CE8E /* equaliser.gif */; };
+		FAA25222277B1F3800D4CE8E /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25221277B1F3800D4CE8E /* Gif.swift */; };
+		FAA25227277B213300D4CE8E /* TrackInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25226277B213300D4CE8E /* TrackInfoViewController.swift */; };
+		FAA2522A277B23D400D4CE8E /* TrackInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25229277B23D400D4CE8E /* TrackInfoViewModel.swift */; };
+		FAA2522C277B242A00D4CE8E /* TrackInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2522B277B242A00D4CE8E /* TrackInfoView.swift */; };
+		FAA2522E277B255600D4CE8E /* TrackInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2522D277B255600D4CE8E /* TrackInfoCell.swift */; };
 		FAB5DF9D27732A2A0008BE67 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DF9C27732A2A0008BE67 /* Coordinator.swift */; };
 		FAB5DF9F27732F8A0008BE67 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DF9E27732F8A0008BE67 /* MainCoordinator.swift */; };
 		FAB5DFA127733C2E0008BE67 /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DFA027733C2D0008BE67 /* ScreenFactory.swift */; };
@@ -100,7 +114,7 @@
 		FAE67F1027633E4800BBB2C1 /* EPICViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE67F0F27633E4800BBB2C1 /* EPICViewModel.swift */; };
 		FAE67F122763400A00BBB2C1 /* EPICCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE67F112763400A00BBB2C1 /* EPICCell.swift */; };
 		FAE67F162763719200BBB2C1 /* AccessoryViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE67F152763719200BBB2C1 /* AccessoryViewFactory.swift */; };
-		FAE67F192763B19F00BBB2C1 /* UILabelDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE67F182763B19F00BBB2C1 /* UILabelDecorator.swift */; };
+		FAE67F192763B19F00BBB2C1 /* UILabelInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE67F182763B19F00BBB2C1 /* UILabelInsets.swift */; };
 		FAF467BF276310B200A04E1C /* HeaderViewLabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF467BE276310B200A04E1C /* HeaderViewLabelFactory.swift */; };
 /* End PBXBuildFile section */
 
@@ -131,7 +145,6 @@
 		FA11B6CC2773224900E89634 /* SpaceOdysseyCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceOdysseyCellProtocol.swift; sourceTree = "<group>"; };
 		FA11F27A276632C000C61C87 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
 		FA11F27C276632F500C61C87 /* MusicPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerView.swift; sourceTree = "<group>"; };
-		FA11F27E27666FFF00C61C87 /* Zemlyane.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Zemlyane.mp3; sourceTree = "<group>"; };
 		FA11F2802766990500C61C87 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		FA1B31F9276A0EF1007F6922 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		FA31460F2762157100FE997E /* SpaceOdyssey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceOdyssey.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,7 +187,6 @@
 		FA31467B276215E300FE997E /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		FA31467D276215E300FE997E /* RefreshControlFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshControlFactory.swift; sourceTree = "<group>"; };
 		FA3146A327623FFF00FE997E /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
-		FA43D67427689AC0005B9C87 /* Interstellar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Interstellar.mp3; sourceTree = "<group>"; };
 		FA43D67927689D1A005B9C87 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		FA43D67B27689D73005B9C87 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		FA43D67D27689EE8005B9C87 /* FavoritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCell.swift; sourceTree = "<group>"; };
@@ -185,6 +197,10 @@
 		FA49D2F32779D82700BDF807 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		FA49D2F52779D9D900BDF807 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
 		FA49D2F72779DA3800BDF807 /* JSONDataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataFetcherService.swift; sourceTree = "<group>"; };
+		FA5CE81E2779F80E0083CD1C /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		FA5CE8202779F89D0083CD1C /* MusicFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicFactory.swift; sourceTree = "<group>"; };
+		FA5CE8232779F9A50083CD1C /* MusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewModel.swift; sourceTree = "<group>"; };
+		FA5CE8252779FFD60083CD1C /* MusicPlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerCell.swift; sourceTree = "<group>"; };
 		FA6476CF2765D26600519921 /* LoadableInfoAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoadableInfoAlertController+Extension.swift"; sourceTree = "<group>"; };
 		FA6476D12765D9E400519921 /* InternetAvailabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetAvailabilityService.swift; sourceTree = "<group>"; };
 		FA6476D62765E84F00519921 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
@@ -202,6 +218,18 @@
 		FA8B72BA2775E2EE0030693B /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
 		FA8B72BC2775E4B80030693B /* AppHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHeader.swift; sourceTree = "<group>"; };
 		FA8B72BE2775F55F0030693B /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		FAA25212277AEAC000D4CE8E /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
+		FAA25214277AF17700D4CE8E /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		FAA25216277AF5CF00D4CE8E /* S.T.A.Y. (Interstellar Main Theme).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "S.T.A.Y. (Interstellar Main Theme).mp3"; sourceTree = "<group>"; };
+		FAA25218277AF8A200D4CE8E /* First Step(OST Interstellar).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "First Step(OST Interstellar).mp3"; sourceTree = "<group>"; };
+		FAA2521A277AF8A800D4CE8E /* Mountains(OST Interstellar).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mountains(OST Interstellar).mp3"; sourceTree = "<group>"; };
+		FAA2521C277B1B7D00D4CE8E /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		FAA2521F277B1E6900D4CE8E /* equaliser.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = equaliser.gif; sourceTree = "<group>"; };
+		FAA25221277B1F3800D4CE8E /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
+		FAA25226277B213300D4CE8E /* TrackInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoViewController.swift; sourceTree = "<group>"; };
+		FAA25229277B23D400D4CE8E /* TrackInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoViewModel.swift; sourceTree = "<group>"; };
+		FAA2522B277B242A00D4CE8E /* TrackInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoView.swift; sourceTree = "<group>"; };
+		FAA2522D277B255600D4CE8E /* TrackInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoCell.swift; sourceTree = "<group>"; };
 		FAB5DF9C27732A2A0008BE67 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FAB5DF9E27732F8A0008BE67 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		FAB5DFA027733C2D0008BE67 /* ScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactory.swift; sourceTree = "<group>"; };
@@ -220,7 +248,7 @@
 		FAE67F0F27633E4800BBB2C1 /* EPICViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPICViewModel.swift; sourceTree = "<group>"; };
 		FAE67F112763400A00BBB2C1 /* EPICCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPICCell.swift; sourceTree = "<group>"; };
 		FAE67F152763719200BBB2C1 /* AccessoryViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryViewFactory.swift; sourceTree = "<group>"; };
-		FAE67F182763B19F00BBB2C1 /* UILabelDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelDecorator.swift; sourceTree = "<group>"; };
+		FAE67F182763B19F00BBB2C1 /* UILabelInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelInsets.swift; sourceTree = "<group>"; };
 		FAF467BE276310B200A04E1C /* HeaderViewLabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewLabelFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -307,6 +335,8 @@
 			children = (
 				FA11F2782766328400C61C87 /* Controller */,
 				FA11F2792766328C00C61C87 /* View */,
+				FA5CE8222779F9890083CD1C /* ViewModel */,
+				FA5CE81D2779F7FE0083CD1C /* Model */,
 			);
 			path = MusicPlayerModule;
 			sourceTree = "<group>";
@@ -323,6 +353,7 @@
 			isa = PBXGroup;
 			children = (
 				FA11F27C276632F500C61C87 /* MusicPlayerView.swift */,
+				FA5CE8252779FFD60083CD1C /* MusicPlayerCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -404,6 +435,7 @@
 				FA1A145E276513B10075AAF1 /* MarsRoversModule */,
 				FAE67F00276328A300BBB2C1 /* NasaSingleImageModule */,
 				FA11F2772766326A00C61C87 /* MusicPlayerModule */,
+				FAA25223277B20B600D4CE8E /* DetailedMusicPlayerModule */,
 				FAAED16C2779AA4700EB0D07 /* FavoritesModule */,
 				FA8ABFDD27786515002656F6 /* PhotoGalleryModule */,
 				FA11B6CB2773221F00E89634 /* Protocols */,
@@ -550,6 +582,8 @@
 		FA31466C276215E300FE997E /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				FAA2521E277B1E4000D4CE8E /* Gif */,
+				FAA25211277AEAA200D4CE8E /* DateFormatters */,
 				FACEFFF8276B517300B0F2A1 /* DesignPattern */,
 				FA31466D276215E300FE997E /* Localisation */,
 				FA314671276215E300FE997E /* Constants */,
@@ -578,6 +612,7 @@
 				FA8B72BA2775E2EE0030693B /* AppFont.swift */,
 				FA8B72BC2775E4B80030693B /* AppHeader.swift */,
 				FA49D2F52779D9D900BDF807 /* JSON.swift */,
+				FAA25221277B1F3800D4CE8E /* Gif.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -598,6 +633,8 @@
 				FA8B72B42775D86D0030693B /* UITabBarController+Extension.swift */,
 				FA8B72BE2775F55F0030693B /* UIImageView+Extension.swift */,
 				FA8ABFEC27788ACC002656F6 /* UIScrollView+Extension.swift */,
+				FAA25214277AF17700D4CE8E /* UITableViewCell+Extension.swift */,
+				FAA2521C277B1B7D00D4CE8E /* UIImage+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -610,6 +647,7 @@
 				FAE026842762879700F59038 /* NasaCategoryFactory.swift */,
 				FAF467BE276310B200A04E1C /* HeaderViewLabelFactory.swift */,
 				FAE67F152763719200BBB2C1 /* AccessoryViewFactory.swift */,
+				FA5CE8202779F89D0083CD1C /* MusicFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -626,8 +664,9 @@
 		FA31469F27623F6600FE997E /* Tracks */ = {
 			isa = PBXGroup;
 			children = (
-				FA11F27E27666FFF00C61C87 /* Zemlyane.mp3 */,
-				FA43D67427689AC0005B9C87 /* Interstellar.mp3 */,
+				FAA25216277AF5CF00D4CE8E /* S.T.A.Y. (Interstellar Main Theme).mp3 */,
+				FAA25218277AF8A200D4CE8E /* First Step(OST Interstellar).mp3 */,
+				FAA2521A277AF8A800D4CE8E /* Mountains(OST Interstellar).mp3 */,
 			);
 			path = Tracks;
 			sourceTree = "<group>";
@@ -689,6 +728,22 @@
 				FA49D2F32779D82700BDF807 /* JSONParser.swift */,
 			);
 			path = JSONParserManager;
+			sourceTree = "<group>";
+		};
+		FA5CE81D2779F7FE0083CD1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA5CE81E2779F80E0083CD1C /* Track.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA5CE8222779F9890083CD1C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA5CE8232779F9A50083CD1C /* MusicViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		FA6476D32765E7F400519921 /* TabBar */ = {
@@ -758,6 +813,57 @@
 				FA8ABFEA27786E43002656F6 /* ZoomAndSnapFlowLayout.swift */,
 			);
 			path = Subview;
+			sourceTree = "<group>";
+		};
+		FAA25211277AEAA200D4CE8E /* DateFormatters */ = {
+			isa = PBXGroup;
+			children = (
+				FAA25212277AEAC000D4CE8E /* DateFormatters.swift */,
+			);
+			path = DateFormatters;
+			sourceTree = "<group>";
+		};
+		FAA2521E277B1E4000D4CE8E /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2521F277B1E6900D4CE8E /* equaliser.gif */,
+			);
+			path = Gif;
+			sourceTree = "<group>";
+		};
+		FAA25223277B20B600D4CE8E /* DetailedMusicPlayerModule */ = {
+			isa = PBXGroup;
+			children = (
+				FAA25224277B20D900D4CE8E /* Controller */,
+				FAA25225277B20E000D4CE8E /* View */,
+				FAA25228277B23C800D4CE8E /* ViewModel */,
+			);
+			path = DetailedMusicPlayerModule;
+			sourceTree = "<group>";
+		};
+		FAA25224277B20D900D4CE8E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAA25226277B213300D4CE8E /* TrackInfoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FAA25225277B20E000D4CE8E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2522B277B242A00D4CE8E /* TrackInfoView.swift */,
+				FAA2522D277B255600D4CE8E /* TrackInfoCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAA25228277B23C800D4CE8E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAA25229277B23D400D4CE8E /* TrackInfoViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		FAAED16C2779AA4700EB0D07 /* FavoritesModule */ = {
@@ -917,7 +1023,7 @@
 		FAE67F172763B15C00BBB2C1 /* Decorator */ = {
 			isa = PBXGroup;
 			children = (
-				FAE67F182763B19F00BBB2C1 /* UILabelDecorator.swift */,
+				FAE67F182763B19F00BBB2C1 /* UILabelInsets.swift */,
 			);
 			path = Decorator;
 			sourceTree = "<group>";
@@ -1027,12 +1133,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA11F27F2766700000C61C87 /* Zemlyane.mp3 in Resources */,
 				FA314692276215E400FE997E /* LaunchScreen.storyboard in Resources */,
 				FA314698276215E400FE997E /* Assets.xcassets in Resources */,
 				FA49D2F12779D76000BDF807 /* categoriesJSON.json in Resources */,
-				FA43D67527689AC0005B9C87 /* Interstellar.mp3 in Resources */,
 				FA314693276215E400FE997E /* Localizable.strings in Resources */,
+				FAA25220277B1E6900D4CE8E /* equaliser.gif in Resources */,
+				FAA25219277AF8A200D4CE8E /* First Step(OST Interstellar).mp3 in Resources */,
+				FAA2521B277AF8A800D4CE8E /* Mountains(OST Interstellar).mp3 in Resources */,
+				FAA25217277AF5CF00D4CE8E /* S.T.A.Y. (Interstellar Main Theme).mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1068,7 +1176,7 @@
 				FA43D6852768CD1A005B9C87 /* FavoriteSpaceOdyssey.xcdatamodeld in Sources */,
 				FA6476D72765E84F00519921 /* TabBarController.swift in Sources */,
 				FAE67F0327632FC400BBB2C1 /* SingleImageViewModel.swift in Sources */,
-				FAE67F192763B19F00BBB2C1 /* UILabelDecorator.swift in Sources */,
+				FAE67F192763B19F00BBB2C1 /* UILabelInsets.swift in Sources */,
 				FA43D6812768A258005B9C87 /* FavoritesViewModel.swift in Sources */,
 				FA11F27D276632F500C61C87 /* MusicPlayerView.swift in Sources */,
 				FAE67F0C27633CD800BBB2C1 /* EPICViewController.swift in Sources */,
@@ -1079,6 +1187,8 @@
 				FA04459E27624F6800597761 /* CategoriesCell.swift in Sources */,
 				FA31468A276215E400FE997E /* MarsRoverCell.swift in Sources */,
 				FAF467BF276310B200A04E1C /* HeaderViewLabelFactory.swift in Sources */,
+				FA5CE8212779F89D0083CD1C /* MusicFactory.swift in Sources */,
+				FAA25227277B213300D4CE8E /* TrackInfoViewController.swift in Sources */,
 				FAB5DF9D27732A2A0008BE67 /* Coordinator.swift in Sources */,
 				FAE67F0E27633D3300BBB2C1 /* EPICView.swift in Sources */,
 				FA6476D02765D26600519921 /* LoadableInfoAlertController+Extension.swift in Sources */,
@@ -1087,7 +1197,9 @@
 				FA1B31FA276A0EF1007F6922 /* UIViewController+Extension.swift in Sources */,
 				FA314691276215E400FE997E /* NetworkDataFetcher.swift in Sources */,
 				FA314699276215E400FE997E /* String+Extension.swift in Sources */,
+				FAA2522A277B23D400D4CE8E /* TrackInfoViewModel.swift in Sources */,
 				FA31468F276215E400FE997E /* NetworkService.swift in Sources */,
+				FAA25222277B1F3800D4CE8E /* Gif.swift in Sources */,
 				FA49D2F62779D9D900BDF807 /* JSON.swift in Sources */,
 				FA31468C276215E400FE997E /* AppDelegate.swift in Sources */,
 				FA3146A427623FFF00FE997E /* MusicPlayer.swift in Sources */,
@@ -1099,8 +1211,11 @@
 				FA43D67C27689D73005B9C87 /* FavoritesView.swift in Sources */,
 				FA43D68B2768D94F005B9C87 /* CoreDataManagerImpl.swift in Sources */,
 				FACEFFFA276B51A800B0F2A1 /* FileManager.swift in Sources */,
+				FAA25215277AF17700D4CE8E /* UITableViewCell+Extension.swift in Sources */,
 				FA314683276215E400FE997E /* ApodDTO.swift in Sources */,
 				FA8ABFE627786953002656F6 /* GalleryView.swift in Sources */,
+				FAA2522C277B242A00D4CE8E /* TrackInfoView.swift in Sources */,
+				FA5CE81F2779F80F0083CD1C /* Track.swift in Sources */,
 				FA31468D276215E400FE997E /* SceneDelegate.swift in Sources */,
 				FA04459A27624E3D00597761 /* CategoriesViewController.swift in Sources */,
 				FA314697276215E400FE997E /* StringURL.swift in Sources */,
@@ -1110,6 +1225,7 @@
 				FA04459C27624EF800597761 /* CategoriesView.swift in Sources */,
 				FA31469A276215E400FE997E /* UIView+Extension.swift in Sources */,
 				FA11F27B276632C000C61C87 /* MusicPlayerViewController.swift in Sources */,
+				FAA25213277AEAC000D4CE8E /* DateFormatters.swift in Sources */,
 				FA11F2812766990600C61C87 /* UIDevice+Extension.swift in Sources */,
 				FA314695276215E400FE997E /* Localization.swift in Sources */,
 				FA6476DC2765EB3500519921 /* NasaTabBarView.swift in Sources */,
@@ -1119,7 +1235,10 @@
 				FA8B72BF2775F55F0030693B /* UIImageView+Extension.swift in Sources */,
 				FAB5DF9F27732F8A0008BE67 /* MainCoordinator.swift in Sources */,
 				FA31467F276215E300FE997E /* SingleImageView.swift in Sources */,
+				FAA2521D277B1B7D00D4CE8E /* UIImage+Extension.swift in Sources */,
 				FA314687276215E400FE997E /* MarsRoverViewModel.swift in Sources */,
+				FA5CE8262779FFD70083CD1C /* MusicPlayerCell.swift in Sources */,
+				FA5CE8242779F9A50083CD1C /* MusicViewModel.swift in Sources */,
 				FA314686276215E400FE997E /* ActivityIndicatorView.swift in Sources */,
 				FACF008A2764AB7C00A7F9EA /* AsteroidView.swift in Sources */,
 				FAE67F162763719200BBB2C1 /* AccessoryViewFactory.swift in Sources */,
@@ -1141,6 +1260,7 @@
 				FA8ABFE12778672D002656F6 /* GalleryCollectionViewController.swift in Sources */,
 				FAB5DFA127733C2E0008BE67 /* ScreenFactory.swift in Sources */,
 				FA0445A627625C3000597761 /* Category.swift in Sources */,
+				FAA2522E277B255600D4CE8E /* TrackInfoCell.swift in Sources */,
 				FA8B72BD2775E4B80030693B /* AppHeader.swift in Sources */,
 				FA314689276215E400FE997E /* MarsRoverDTO.swift in Sources */,
 			);

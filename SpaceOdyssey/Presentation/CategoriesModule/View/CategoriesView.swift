@@ -24,8 +24,6 @@ final class CategoriesView: UIView {
         return $0
     }(UITableView())
     
-    // MARK: - Private Properties
-    
     // MARK: - Initializers
     
     override init(frame: CGRect) {

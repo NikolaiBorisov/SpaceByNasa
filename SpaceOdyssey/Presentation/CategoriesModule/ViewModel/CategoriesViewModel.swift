@@ -24,7 +24,7 @@ final class CategoriesViewModel {
     // MARK: - Public Methods
     
     public func playMusic() {
-        guard let url = StringURL.mainThemeMusic else { return }
+        guard let url = StringURL.interstellar1 else { return }
         musicPlayer.playSound(withURL: url)
     }
     

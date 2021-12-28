@@ -29,4 +29,11 @@ final class MusicPlayer {
         }
     }
     
+    /// Get audio track duration from URL
+    public func getDuration(for track: URL) -> Double {
+        let item = AVPlayerItem(url: track)
+        let duration = Double(item.asset.duration.value) / Double(item.asset.duration.timescale)
+        return duration
+    }
+    
 }

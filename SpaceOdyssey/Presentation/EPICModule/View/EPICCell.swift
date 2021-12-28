@@ -68,20 +68,6 @@ final class EPICCell: UITableViewCell {
     
     // MARK: - Public Methods
     
-    /// Animate cell appearance
-    public func animateCell(at indexPath: IndexPath) {
-        transform = CGAffineTransform(translationX: 0, y: contentView.frame.height)
-        UIView.animate(
-            withDuration: 0.3,
-            delay: 0.02 * Double(indexPath.row),
-            animations: { [self] in
-                transform = CGAffineTransform(
-                    translationX: contentView.frame.width,
-                    y: contentView.frame.height
-                )
-            })
-    }
-    
     public func configureFirstSectionCell(with item: EpicDTO) {
         dateLabel.text = item.caption + "." + "\nDiscover the picture of the Earth at specific time"
         dateLabel.font = .avenirNextMediumOfSize(16)
