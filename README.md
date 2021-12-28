@@ -20,9 +20,8 @@ App Stack:
 14. Localization;
 15. Animation;
 16. Local JSON for storing data;
-
-In Progress:
-1. Music player;
+17. AVFoundation;
+18. Music player;
 
 Screenshots:
 
