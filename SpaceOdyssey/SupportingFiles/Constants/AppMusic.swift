@@ -15,6 +15,11 @@ enum AppMusic {
     
     // MARK: - Tracks
     
-    static let interstellar = "Interstellar"
-    static let zemlyane = "Zemlyane"
+    static let stay = "S.T.A.Y. (Interstellar Main Theme)"
+    static let mountains = "Mountains(OST Interstellar)"
+    static let firstStep = "First Step(OST Interstellar)"
+    
+    // MARK: - Author
+    
+    static let hansZimmer = "Hans Zimmer"
 }

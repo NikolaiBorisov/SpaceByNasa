@@ -48,7 +48,7 @@ final class SingleImageView: UIView, UIGestureRecognizerDelegate {
         return $0
     }(UIButton(type: .system))
     
-    public let epicAndMarsInfoLabel: UILabelDecorator = {
+    public let epicAndMarsInfoLabel: UILabelInsets = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.textAlignment = .left
         $0.numberOfLines = 0
@@ -59,7 +59,7 @@ final class SingleImageView: UIView, UIGestureRecognizerDelegate {
         $0.adjustsFontSizeToFitWidth = true
         $0.minimumScaleFactor = 0.3
         return $0
-    }(UILabelDecorator())
+    }(UILabelInsets())
     
     public var saveButton: UIButton = {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -75,7 +75,7 @@ final class SingleImageView: UIView, UIGestureRecognizerDelegate {
     private var isChevronLeftButtonTapped = false
     private var smallDevice = UIDevice.isSmallDevice
     
-    private let topInfoLabel: UILabelDecorator = {
+    private let topInfoLabel: UILabelInsets = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.textAlignment = .center
         $0.numberOfLines = 0
@@ -84,7 +84,7 @@ final class SingleImageView: UIView, UIGestureRecognizerDelegate {
         $0.textColor = .cyan
         $0.text = "Long press on picture\nfor adding to your library "
         return $0
-    }(UILabelDecorator())
+    }(UILabelInsets())
     
     private var chevronRightButton: UIButton = {
         $0.translatesAutoresizingMaskIntoConstraints = false

@@ -18,3 +18,14 @@ extension UITableView {
         return dequeueReusableCell(withIdentifier: T.identifier, for: indexPath) as! T
     }
 }
+
+// MARK: - BackgroundImage
+
+extension UITableView {
+    func setBackgroundWith(image: UIImage) {
+        let bgImage = UIImageView()
+        bgImage.image = image
+        bgImage.contentMode = .scaleToFill
+        self.backgroundView = bgImage
+    }
+}

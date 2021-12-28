@@ -13,11 +13,14 @@ final class MusicPlayerView: UIView {
     // MARK: - Public Properties
     
     public var playButtonWasTapped: (() -> Void)?
-    public var pauseButtonWasTapped: (() -> Void)?
-    public var stopButtonWasTapped: (() -> Void)?
+    public var pauseButtonWasTapped: ((Bool) -> Void)?
+    public var stopButtonWasTapped: ((Bool) -> Void)?
     public var nextButtonWasTapped: (() -> Void)?
     
-    public var cellHeight: CGFloat = 80
+    public var isStopTapped = true
+    public var isPauseTapped = true
+    
+    public var cellHeight: CGFloat = 120
     
     public lazy var musicTableView: UITableView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -26,24 +29,44 @@ final class MusicPlayerView: UIView {
         $0.backgroundColor = .black
         $0.contentInsetAdjustmentBehavior = .never
         $0.separatorColor = .lightGray
+        guard let image = AppImage.backgroundImg else { return $0 }
+        $0.setBackgroundWith(image: image)
         return $0
     }(UITableView())
     
-    public let nowIsPlayingLabel: UILabel = {
+    public let nowIsPlayingLabel: UILabelInsets = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.textAlignment = .center
-        $0.textColor = .white
+        $0.textColor = .cyan
         $0.alpha = 0
         $0.font = .avenirNextMediumOfSize(18)
+        $0.adjustsFontSizeToFitWidth = true
+        $0.minimumScaleFactor = 0.3
         return $0
-    }(UILabel())
+    }(UILabelInsets())
+    
+    public lazy var pauseButton: UIButton = {
+        $0.setBackgroundImage(AppImage.pause, for: .normal)
+        $0.tintColor = .cyan
+        $0.backgroundColor = .black
+        $0.clipsToBounds = true
+        return $0
+    }(UIButton(type: .system))
+    
+    public lazy var stopButton: UIButton = {
+        $0.setBackgroundImage(AppImage.stop, for: .normal)
+        $0.tintColor = .cyan
+        $0.backgroundColor = .black
+        $0.clipsToBounds = true
+        return $0
+    }(UIButton(type: .system))
     
     public lazy var buttonStackView: UIStackView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.axis = .horizontal
         $0.distribution = .fillEqually
         $0.spacing = 5
-        $0.layoutMargins = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
+        $0.layoutMargins = UIEdgeInsets(top: 5, left: 20, bottom: 5, right: 20)
         $0.isLayoutMarginsRelativeArrangement = true
         $0.alpha = 0
         return $0
@@ -53,24 +76,17 @@ final class MusicPlayerView: UIView {
     
     private var screenWidth = UIScreen.main.bounds.width
     
+    private let nowIsPlayingLabelHeader: UILabel = {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.textAlignment = .center
+        $0.textColor = .white
+        $0.font = .avenirNextMediumOfSize(18)
+        $0.text = "Now is playing:"
+        return $0
+    }(UILabel())
+    
     private lazy var playButton: UIButton = {
         $0.setBackgroundImage(AppImage.play, for: .normal)
-        $0.tintColor = .cyan
-        $0.backgroundColor = .black
-        $0.clipsToBounds = true
-        return $0
-    }(UIButton(type: .system))
-    
-    private lazy var pauseButton: UIButton = {
-        $0.setBackgroundImage(AppImage.pause, for: .normal)
-        $0.tintColor = .cyan
-        $0.backgroundColor = .black
-        $0.clipsToBounds = true
-        return $0
-    }(UIButton(type: .system))
-    
-    private lazy var stopButton: UIButton = {
-        $0.setBackgroundImage(AppImage.stop, for: .normal)
         $0.tintColor = .cyan
         $0.backgroundColor = .black
         $0.clipsToBounds = true
@@ -107,9 +123,9 @@ final class MusicPlayerView: UIView {
         case playButton:
             playButtonWasTapped?()
         case pauseButton:
-            pauseButtonWasTapped?()
+            pauseButtonWasTapped?(isPauseTapped)
         case stopButton:
-            stopButtonWasTapped?()
+            stopButtonWasTapped?(isStopTapped)
         case nextButton:
             nextButtonWasTapped?()
         default: return
@@ -151,6 +167,7 @@ final class MusicPlayerView: UIView {
     
     private func addSubviews() {
         addSubview(nowIsPlayingLabel)
+        nowIsPlayingLabel.addSubview(nowIsPlayingLabelHeader)
         addSubview(buttonStackView)
         addSubview(musicTableView)
     }
@@ -160,6 +177,10 @@ final class MusicPlayerView: UIView {
             nowIsPlayingLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             nowIsPlayingLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
             nowIsPlayingLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            nowIsPlayingLabel.heightAnchor.constraint(equalToConstant: 60),
+            
+            nowIsPlayingLabelHeader.centerXAnchor.constraint(equalTo: centerXAnchor),
+            nowIsPlayingLabelHeader.topAnchor.constraint(equalTo: nowIsPlayingLabel.topAnchor),
             
             buttonStackView.centerXAnchor.constraint(equalTo: centerXAnchor),
             buttonStackView.topAnchor.constraint(equalTo: nowIsPlayingLabel.bottomAnchor, constant: 5),

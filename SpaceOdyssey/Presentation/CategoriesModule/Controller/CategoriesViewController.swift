@@ -120,14 +120,16 @@ extension CategoriesViewController: UITableViewDelegate {
 // MARK: - MusicPlayerViewControllerDelegate
 
 extension CategoriesViewController: MusicPlayerViewControllerDelegate {
-    func nextTrack(isNextButtonTapped: Bool) {
-        guard let url1 = StringURL.zemlyane,
-              let url2 = StringURL.interstellar1 else { return }
-        switch isNextButtonTapped {
-        case true:
-            viewModel.musicPlayer.playSound(withURL: url1)
-        case false:
-            viewModel.musicPlayer.playSound(withURL: url2)
+    func nextTrack(nextButtonCount: Int) {
+        guard let url1 = StringURL.interstellar1,
+              let url2 = StringURL.interstellar2,
+              let url3 = StringURL.interstellar3 else { return }
+        
+        switch nextButtonCount {
+        case 0: viewModel.musicPlayer.playSound(withURL: url1)
+        case 1: viewModel.musicPlayer.playSound(withURL: url2)
+        case 2: viewModel.musicPlayer.playSound(withURL: url3)
+        default: return
         }
     }
     func play() { viewModel.musicPlayer.player?.play() }

@@ -7,25 +7,41 @@
 
 import UIKit
 
+/// Class contains UIElements and methods for MusicPlayerCell
 final class MusicPlayerCell: UITableViewCell {
     
     // MARK: - Public Properties
     
     public lazy var trackTitleLabel: UILabel = {
         $0.textAlignment = .left
-        $0.textColor = .white
+        $0.textColor = .lightGray
         $0.numberOfLines = 1
-        $0.font = .avenirNextMediumOfSize(21)
+        $0.font = .avenirNextMediumOfSize(16)
         $0.adjustsFontSizeToFitWidth = true
         $0.minimumScaleFactor = 0.3
         return $0
     }(UILabel())
     
-    // MARK: - Private Properties
-    
-    private lazy var trackSubtitleLabel: UILabel = {
+    public lazy var trackAuthorLabel: UILabel = {
         $0.textAlignment = .left
         $0.textColor = .white
+        $0.numberOfLines = 1
+        $0.font = .avenirNextMediumOfSize(20)
+        $0.adjustsFontSizeToFitWidth = true
+        $0.minimumScaleFactor = 0.3
+        return $0
+    }(UILabel())
+    
+    public lazy var trackIcon: UIImageView = {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.contentMode = .scaleToFill
+        $0.clipsToBounds = true
+        return $0
+    }(UIImageView())
+    
+    public lazy var trackDurationLabel: UILabel = {
+        $0.textAlignment = .left
+        $0.textColor = .lightGray
         $0.numberOfLines = 0
         $0.font = .avenirNextMediumOfSize(16)
         $0.adjustsFontSizeToFitWidth = true
@@ -33,17 +49,19 @@ final class MusicPlayerCell: UITableViewCell {
         return $0
     }(UILabel())
     
+    // MARK: - Private Properties
+    
     private lazy var labelStackView: UIStackView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.axis = .vertical
         $0.distribution = .fillProportionally
         $0.spacing = 5
         return $0
-    }(UIStackView(arrangedSubviews: [trackTitleLabel, trackSubtitleLabel]))
+    }(UIStackView(arrangedSubviews: [trackAuthorLabel, trackTitleLabel, trackDurationLabel]))
     
-    private lazy var trackIcon: UIImageView = {
+    private lazy var equaliser: UIImageView = {
         $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.contentMode = .scaleAspectFit
+        $0.contentMode = .scaleToFill
         $0.clipsToBounds = true
         return $0
     }(UIImageView())
@@ -67,35 +85,27 @@ final class MusicPlayerCell: UITableViewCell {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
-        setupNasaLogo()
+        setupImageView()
     }
     
     // MARK: - Public Methods
     
-    /// Animate cell appearance
-    public func animateCell(at indexPath: IndexPath) {
-        transform = CGAffineTransform(translationX: 0, y: contentView.frame.height)
-        UIView.animate(
-            withDuration: 0.3,
-            delay: 0.02 * Double(indexPath.row),
-            animations: { [self] in
-                transform = CGAffineTransform(
-                    translationX: contentView.frame.width,
-                    y: contentView.frame.height
-                )
-            })
+    public func setupEqualiser() {
+        equaliser.loadGif(name: Gif.equaliser)
     }
     
-    public func configureCell(with item: Music) {
+    public func configureCell(with item: Track) {
+        trackAuthorLabel.text = item.author
         trackTitleLabel.text = item.title
-        trackSubtitleLabel.text = "\(item.duration)"
+        trackDurationLabel.text = "\(item.duration)"
         trackIcon.image = item.icon
     }
     
     // MARK: - Private Methods
     
-    private func setupNasaLogo() {
+    private func setupImageView() {
         trackIcon.roundViewWith(cornerRadius: 10, borderColor: .lightGray, borderWidth: 2)
+        equaliser.roundViewWith(cornerRadius: 10)
     }
     
     private func setupView() {
@@ -108,18 +118,24 @@ final class MusicPlayerCell: UITableViewCell {
     private func addSubviews() {
         contentView.addSubview(labelStackView)
         contentView.addSubview(trackIcon)
+        contentView.addSubview(equaliser)
     }
     
     private func setupLayout() {
         NSLayoutConstraint.activate([
             labelStackView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             labelStackView.trailingAnchor.constraint(equalTo: trackIcon.leadingAnchor, constant: -5),
-            labelStackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
+            labelStackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
             
-            trackIcon.widthAnchor.constraint(equalToConstant: 50),
-            trackIcon.heightAnchor.constraint(equalToConstant: 50),
+            trackIcon.widthAnchor.constraint(equalToConstant: 80),
+            trackIcon.heightAnchor.constraint(equalToConstant: 80),
             trackIcon.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            trackIcon.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            trackIcon.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
+            
+            equaliser.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            equaliser.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            equaliser.topAnchor.constraint(equalTo: trackIcon.bottomAnchor),
+            equaliser.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5)
         ])
     }
     

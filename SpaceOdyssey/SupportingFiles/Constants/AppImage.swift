@@ -40,6 +40,9 @@ enum AppImage {
     static let stop = UIImage(systemName: "stop.circle")
     static let next = UIImage(systemName: "forward.circle")
     static let trash = UIImage(systemName: "trash")
+    static let stay = UIImage(named: "interstellarStay")
+    static let millerPlanet = UIImage(named: "millerPlanet")
+    static let firstStep = UIImage(named: "firstStep")
     
     // MARK: - UITableView AccessoryMark
     

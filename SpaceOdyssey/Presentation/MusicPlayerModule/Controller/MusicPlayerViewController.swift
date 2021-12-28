@@ -10,7 +10,7 @@ import MediaPlayer
 
 protocol MusicPlayerViewControllerDelegate: AnyObject {
     func stop()
-    func nextTrack(isNextButtonTapped: Bool)
+    func nextTrack(nextButtonCount: Int)
     func play()
     func pause()
 }
@@ -54,9 +54,7 @@ final class MusicPlayerViewController: UIViewController {
     
     // MARK: - Initializers
     
-    init(
-        coordinator: MainCoordinator
-    ) {
+    init(coordinator: MainCoordinator) {
         self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
@@ -76,28 +74,42 @@ final class MusicPlayerViewController: UIViewController {
     private func setupCallbacks() {
         viewModel.mainView.playButtonWasTapped = { [weak self] in
             guard let self = self else { return }
+            self.viewModel.mainView.stopButton.tintColor = .cyan
+            self.viewModel.mainView.pauseButton.tintColor = .cyan
             self.delegate?.play()
         }
         
-        viewModel.mainView.pauseButtonWasTapped = { [weak self] in
+        viewModel.mainView.pauseButtonWasTapped = { [weak self] isPauseTapped in
             guard let self = self else { return }
+            if isPauseTapped {
+                self.viewModel.mainView.pauseButton.tintColor = .white
+            }
             self.delegate?.pause()
         }
         
-        viewModel.mainView.stopButtonWasTapped = { [weak self] in
+        viewModel.mainView.stopButtonWasTapped = { [weak self] isStopTapped in
             guard let self = self else { return }
+            if isStopTapped {
+                self.viewModel.mainView.stopButton.tintColor = .white
+            }
             self.delegate?.stop()
         }
         
         viewModel.mainView.nextButtonWasTapped = { [weak self] in
             guard let self = self else { return }
-            self.viewModel.isNextButtonPressed.toggle()
-            if self.viewModel.isNextButtonPressed {
-                self.delegate?.nextTrack(isNextButtonTapped: self.viewModel.isNextButtonPressed)
-                self.viewModel.mainView.nowIsPlayingLabel.text = StringURL.zemlyane?.lastPathComponent
-            } else if !self.viewModel.isNextButtonPressed {
-                self.delegate?.nextTrack(isNextButtonTapped: self.viewModel.isNextButtonPressed)
+            self.viewModel.isFirstLoaded = false
+            self.viewModel.nextButtonCount += 1
+            self.viewModel.mainView.musicTableView.reloadData()
+            if self.viewModel.nextButtonCount == 0 {
+                self.delegate?.nextTrack(nextButtonCount: self.viewModel.nextButtonCount)
                 self.viewModel.mainView.nowIsPlayingLabel.text = StringURL.interstellar1?.lastPathComponent
+            } else if self.viewModel.nextButtonCount == 1 {
+                self.delegate?.nextTrack(nextButtonCount: self.viewModel.nextButtonCount)
+                self.viewModel.mainView.nowIsPlayingLabel.text = StringURL.interstellar2?.lastPathComponent
+            } else if self.viewModel.nextButtonCount == 2 {
+                self.delegate?.nextTrack(nextButtonCount: self.viewModel.nextButtonCount)
+                self.viewModel.mainView.nowIsPlayingLabel.text = StringURL.interstellar3?.lastPathComponent
+                self.viewModel.nextButtonCount = -1
             }
         }
     }
@@ -119,19 +131,29 @@ extension MusicPlayerViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let cell = cell as? MusicPlayerCell else { return }
-        cell.animateCell(at: indexPath)
+        if viewModel.isFirstLoaded {
+            cell.animateCell(at: indexPath)
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: MusicPlayerCell = tableView.dequeueCell(for: indexPath)
         let item = viewModel.tracks[indexPath.row]
         cell.configureCell(with: item)
+        if cell.trackTitleLabel.text == viewModel.mainView.nowIsPlayingLabel.text {
+            cell.trackTitleLabel.textColor = .cyan
+            cell.trackAuthorLabel.textColor = .cyan
+            cell.setupEqualiser()
+        } else {
+            cell.trackTitleLabel.textColor = .lightGray
+            cell.trackAuthorLabel.textColor = .white
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 0.0))
-        let headerLabel = HeaderViewLabelFactory.generateLabelOn(view: tableView, withText: AppHeader.musicPlayerHeader)
+        let headerLabel = HeaderViewLabelFactory.generateLabelOn(view: tableView, withText: AppHeader.musicPlayerHeader, color: .white)
         headerView.addSubview(headerLabel)
         return headerView
     }
@@ -148,15 +170,20 @@ extension MusicPlayerViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let item = viewModel.tracks[indexPath.row]
         guard let cell = tableView.cellForRow(at: indexPath) as? MusicPlayerCell else { return }
-        switch indexPath.row {
-        case 0:
-            print("Test1!")
-        case 1:
-            print("Test2!")
-        default:
-            return
-        }
+        guard let image = cell.trackIcon.image,
+        let author = cell.trackAuthorLabel.text,
+        let title = cell.trackTitleLabel.text,
+        let duration = cell.trackDurationLabel.text,
+        let scene = item.scene else { return }
+        let vc = TrackInfoViewController(coordinator: coordinator)
+        vc.viewModel.icon = image
+        vc.viewModel.author = author
+        vc.viewModel.title = title
+        vc.viewModel.duration = duration
+        vc.viewModel.scene = scene
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }
