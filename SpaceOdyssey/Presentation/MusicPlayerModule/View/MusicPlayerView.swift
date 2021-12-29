@@ -80,7 +80,7 @@ final class MusicPlayerView: UIView {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.textAlignment = .center
         $0.textColor = .white
-        $0.font = .avenirNextMediumOfSize(18)
+        $0.font = .avenirNextMediumOfSize(16)
         $0.text = "Now is playing:"
         return $0
     }(UILabel())

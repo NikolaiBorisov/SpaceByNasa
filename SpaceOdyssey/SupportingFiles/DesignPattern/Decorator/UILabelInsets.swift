@@ -12,7 +12,7 @@ final class UILabelInsets: UILabel {
     
     override func drawText(in rect: CGRect) {
         super.drawText(in: rect.inset(by: UIEdgeInsets(
-            top: 5,
+            top: 0,
             left: 5,
             bottom: 0,
             right: 5
