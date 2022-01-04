@@ -19,45 +19,12 @@ final class TrackInfoCell: UITableViewCell {
         return $0
     }(UIImageView())
     
-    private lazy var trackAuthorLabel: UILabel = {
+    private lazy var trackInfoLabel: UILabel = {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.textAlignment = .center
         $0.textColor = .white
         $0.numberOfLines = 0
         $0.font = .avenirNextMediumOfSize(20)
-        $0.adjustsFontSizeToFitWidth = true
-        $0.minimumScaleFactor = 0.3
-        return $0
-    }(UILabel())
-    
-    private lazy var trackTitleLabel: UILabel = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.textAlignment = .center
-        $0.textColor = .white
-        $0.numberOfLines = 0
-        $0.font = .avenirNextMediumOfSize(20)
-        $0.adjustsFontSizeToFitWidth = true
-        $0.minimumScaleFactor = 0.3
-        return $0
-    }(UILabel())
-    
-    private lazy var trackDurationLabel: UILabel = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.textAlignment = .center
-        $0.textColor = .white
-        $0.numberOfLines = 0
-        $0.font = .avenirNextMediumOfSize(20)
-        $0.adjustsFontSizeToFitWidth = true
-        $0.minimumScaleFactor = 0.3
-        return $0
-    }(UILabel())
-    
-    private lazy var movieSceneLabel: UILabel = {
-        $0.translatesAutoresizingMaskIntoConstraints = false
-        $0.textAlignment = .left
-        $0.textColor = .cyan
-        $0.numberOfLines = 0
-        $0.font = .avenirNextMediumOfSize(16)
         $0.adjustsFontSizeToFitWidth = true
         $0.minimumScaleFactor = 0.3
         return $0
@@ -95,20 +62,23 @@ final class TrackInfoCell: UITableViewCell {
     ) {
         switch indexPath.row {
         case 0:
+            setupLayoutForCellAt(indexPath: indexPath)
             trackIcon.image = icon
-            setupLayoutForIconCell()
         case 1:
-            setupLayoutForAuthorLabelCell()
-            trackAuthorLabel.text = "Author:\n\(author)"
+            setupLayoutForCellAt(indexPath: indexPath)
+            trackInfoLabel.text = "Author:\n\(author)"
         case 2:
-            setupLayoutForTrackTitleLabelCell()
-            trackTitleLabel.text = "Title:\n\(title)"
+            setupLayoutForCellAt(indexPath: indexPath)
+            trackInfoLabel.text = "Title:\n\(title)"
         case 3:
-            setupLayoutForTrackDurationLabelCell()
-            trackDurationLabel.text = "Duration:\n\(duration)"
+            setupLayoutForCellAt(indexPath: indexPath)
+            trackInfoLabel.text = "Duration:\n\(duration)"
         case 4:
-            setupLayoutForMovieSceneLabelCell()
-            movieSceneLabel.text = "...\n\(scene)\n..."
+            setupLayoutForCellAt(indexPath: indexPath)
+            trackInfoLabel.textAlignment = .left
+            trackInfoLabel.textColor = .cyan
+            trackInfoLabel.font = .avenirNextMediumOfSize(16)
+            trackInfoLabel.text = "...\n\(scene)\n..."
         default: break
         }
     }
@@ -124,48 +94,31 @@ final class TrackInfoCell: UITableViewCell {
         selectionStyle = .none
     }
     
-    private func setupLayoutForIconCell() {
-        contentView.addSubview(trackIcon)
-        NSLayoutConstraint.activate([
-            trackIcon.heightAnchor.constraint(equalToConstant: 150),
-            trackIcon.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
-            trackIcon.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            trackIcon.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
-        ])
-    }
-    
-    private func setupLayoutForAuthorLabelCell() {
-        contentView.addSubview(trackAuthorLabel)
-        NSLayoutConstraint.activate([
-            trackAuthorLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            trackAuthorLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
-        ])
-    }
-    
-    private func setupLayoutForTrackTitleLabelCell() {
-        contentView.addSubview(trackTitleLabel)
-        NSLayoutConstraint.activate([
-            trackTitleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            trackTitleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
-        ])
-    }
-    
-    private func setupLayoutForTrackDurationLabelCell() {
-        contentView.addSubview(trackDurationLabel)
-        NSLayoutConstraint.activate([
-            trackDurationLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            trackDurationLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
-        ])
-    }
-    
-    private func setupLayoutForMovieSceneLabelCell() {
-        contentView.addSubview(movieSceneLabel)
-        NSLayoutConstraint.activate([
-            movieSceneLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            movieSceneLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
-            movieSceneLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
-            movieSceneLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5)
-        ])
+    private func setupLayoutForCellAt(indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            contentView.addSubview(trackIcon)
+            NSLayoutConstraint.activate([
+                trackIcon.heightAnchor.constraint(equalToConstant: 150),
+                trackIcon.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+                trackIcon.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+                trackIcon.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            ])
+        case 4:
+            contentView.addSubview(trackInfoLabel)
+            NSLayoutConstraint.activate([
+                trackInfoLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+                trackInfoLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+                trackInfoLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
+                trackInfoLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -5)
+            ])
+        default:
+            contentView.addSubview(trackInfoLabel)
+            NSLayoutConstraint.activate([
+                trackInfoLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+                trackInfoLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            ])
+        }
     }
     
 }
