@@ -5,7 +5,7 @@ Explore Space using NASA's API. Track all asteroids. See photos from Mars and ph
 App Stack:
 
 1. UIKit
-2. Architecture pattern: MVVM;
+2. Architecture pattern: MVVM + C;
 3. Design patterns: Factory Method, Delegate, Coordinator; 
 4. Service layer: RestAPI, URLSession;
 5. Image Caching Service;
