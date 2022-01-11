@@ -23,7 +23,8 @@ final class NetworkService: Networking {
             completion(.failure(AppError.badURL))
             return
         }
-        let request = URLRequest(url: url)
+        var request = URLRequest(url: url)
+        request.timeoutInterval = 10
         let task = createDataTask(from: request, completion: completion)
         task.resume()
     }
