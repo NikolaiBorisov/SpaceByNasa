@@ -15,6 +15,7 @@ enum AppError: Error {
     case badURL
     case noData
     case somethingWrongWithUrlSessionData
+    case noLocalFile
     
     var title: String {
         switch self {
@@ -30,6 +31,8 @@ enum AppError: Error {
             return "NoData".localized()
         case .somethingWrongWithUrlSessionData:
             return "SomethingWrongWithUrlSessionData".localized()
+        case .noLocalFile:
+            return "NoLocalFileWithASuchName".localized()
         }
     }
 }

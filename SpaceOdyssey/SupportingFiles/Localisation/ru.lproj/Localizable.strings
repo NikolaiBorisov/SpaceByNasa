@@ -22,3 +22,4 @@
 "URLIsNotValid" = "Недопустимый URL";
 "NoData" = "Нет данных";
 "SomethingWrongWithUrlSessionData" = "Что-то не так с данными URL-сессии";
+"NoLocalFileWithASuchName" = "Невозможно найти локальный файл с предоставляемым именем";

@@ -60,9 +60,7 @@
 		FA43D6852768CD1A005B9C87 /* FavoriteSpaceOdyssey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA43D6832768CD1A005B9C87 /* FavoriteSpaceOdyssey.xcdatamodeld */; };
 		FA43D68B2768D94F005B9C87 /* CoreDataManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D68A2768D94F005B9C87 /* CoreDataManagerImpl.swift */; };
 		FA49D2F12779D76000BDF807 /* categoriesJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = FA49D2F02779D76000BDF807 /* categoriesJSON.json */; };
-		FA49D2F42779D82700BDF807 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49D2F32779D82700BDF807 /* JSONParser.swift */; };
 		FA49D2F62779D9D900BDF807 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49D2F52779D9D900BDF807 /* JSON.swift */; };
-		FA49D2F82779DA3800BDF807 /* JSONDataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49D2F72779DA3800BDF807 /* JSONDataFetcherService.swift */; };
 		FA5CE81F2779F80F0083CD1C /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CE81E2779F80E0083CD1C /* Track.swift */; };
 		FA5CE8212779F89D0083CD1C /* MusicFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CE8202779F89D0083CD1C /* MusicFactory.swift */; };
 		FA5CE8242779F9A50083CD1C /* MusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CE8232779F9A50083CD1C /* MusicViewModel.swift */; };
@@ -96,6 +94,7 @@
 		FAA2522A277B23D400D4CE8E /* TrackInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25229277B23D400D4CE8E /* TrackInfoViewModel.swift */; };
 		FAA2522C277B242A00D4CE8E /* TrackInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2522B277B242A00D4CE8E /* TrackInfoView.swift */; };
 		FAA2522E277B255600D4CE8E /* TrackInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2522D277B255600D4CE8E /* TrackInfoCell.swift */; };
+		FAA8A93C278D50A500CABA10 /* LocalDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8A93B278D50A500CABA10 /* LocalDataFetcher.swift */; };
 		FAB5DF9D27732A2A0008BE67 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DF9C27732A2A0008BE67 /* Coordinator.swift */; };
 		FAB5DF9F27732F8A0008BE67 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DF9E27732F8A0008BE67 /* MainCoordinator.swift */; };
 		FAB5DFA127733C2E0008BE67 /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DFA027733C2D0008BE67 /* ScreenFactory.swift */; };
@@ -194,9 +193,7 @@
 		FA43D6842768CD1A005B9C87 /* FavoriteSpaceOdyssey.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteSpaceOdyssey.xcdatamodel; sourceTree = "<group>"; };
 		FA43D68A2768D94F005B9C87 /* CoreDataManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerImpl.swift; sourceTree = "<group>"; };
 		FA49D2F02779D76000BDF807 /* categoriesJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categoriesJSON.json; sourceTree = "<group>"; };
-		FA49D2F32779D82700BDF807 /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		FA49D2F52779D9D900BDF807 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
-		FA49D2F72779DA3800BDF807 /* JSONDataFetcherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataFetcherService.swift; sourceTree = "<group>"; };
 		FA5CE81E2779F80E0083CD1C /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		FA5CE8202779F89D0083CD1C /* MusicFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicFactory.swift; sourceTree = "<group>"; };
 		FA5CE8232779F9A50083CD1C /* MusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewModel.swift; sourceTree = "<group>"; };
@@ -230,6 +227,7 @@
 		FAA25229277B23D400D4CE8E /* TrackInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoViewModel.swift; sourceTree = "<group>"; };
 		FAA2522B277B242A00D4CE8E /* TrackInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoView.swift; sourceTree = "<group>"; };
 		FAA2522D277B255600D4CE8E /* TrackInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoCell.swift; sourceTree = "<group>"; };
+		FAA8A93B278D50A500CABA10 /* LocalDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataFetcher.swift; sourceTree = "<group>"; };
 		FAB5DF9C27732A2A0008BE67 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		FAB5DF9E27732F8A0008BE67 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		FAB5DFA027733C2D0008BE67 /* ScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactory.swift; sourceTree = "<group>"; };
@@ -394,7 +392,6 @@
 			children = (
 				FAB5DF9B277328200008BE67 /* AppCoordinator */,
 				FACEFFF7276B514000B0F2A1 /* FileManager */,
-				FA49D2F92779DFB600BDF807 /* JSONParserManager */,
 				FA43D6822768CC86005B9C87 /* CoreDataManager */,
 				FA314663276215E300FE997E /* NetworkManager */,
 				FA31469E27623EF500FE997E /* MusicManager */,
@@ -565,8 +562,9 @@
 				FA314666276215E300FE997E /* NetworkService.swift */,
 				FA314668276215E300FE997E /* NetworkDataFetcher.swift */,
 				FA314667276215E300FE997E /* DataFetcherService.swift */,
-				FA314665276215E300FE997E /* ImageCachingService.swift */,
-				FA6476D12765D9E400519921 /* InternetAvailabilityService.swift */,
+				FAA8A93B278D50A500CABA10 /* LocalDataFetcher.swift */,
+				FAA8A93D278D5B1900CABA10 /* ImageCachingService */,
+				FAA8A93E278D5B3100CABA10 /* InternetAvailabilityService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -721,15 +719,6 @@
 			path = JSON;
 			sourceTree = "<group>";
 		};
-		FA49D2F92779DFB600BDF807 /* JSONParserManager */ = {
-			isa = PBXGroup;
-			children = (
-				FA49D2F72779DA3800BDF807 /* JSONDataFetcherService.swift */,
-				FA49D2F32779D82700BDF807 /* JSONParser.swift */,
-			);
-			path = JSONParserManager;
-			sourceTree = "<group>";
-		};
 		FA5CE81D2779F7FE0083CD1C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -864,6 +853,22 @@
 				FAA25229277B23D400D4CE8E /* TrackInfoViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FAA8A93D278D5B1900CABA10 /* ImageCachingService */ = {
+			isa = PBXGroup;
+			children = (
+				FA314665276215E300FE997E /* ImageCachingService.swift */,
+			);
+			path = ImageCachingService;
+			sourceTree = "<group>";
+		};
+		FAA8A93E278D5B3100CABA10 /* InternetAvailabilityService */ = {
+			isa = PBXGroup;
+			children = (
+				FA6476D12765D9E400519921 /* InternetAvailabilityService.swift */,
+			);
+			path = InternetAvailabilityService;
 			sourceTree = "<group>";
 		};
 		FAAED16C2779AA4700EB0D07 /* FavoritesModule */ = {
@@ -1167,7 +1172,6 @@
 			files = (
 				FA6476D22765D9E400519921 /* InternetAvailabilityService.swift in Sources */,
 				FA43D67E27689EE8005B9C87 /* FavoritesCell.swift in Sources */,
-				FA49D2F42779D82700BDF807 /* JSONParser.swift in Sources */,
 				FA31467E276215E300FE997E /* SingleImageViewController.swift in Sources */,
 				FA8ABFE8277869F4002656F6 /* GalleryCell.swift in Sources */,
 				FA11B6CD2773224900E89634 /* SpaceOdysseyCellProtocol.swift in Sources */,
@@ -1217,6 +1221,7 @@
 				FAA2522C277B242A00D4CE8E /* TrackInfoView.swift in Sources */,
 				FA5CE81F2779F80F0083CD1C /* Track.swift in Sources */,
 				FA31468D276215E400FE997E /* SceneDelegate.swift in Sources */,
+				FAA8A93C278D50A500CABA10 /* LocalDataFetcher.swift in Sources */,
 				FA04459A27624E3D00597761 /* CategoriesViewController.swift in Sources */,
 				FA314697276215E400FE997E /* StringURL.swift in Sources */,
 				FA8ABFEB27786E43002656F6 /* ZoomAndSnapFlowLayout.swift in Sources */,
@@ -1254,7 +1259,6 @@
 				FA314682276215E400FE997E /* APODViewController.swift in Sources */,
 				FAE67F1027633E4800BBB2C1 /* EPICViewModel.swift in Sources */,
 				FACF008E2764AD8B00A7F9EA /* AsteroidViewModel.swift in Sources */,
-				FA49D2F82779DA3800BDF807 /* JSONDataFetcherService.swift in Sources */,
 				FA314690276215E400FE997E /* DataFetcherService.swift in Sources */,
 				FA31468B276215E400FE997E /* MarsRoverView.swift in Sources */,
 				FA8ABFE12778672D002656F6 /* GalleryCollectionViewController.swift in Sources */,

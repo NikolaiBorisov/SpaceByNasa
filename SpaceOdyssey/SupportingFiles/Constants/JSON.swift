@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum FileName: String {
+enum FileName: String, Codable {
     case categoriesJSON
 }
 

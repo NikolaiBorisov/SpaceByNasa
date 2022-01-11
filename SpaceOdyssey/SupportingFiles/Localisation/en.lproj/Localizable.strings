@@ -22,3 +22,4 @@
 "URLIsNotValid" = "URL is not valid";
 "NoData" = "No data";
 "SomethingWrongWithUrlSessionData" = "Something wrong with URL session data";
+"NoLocalFileWithASuchName" = "No Local File With a Such Name";

@@ -13,7 +13,7 @@ protocol DataFetcher {
 }
 
 /// Class decodes and fetches JSONData. Inherits DataFetcher protocol
-final class NetworkDataFetcher: DataFetcher {
+class NetworkDataFetcher: DataFetcher {
     
     // MARK: - Private Properties
     
@@ -49,10 +49,8 @@ final class NetworkDataFetcher: DataFetcher {
         }
     }
     
-    // MARK: - Private Methods
-    
     /// Method decodes JSON file
-    private func decodeJSON<T: Codable>(type: T.Type, from: Data?, completion: @escaping (Result<T?, AppError>) -> Void) -> T? {
+    public func decodeJSON<T: Codable>(type: T.Type, from: Data?, completion: @escaping (Result<T?, AppError>) -> Void) -> T? {
         guard let data = from else {
             completion(.failure(AppError.noData))
             return nil

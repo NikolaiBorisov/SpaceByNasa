@@ -12,12 +12,17 @@ final class DataFetcherService {
     
     // MARK: - Private Properties
     
-    private var dataFetcher: DataFetcher
+    private var networkDataFetcher: DataFetcher
+    private var localDataFetcher: DataFetcher
     
     // MARK: - Initializers
     
-    init(dataFetcher: DataFetcher = NetworkDataFetcher()) {
-        self.dataFetcher = dataFetcher
+    init(
+        dataFetcher: DataFetcher = NetworkDataFetcher(),
+        localDataFetcher: DataFetcher = LocalDataFetcher()
+    ) {
+        self.networkDataFetcher = dataFetcher
+        self.localDataFetcher = localDataFetcher
     }
     
     // MARK: - Public Methods
@@ -25,25 +30,31 @@ final class DataFetcherService {
     /// Method fetches APODData using URL
     public func fetchAPODData(completion: @escaping (Result<ApodDTO?, AppError>) -> Void) {
         let urlString = StringURL.apodURL
-        dataFetcher.fetchJSONData(urlString: urlString, completion: completion)
+        networkDataFetcher.fetchJSONData(urlString: urlString, completion: completion)
     }
     
     /// Method fetches EPICData using URL
     public func fetchEPICData(completion: @escaping (Result<[EpicDTO]?, AppError>) -> Void) {
         let urlString = StringURL.epicURL
-        dataFetcher.fetchJSONData(urlString: urlString, completion: completion)
+        networkDataFetcher.fetchJSONData(urlString: urlString, completion: completion)
     }
     
     /// Method fetches AsteroidData using URL
     public func fetchAsteroidData(completion: @escaping (Result<AsteroidDTO?, AppError>) -> Void) {
         let urlString = StringURL.asteroidURL
-        dataFetcher.fetchJSONData(urlString: urlString, completion: completion)
+        networkDataFetcher.fetchJSONData(urlString: urlString, completion: completion)
     }
     
     /// Method fetches MarsRover photos
     public func fetchMarsRoverPhotos(completion: @escaping (Result<MarsRoverDTO?, AppError>) -> Void) {
         let urlString = StringURL.marsRoverURL
-        dataFetcher.fetchJSONData(urlString: urlString, completion: completion)
+        networkDataFetcher.fetchJSONData(urlString: urlString, completion: completion)
+    }
+    
+    /// Method fetches Categories from local JSONFile
+    public func fetchLocalCategories(completion: @escaping (Result<[Category]?, AppError>) -> Void) {
+        let localURLString = FileName.categoriesJSON
+        localDataFetcher.fetchJSONData(urlString: localURLString.rawValue, completion: completion)
     }
     
 }

@@ -19,7 +19,7 @@ final class CategoriesViewModel {
     
     // MARK: - Private Properties
     
-    private var getJSONDataService = JSONDataFetcherService()
+    private var dataFetcherService = DataFetcherService()
     
     // MARK: - Public Methods
     
@@ -29,10 +29,15 @@ final class CategoriesViewModel {
     }
     
     public func getData() {
-        getJSONDataService.loadCategories { [weak self] categories in
+        dataFetcherService.fetchLocalCategories { [weak self] result in
             guard let self = self else { return }
-            self.categories = categories
-            self.mainView.categoriesTableView.reloadData()
+            switch result {
+            case .failure(let error):
+                print(error)
+            case .success(let data):
+                self.categories = data ?? []
+                self.mainView.categoriesTableView.reloadData()
+            }
         }
     }
     
