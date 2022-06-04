@@ -1,0 +1,1651 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA04459A27624E3D00597761 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04459927624E3D00597761 /* CategoriesViewController.swift */; };
+		FA04459C27624EF800597761 /* CategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04459B27624EF800597761 /* CategoriesView.swift */; };
+		FA04459E27624F6800597761 /* CategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA04459D27624F6800597761 /* CategoriesCell.swift */; };
+		FA0445A12762518A00597761 /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0445A02762518A00597761 /* CategoriesViewModel.swift */; };
+		FA0445A32762586E00597761 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0445A22762586E00597761 /* UIFont+Extension.swift */; };
+		FA0445A627625C3000597761 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0445A527625C3000597761 /* Category.swift */; };
+		FA11B6CD2773224900E89634 /* SpaceOdysseyCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11B6CC2773224900E89634 /* SpaceOdysseyCellProtocol.swift */; };
+		FA11F27B276632C000C61C87 /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F27A276632C000C61C87 /* MusicPlayerViewController.swift */; };
+		FA11F27D276632F500C61C87 /* MusicPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F27C276632F500C61C87 /* MusicPlayerView.swift */; };
+		FA11F2812766990600C61C87 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA11F2802766990500C61C87 /* UIDevice+Extension.swift */; };
+		FA1B31FA276A0EF1007F6922 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA1B31F9276A0EF1007F6922 /* UIViewController+Extension.swift */; };
+		FA31462A2762157400FE997E /* SpaceOdysseyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3146292762157400FE997E /* SpaceOdysseyTests.swift */; };
+		FA3146342762157400FE997E /* SpaceOdysseyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3146332762157400FE997E /* SpaceOdysseyUITests.swift */; };
+		FA3146362762157400FE997E /* SpaceOdysseyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3146352762157400FE997E /* SpaceOdysseyUITestsLaunchTests.swift */; };
+		FA31467E276215E300FE997E /* SingleImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314645276215E300FE997E /* SingleImageViewController.swift */; };
+		FA31467F276215E300FE997E /* SingleImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314647276215E300FE997E /* SingleImageView.swift */; };
+		FA314680276215E400FE997E /* SingleImageViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314649276215E300FE997E /* SingleImageViewDelegate.swift */; };
+		FA314681276215E400FE997E /* APODViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31464C276215E300FE997E /* APODViewModel.swift */; };
+		FA314682276215E400FE997E /* APODViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31464E276215E300FE997E /* APODViewController.swift */; };
+		FA314683276215E400FE997E /* ApodDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314650276215E300FE997E /* ApodDTO.swift */; };
+		FA314684276215E400FE997E /* APODView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314652276215E300FE997E /* APODView.swift */; };
+		FA314685276215E400FE997E /* APODCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314653276215E300FE997E /* APODCell.swift */; };
+		FA314686276215E400FE997E /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314655276215E300FE997E /* ActivityIndicatorView.swift */; };
+		FA314687276215E400FE997E /* MarsRoverViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314658276215E300FE997E /* MarsRoverViewModel.swift */; };
+		FA314688276215E400FE997E /* MarsRoverCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31465A276215E300FE997E /* MarsRoverCollectionViewController.swift */; };
+		FA314689276215E400FE997E /* MarsRoverDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31465C276215E300FE997E /* MarsRoverDTO.swift */; };
+		FA31468A276215E400FE997E /* MarsRoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31465E276215E300FE997E /* MarsRoverCell.swift */; };
+		FA31468B276215E400FE997E /* MarsRoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31465F276215E300FE997E /* MarsRoverView.swift */; };
+		FA31468C276215E400FE997E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314661276215E300FE997E /* AppDelegate.swift */; };
+		FA31468D276215E400FE997E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314662276215E300FE997E /* SceneDelegate.swift */; };
+		FA31468E276215E400FE997E /* ImageCachingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314665276215E300FE997E /* ImageCachingService.swift */; };
+		FA31468F276215E400FE997E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314666276215E300FE997E /* NetworkService.swift */; };
+		FA314690276215E400FE997E /* DataFetcherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314667276215E300FE997E /* DataFetcherService.swift */; };
+		FA314691276215E400FE997E /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314668276215E300FE997E /* NetworkDataFetcher.swift */; };
+		FA314692276215E400FE997E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA31466A276215E300FE997E /* LaunchScreen.storyboard */; };
+		FA314693276215E400FE997E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA31466E276215E300FE997E /* Localizable.strings */; };
+		FA314695276215E400FE997E /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314673276215E300FE997E /* Localization.swift */; };
+		FA314696276215E400FE997E /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314674276215E300FE997E /* AppError.swift */; };
+		FA314697276215E400FE997E /* StringURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314675276215E300FE997E /* StringURL.swift */; };
+		FA314698276215E400FE997E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA314676276215E300FE997E /* Assets.xcassets */; };
+		FA314699276215E400FE997E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314678276215E300FE997E /* String+Extension.swift */; };
+		FA31469A276215E400FE997E /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA314679276215E300FE997E /* UIView+Extension.swift */; };
+		FA31469B276215E400FE997E /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31467A276215E300FE997E /* UICollectionView+Extension.swift */; };
+		FA31469C276215E400FE997E /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31467B276215E300FE997E /* UITableView+Extension.swift */; };
+		FA31469D276215E400FE997E /* RefreshControlFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31467D276215E300FE997E /* RefreshControlFactory.swift */; };
+		FA3146A427623FFF00FE997E /* MusicPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3146A327623FFF00FE997E /* MusicPlayer.swift */; };
+		FA43D67A27689D1B005B9C87 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D67927689D1A005B9C87 /* FavoritesViewController.swift */; };
+		FA43D67C27689D73005B9C87 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D67B27689D73005B9C87 /* FavoritesView.swift */; };
+		FA43D67E27689EE8005B9C87 /* FavoritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D67D27689EE8005B9C87 /* FavoritesCell.swift */; };
+		FA43D6812768A258005B9C87 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D6802768A258005B9C87 /* FavoritesViewModel.swift */; };
+		FA43D6852768CD1A005B9C87 /* FavoriteSpaceOdyssey.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA43D6832768CD1A005B9C87 /* FavoriteSpaceOdyssey.xcdatamodeld */; };
+		FA43D68B2768D94F005B9C87 /* CoreDataManagerImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA43D68A2768D94F005B9C87 /* CoreDataManagerImpl.swift */; };
+		FA49D2F12779D76000BDF807 /* categoriesJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = FA49D2F02779D76000BDF807 /* categoriesJSON.json */; };
+		FA49D2F62779D9D900BDF807 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA49D2F52779D9D900BDF807 /* JSON.swift */; };
+		FA5CE81F2779F80F0083CD1C /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CE81E2779F80E0083CD1C /* Track.swift */; };
+		FA5CE8212779F89D0083CD1C /* MusicFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CE8202779F89D0083CD1C /* MusicFactory.swift */; };
+		FA5CE8242779F9A50083CD1C /* MusicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CE8232779F9A50083CD1C /* MusicViewModel.swift */; };
+		FA5CE8262779FFD70083CD1C /* MusicPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CE8252779FFD60083CD1C /* MusicPlayerCell.swift */; };
+		FA6476D02765D26600519921 /* LoadableInfoAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476CF2765D26600519921 /* LoadableInfoAlertController+Extension.swift */; };
+		FA6476D22765D9E400519921 /* InternetAvailabilityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476D12765D9E400519921 /* InternetAvailabilityService.swift */; };
+		FA6476D72765E84F00519921 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476D62765E84F00519921 /* TabBarController.swift */; };
+		FA6476DC2765EB3500519921 /* NasaTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6476DB2765EB3500519921 /* NasaTabBarView.swift */; };
+		FA8ABFE12778672D002656F6 /* GalleryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8ABFE02778672D002656F6 /* GalleryCollectionViewController.swift */; };
+		FA8ABFE4277868DE002656F6 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8ABFE3277868DE002656F6 /* GalleryViewModel.swift */; };
+		FA8ABFE627786953002656F6 /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8ABFE527786953002656F6 /* GalleryView.swift */; };
+		FA8ABFE8277869F4002656F6 /* GalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8ABFE7277869F4002656F6 /* GalleryCell.swift */; };
+		FA8ABFEB27786E43002656F6 /* ZoomAndSnapFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8ABFEA27786E43002656F6 /* ZoomAndSnapFlowLayout.swift */; };
+		FA8ABFED27788ACC002656F6 /* UIScrollView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8ABFEC27788ACC002656F6 /* UIScrollView+Extension.swift */; };
+		FA8B72B32775BB1D0030693B /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B72B22775BB1D0030693B /* Double+Extension.swift */; };
+		FA8B72B52775D86D0030693B /* UITabBarController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B72B42775D86D0030693B /* UITabBarController+Extension.swift */; };
+		FA8B72B72775DCAB0030693B /* AppImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B72B62775DCAB0030693B /* AppImage.swift */; };
+		FA8B72B92775E1CF0030693B /* AppMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B72B82775E1CF0030693B /* AppMusic.swift */; };
+		FA8B72BB2775E2EE0030693B /* AppFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B72BA2775E2EE0030693B /* AppFont.swift */; };
+		FA8B72BD2775E4B80030693B /* AppHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B72BC2775E4B80030693B /* AppHeader.swift */; };
+		FA8B72BF2775F55F0030693B /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B72BE2775F55F0030693B /* UIImageView+Extension.swift */; };
+		FAA25213277AEAC000D4CE8E /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25212277AEAC000D4CE8E /* DateFormatters.swift */; };
+		FAA25215277AF17700D4CE8E /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25214277AF17700D4CE8E /* UITableViewCell+Extension.swift */; };
+		FAA25217277AF5CF00D4CE8E /* S.T.A.Y. (Interstellar Main Theme).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAA25216277AF5CF00D4CE8E /* S.T.A.Y. (Interstellar Main Theme).mp3 */; };
+		FAA25219277AF8A200D4CE8E /* First Step(OST Interstellar).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAA25218277AF8A200D4CE8E /* First Step(OST Interstellar).mp3 */; };
+		FAA2521B277AF8A800D4CE8E /* Mountains(OST Interstellar).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAA2521A277AF8A800D4CE8E /* Mountains(OST Interstellar).mp3 */; };
+		FAA2521D277B1B7D00D4CE8E /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2521C277B1B7D00D4CE8E /* UIImage+Extension.swift */; };
+		FAA25220277B1E6900D4CE8E /* equaliser.gif in Resources */ = {isa = PBXBuildFile; fileRef = FAA2521F277B1E6900D4CE8E /* equaliser.gif */; };
+		FAA25222277B1F3800D4CE8E /* Gif.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25221277B1F3800D4CE8E /* Gif.swift */; };
+		FAA25227277B213300D4CE8E /* TrackInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25226277B213300D4CE8E /* TrackInfoViewController.swift */; };
+		FAA2522A277B23D400D4CE8E /* TrackInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA25229277B23D400D4CE8E /* TrackInfoViewModel.swift */; };
+		FAA2522C277B242A00D4CE8E /* TrackInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2522B277B242A00D4CE8E /* TrackInfoView.swift */; };
+		FAA2522E277B255600D4CE8E /* TrackInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2522D277B255600D4CE8E /* TrackInfoCell.swift */; };
+		FAA8A93C278D50A500CABA10 /* LocalDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA8A93B278D50A500CABA10 /* LocalDataFetcher.swift */; };
+		FAB5DF9D27732A2A0008BE67 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DF9C27732A2A0008BE67 /* Coordinator.swift */; };
+		FAB5DF9F27732F8A0008BE67 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DF9E27732F8A0008BE67 /* MainCoordinator.swift */; };
+		FAB5DFA127733C2E0008BE67 /* ScreenFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB5DFA027733C2D0008BE67 /* ScreenFactory.swift */; };
+		FACEFFFA276B51A800B0F2A1 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACEFFF9276B51A800B0F2A1 /* FileManager.swift */; };
+		FACF007E2764823F00A7F9EA /* LoadableErrorAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF007D2764823F00A7F9EA /* LoadableErrorAlertController+Extension.swift */; };
+		FACF00862764A65600A7F9EA /* AsteroidDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF00852764A65600A7F9EA /* AsteroidDTO.swift */; };
+		FACF00882764A97400A7F9EA /* AsteroidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF00872764A97400A7F9EA /* AsteroidViewController.swift */; };
+		FACF008A2764AB7C00A7F9EA /* AsteroidView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF00892764AB7C00A7F9EA /* AsteroidView.swift */; };
+		FACF008C2764ABF900A7F9EA /* AsteroidCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF008B2764ABF900A7F9EA /* AsteroidCell.swift */; };
+		FACF008E2764AD8B00A7F9EA /* AsteroidViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACF008D2764AD8B00A7F9EA /* AsteroidViewModel.swift */; };
+		FAE026852762879700F59038 /* NasaCategoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE026842762879700F59038 /* NasaCategoryFactory.swift */; };
+		FAE67F0327632FC400BBB2C1 /* SingleImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE67F0227632FC400BBB2C1 /* SingleImageViewModel.swift */; };
+		FAE67F0A27633ACA00BBB2C1 /* EpicDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE67F0927633ACA00BBB2C1 /* EpicDTO.swift */; };
+		FAE67F0C27633CD800BBB2C1 /* EPICViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE67F0B27633CD800BBB2C1 /* EPICViewController.swift */; };
+		FAE67F0E27633D3300BBB2C1 /* EPICView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE67F0D27633D3300BBB2C1 /* EPICView.swift */; };
+		FAE67F1027633E4800BBB2C1 /* EPICViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE67F0F27633E4800BBB2C1 /* EPICViewModel.swift */; };
+		FAE67F122763400A00BBB2C1 /* EPICCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE67F112763400A00BBB2C1 /* EPICCell.swift */; };
+		FAE67F162763719200BBB2C1 /* AccessoryViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE67F152763719200BBB2C1 /* AccessoryViewFactory.swift */; };
+		FAE67F192763B19F00BBB2C1 /* UILabelInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE67F182763B19F00BBB2C1 /* UILabelInsets.swift */; };
+		FAF467BF276310B200A04E1C /* HeaderViewLabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF467BE276310B200A04E1C /* HeaderViewLabelFactory.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FA3146262762157400FE997E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA3146072762157100FE997E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA31460E2762157100FE997E;
+			remoteInfo = SpaceOdyssey;
+		};
+		FA3146302762157400FE997E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA3146072762157100FE997E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA31460E2762157100FE997E;
+			remoteInfo = SpaceOdyssey;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA04459927624E3D00597761 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		FA04459B27624EF800597761 /* CategoriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesView.swift; sourceTree = "<group>"; };
+		FA04459D27624F6800597761 /* CategoriesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCell.swift; sourceTree = "<group>"; };
+		FA0445A02762518A00597761 /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		FA0445A22762586E00597761 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		FA0445A527625C3000597761 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		FA11B6CC2773224900E89634 /* SpaceOdysseyCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceOdysseyCellProtocol.swift; sourceTree = "<group>"; };
+		FA11F27A276632C000C61C87 /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
+		FA11F27C276632F500C61C87 /* MusicPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerView.swift; sourceTree = "<group>"; };
+		FA11F2802766990500C61C87 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		FA1B31F9276A0EF1007F6922 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		FA31460F2762157100FE997E /* SpaceOdyssey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceOdyssey.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA3146202762157400FE997E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA3146252762157400FE997E /* SpaceOdysseyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceOdysseyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA3146292762157400FE997E /* SpaceOdysseyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceOdysseyTests.swift; sourceTree = "<group>"; };
+		FA31462F2762157400FE997E /* SpaceOdysseyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceOdysseyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA3146332762157400FE997E /* SpaceOdysseyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceOdysseyUITests.swift; sourceTree = "<group>"; };
+		FA3146352762157400FE997E /* SpaceOdysseyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceOdysseyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FA314645276215E300FE997E /* SingleImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleImageViewController.swift; sourceTree = "<group>"; };
+		FA314647276215E300FE997E /* SingleImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleImageView.swift; sourceTree = "<group>"; };
+		FA314649276215E300FE997E /* SingleImageViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleImageViewDelegate.swift; sourceTree = "<group>"; };
+		FA31464C276215E300FE997E /* APODViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODViewModel.swift; sourceTree = "<group>"; };
+		FA31464E276215E300FE997E /* APODViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODViewController.swift; sourceTree = "<group>"; };
+		FA314650276215E300FE997E /* ApodDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApodDTO.swift; sourceTree = "<group>"; };
+		FA314652276215E300FE997E /* APODView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODView.swift; sourceTree = "<group>"; };
+		FA314653276215E300FE997E /* APODCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APODCell.swift; sourceTree = "<group>"; };
+		FA314655276215E300FE997E /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
+		FA314658276215E300FE997E /* MarsRoverViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverViewModel.swift; sourceTree = "<group>"; };
+		FA31465A276215E300FE997E /* MarsRoverCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverCollectionViewController.swift; sourceTree = "<group>"; };
+		FA31465C276215E300FE997E /* MarsRoverDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverDTO.swift; sourceTree = "<group>"; };
+		FA31465E276215E300FE997E /* MarsRoverCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverCell.swift; sourceTree = "<group>"; };
+		FA31465F276215E300FE997E /* MarsRoverView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarsRoverView.swift; sourceTree = "<group>"; };
+		FA314661276215E300FE997E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FA314662276215E300FE997E /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FA314665276215E300FE997E /* ImageCachingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCachingService.swift; sourceTree = "<group>"; };
+		FA314666276215E300FE997E /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		FA314667276215E300FE997E /* DataFetcherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFetcherService.swift; sourceTree = "<group>"; };
+		FA314668276215E300FE997E /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
+		FA31466B276215E300FE997E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FA31466F276215E300FE997E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA314670276215E300FE997E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA314673276215E300FE997E /* Localization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		FA314674276215E300FE997E /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		FA314675276215E300FE997E /* StringURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringURL.swift; sourceTree = "<group>"; };
+		FA314676276215E300FE997E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FA314678276215E300FE997E /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		FA314679276215E300FE997E /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		FA31467A276215E300FE997E /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		FA31467B276215E300FE997E /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
+		FA31467D276215E300FE997E /* RefreshControlFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefreshControlFactory.swift; sourceTree = "<group>"; };
+		FA3146A327623FFF00FE997E /* MusicPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayer.swift; sourceTree = "<group>"; };
+		FA43D67927689D1A005B9C87 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		FA43D67B27689D73005B9C87 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		FA43D67D27689EE8005B9C87 /* FavoritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCell.swift; sourceTree = "<group>"; };
+		FA43D6802768A258005B9C87 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		FA43D6842768CD1A005B9C87 /* FavoriteSpaceOdyssey.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FavoriteSpaceOdyssey.xcdatamodel; sourceTree = "<group>"; };
+		FA43D68A2768D94F005B9C87 /* CoreDataManagerImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerImpl.swift; sourceTree = "<group>"; };
+		FA49D2F02779D76000BDF807 /* categoriesJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = categoriesJSON.json; sourceTree = "<group>"; };
+		FA49D2F52779D9D900BDF807 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		FA5CE81E2779F80E0083CD1C /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		FA5CE8202779F89D0083CD1C /* MusicFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicFactory.swift; sourceTree = "<group>"; };
+		FA5CE8232779F9A50083CD1C /* MusicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewModel.swift; sourceTree = "<group>"; };
+		FA5CE8252779FFD60083CD1C /* MusicPlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerCell.swift; sourceTree = "<group>"; };
+		FA6476CF2765D26600519921 /* LoadableInfoAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoadableInfoAlertController+Extension.swift"; sourceTree = "<group>"; };
+		FA6476D12765D9E400519921 /* InternetAvailabilityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetAvailabilityService.swift; sourceTree = "<group>"; };
+		FA6476D62765E84F00519921 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FA6476DB2765EB3500519921 /* NasaTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaTabBarView.swift; sourceTree = "<group>"; };
+		FA8ABFE02778672D002656F6 /* GalleryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCollectionViewController.swift; sourceTree = "<group>"; };
+		FA8ABFE3277868DE002656F6 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		FA8ABFE527786953002656F6 /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
+		FA8ABFE7277869F4002656F6 /* GalleryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryCell.swift; sourceTree = "<group>"; };
+		FA8ABFEA27786E43002656F6 /* ZoomAndSnapFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomAndSnapFlowLayout.swift; sourceTree = "<group>"; };
+		FA8ABFEC27788ACC002656F6 /* UIScrollView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+Extension.swift"; sourceTree = "<group>"; };
+		FA8B72B22775BB1D0030693B /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		FA8B72B42775D86D0030693B /* UITabBarController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extension.swift"; sourceTree = "<group>"; };
+		FA8B72B62775DCAB0030693B /* AppImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppImage.swift; sourceTree = "<group>"; };
+		FA8B72B82775E1CF0030693B /* AppMusic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMusic.swift; sourceTree = "<group>"; };
+		FA8B72BA2775E2EE0030693B /* AppFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFont.swift; sourceTree = "<group>"; };
+		FA8B72BC2775E4B80030693B /* AppHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHeader.swift; sourceTree = "<group>"; };
+		FA8B72BE2775F55F0030693B /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		FAA25212277AEAC000D4CE8E /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
+		FAA25214277AF17700D4CE8E /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		FAA25216277AF5CF00D4CE8E /* S.T.A.Y. (Interstellar Main Theme).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "S.T.A.Y. (Interstellar Main Theme).mp3"; sourceTree = "<group>"; };
+		FAA25218277AF8A200D4CE8E /* First Step(OST Interstellar).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "First Step(OST Interstellar).mp3"; sourceTree = "<group>"; };
+		FAA2521A277AF8A800D4CE8E /* Mountains(OST Interstellar).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mountains(OST Interstellar).mp3"; sourceTree = "<group>"; };
+		FAA2521C277B1B7D00D4CE8E /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		FAA2521F277B1E6900D4CE8E /* equaliser.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = equaliser.gif; sourceTree = "<group>"; };
+		FAA25221277B1F3800D4CE8E /* Gif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gif.swift; sourceTree = "<group>"; };
+		FAA25226277B213300D4CE8E /* TrackInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoViewController.swift; sourceTree = "<group>"; };
+		FAA25229277B23D400D4CE8E /* TrackInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoViewModel.swift; sourceTree = "<group>"; };
+		FAA2522B277B242A00D4CE8E /* TrackInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoView.swift; sourceTree = "<group>"; };
+		FAA2522D277B255600D4CE8E /* TrackInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackInfoCell.swift; sourceTree = "<group>"; };
+		FAA8A93B278D50A500CABA10 /* LocalDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataFetcher.swift; sourceTree = "<group>"; };
+		FAB5DF9C27732A2A0008BE67 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		FAB5DF9E27732F8A0008BE67 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		FAB5DFA027733C2D0008BE67 /* ScreenFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFactory.swift; sourceTree = "<group>"; };
+		FACEFFF9276B51A800B0F2A1 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		FACF007D2764823F00A7F9EA /* LoadableErrorAlertController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoadableErrorAlertController+Extension.swift"; sourceTree = "<group>"; };
+		FACF00852764A65600A7F9EA /* AsteroidDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidDTO.swift; sourceTree = "<group>"; };
+		FACF00872764A97400A7F9EA /* AsteroidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidViewController.swift; sourceTree = "<group>"; };
+		FACF00892764AB7C00A7F9EA /* AsteroidView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidView.swift; sourceTree = "<group>"; };
+		FACF008B2764ABF900A7F9EA /* AsteroidCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidCell.swift; sourceTree = "<group>"; };
+		FACF008D2764AD8B00A7F9EA /* AsteroidViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsteroidViewModel.swift; sourceTree = "<group>"; };
+		FAE026842762879700F59038 /* NasaCategoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NasaCategoryFactory.swift; sourceTree = "<group>"; };
+		FAE67F0227632FC400BBB2C1 /* SingleImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleImageViewModel.swift; sourceTree = "<group>"; };
+		FAE67F0927633ACA00BBB2C1 /* EpicDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpicDTO.swift; sourceTree = "<group>"; };
+		FAE67F0B27633CD800BBB2C1 /* EPICViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPICViewController.swift; sourceTree = "<group>"; };
+		FAE67F0D27633D3300BBB2C1 /* EPICView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPICView.swift; sourceTree = "<group>"; };
+		FAE67F0F27633E4800BBB2C1 /* EPICViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPICViewModel.swift; sourceTree = "<group>"; };
+		FAE67F112763400A00BBB2C1 /* EPICCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPICCell.swift; sourceTree = "<group>"; };
+		FAE67F152763719200BBB2C1 /* AccessoryViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryViewFactory.swift; sourceTree = "<group>"; };
+		FAE67F182763B19F00BBB2C1 /* UILabelInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelInsets.swift; sourceTree = "<group>"; };
+		FAF467BE276310B200A04E1C /* HeaderViewLabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewLabelFactory.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA31460C2762157100FE997E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA3146222762157400FE997E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA31462C2762157400FE997E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FA04459627624E1100597761 /* CategoriesModule */ = {
+			isa = PBXGroup;
+			children = (
+				FA04459727624E1D00597761 /* Controller */,
+				FA04459827624E2300597761 /* View */,
+				FA04459F2762516B00597761 /* ViewModel */,
+				FA0445A427625C0C00597761 /* Model */,
+			);
+			path = CategoriesModule;
+			sourceTree = "<group>";
+		};
+		FA04459727624E1D00597761 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA04459927624E3D00597761 /* CategoriesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA04459827624E2300597761 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA04459B27624EF800597761 /* CategoriesView.swift */,
+				FA04459D27624F6800597761 /* CategoriesCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA04459F2762516B00597761 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA0445A02762518A00597761 /* CategoriesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA0445A427625C0C00597761 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA0445A527625C3000597761 /* Category.swift */,
+				FA49D2EF2779D34C00BDF807 /* JSON */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA11B6CB2773221F00E89634 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA11B6CC2773224900E89634 /* SpaceOdysseyCellProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FA11F2772766326A00C61C87 /* MusicPlayerModule */ = {
+			isa = PBXGroup;
+			children = (
+				FA11F2782766328400C61C87 /* Controller */,
+				FA11F2792766328C00C61C87 /* View */,
+				FA5CE8222779F9890083CD1C /* ViewModel */,
+				FA5CE81D2779F7FE0083CD1C /* Model */,
+			);
+			path = MusicPlayerModule;
+			sourceTree = "<group>";
+		};
+		FA11F2782766328400C61C87 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA11F27A276632C000C61C87 /* MusicPlayerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA11F2792766328C00C61C87 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA11F27C276632F500C61C87 /* MusicPlayerView.swift */,
+				FA5CE8252779FFD60083CD1C /* MusicPlayerCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA1A145E276513B10075AAF1 /* MarsRoversModule */ = {
+			isa = PBXGroup;
+			children = (
+				FA314659276215E300FE997E /* Controller */,
+				FA31465D276215E300FE997E /* View */,
+				FA314657276215E300FE997E /* ViewModel */,
+				FA31465B276215E300FE997E /* Model */,
+			);
+			path = MarsRoversModule;
+			sourceTree = "<group>";
+		};
+		FA3146062762157100FE997E = {
+			isa = PBXGroup;
+			children = (
+				FA3146112762157100FE997E /* SpaceOdyssey */,
+				FA3146282762157400FE997E /* SpaceOdysseyTests */,
+				FA3146322762157400FE997E /* SpaceOdysseyUITests */,
+				FA3146102762157100FE997E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FA3146102762157100FE997E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FA31460F2762157100FE997E /* SpaceOdyssey.app */,
+				FA3146252762157400FE997E /* SpaceOdysseyTests.xctest */,
+				FA31462F2762157400FE997E /* SpaceOdysseyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FA3146112762157100FE997E /* SpaceOdyssey */ = {
+			isa = PBXGroup;
+			children = (
+				FAB5DF9B277328200008BE67 /* AppCoordinator */,
+				FACEFFF7276B514000B0F2A1 /* FileManager */,
+				FA43D6822768CC86005B9C87 /* CoreDataManager */,
+				FA314663276215E300FE997E /* NetworkManager */,
+				FA31469E27623EF500FE997E /* MusicManager */,
+				FA31466C276215E300FE997E /* SupportingFiles */,
+				FA314660276215E300FE997E /* UIApplication */,
+				FA314642276215E300FE997E /* Presentation */,
+				FA3146202762157400FE997E /* Info.plist */,
+			);
+			path = SpaceOdyssey;
+			sourceTree = "<group>";
+		};
+		FA3146282762157400FE997E /* SpaceOdysseyTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA3146292762157400FE997E /* SpaceOdysseyTests.swift */,
+			);
+			path = SpaceOdysseyTests;
+			sourceTree = "<group>";
+		};
+		FA3146322762157400FE997E /* SpaceOdysseyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FA3146332762157400FE997E /* SpaceOdysseyUITests.swift */,
+				FA3146352762157400FE997E /* SpaceOdysseyUITestsLaunchTests.swift */,
+			);
+			path = SpaceOdysseyUITests;
+			sourceTree = "<group>";
+		};
+		FA314642276215E300FE997E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FA314669276215E300FE997E /* LaunchScreen */,
+				FA6476D32765E7F400519921 /* TabBar */,
+				FA04459627624E1100597761 /* CategoriesModule */,
+				FAE67EFF276320C000BBB2C1 /* APODModule */,
+				FACF00802764A5F400A7F9EA /* AsteroidsModule */,
+				FAE67F0427633A7800BBB2C1 /* EPICModule */,
+				FA1A145E276513B10075AAF1 /* MarsRoversModule */,
+				FAE67F00276328A300BBB2C1 /* NasaSingleImageModule */,
+				FA11F2772766326A00C61C87 /* MusicPlayerModule */,
+				FAA25223277B20B600D4CE8E /* DetailedMusicPlayerModule */,
+				FAAED16C2779AA4700EB0D07 /* FavoritesModule */,
+				FA8ABFDD27786515002656F6 /* PhotoGalleryModule */,
+				FA11B6CB2773221F00E89634 /* Protocols */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FA314644276215E300FE997E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA314645276215E300FE997E /* SingleImageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA314646276215E300FE997E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA314647276215E300FE997E /* SingleImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA314648276215E300FE997E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FA314649276215E300FE997E /* SingleImageViewDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FA31464B276215E300FE997E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA31464C276215E300FE997E /* APODViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA31464D276215E300FE997E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA31464E276215E300FE997E /* APODViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA31464F276215E300FE997E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA314650276215E300FE997E /* ApodDTO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA314651276215E300FE997E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA314652276215E300FE997E /* APODView.swift */,
+				FA314653276215E300FE997E /* APODCell.swift */,
+				FA314654276215E300FE997E /* Subview */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA314654276215E300FE997E /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				FA314655276215E300FE997E /* ActivityIndicatorView.swift */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
+		FA314657276215E300FE997E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA314658276215E300FE997E /* MarsRoverViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA314659276215E300FE997E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA31465A276215E300FE997E /* MarsRoverCollectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA31465B276215E300FE997E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA31465C276215E300FE997E /* MarsRoverDTO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA31465D276215E300FE997E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA31465F276215E300FE997E /* MarsRoverView.swift */,
+				FA31465E276215E300FE997E /* MarsRoverCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA314660276215E300FE997E /* UIApplication */ = {
+			isa = PBXGroup;
+			children = (
+				FA314661276215E300FE997E /* AppDelegate.swift */,
+				FA314662276215E300FE997E /* SceneDelegate.swift */,
+			);
+			path = UIApplication;
+			sourceTree = "<group>";
+		};
+		FA314663276215E300FE997E /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				FA314664276215E300FE997E /* Services */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		FA314664276215E300FE997E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FA314666276215E300FE997E /* NetworkService.swift */,
+				FA314668276215E300FE997E /* NetworkDataFetcher.swift */,
+				FA314667276215E300FE997E /* DataFetcherService.swift */,
+				FAA8A93B278D50A500CABA10 /* LocalDataFetcher.swift */,
+				FAA8A93D278D5B1900CABA10 /* ImageCachingService */,
+				FAA8A93E278D5B3100CABA10 /* InternetAvailabilityService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FA314669276215E300FE997E /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FA31466A276215E300FE997E /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		FA31466C276215E300FE997E /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2521E277B1E4000D4CE8E /* Gif */,
+				FAA25211277AEAA200D4CE8E /* DateFormatters */,
+				FACEFFF8276B517300B0F2A1 /* DesignPattern */,
+				FA31466D276215E300FE997E /* Localisation */,
+				FA314671276215E300FE997E /* Constants */,
+				FA314676276215E300FE997E /* Assets.xcassets */,
+				FA314677276215E300FE997E /* Extensions */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		FA31466D276215E300FE997E /* Localisation */ = {
+			isa = PBXGroup;
+			children = (
+				FA31466E276215E300FE997E /* Localizable.strings */,
+			);
+			path = Localisation;
+			sourceTree = "<group>";
+		};
+		FA314671276215E300FE997E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FA314673276215E300FE997E /* Localization.swift */,
+				FA314674276215E300FE997E /* AppError.swift */,
+				FA314675276215E300FE997E /* StringURL.swift */,
+				FA8B72B62775DCAB0030693B /* AppImage.swift */,
+				FA8B72B82775E1CF0030693B /* AppMusic.swift */,
+				FA8B72BA2775E2EE0030693B /* AppFont.swift */,
+				FA8B72BC2775E4B80030693B /* AppHeader.swift */,
+				FA49D2F52779D9D900BDF807 /* JSON.swift */,
+				FAA25221277B1F3800D4CE8E /* Gif.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		FA314677276215E300FE997E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FA314678276215E300FE997E /* String+Extension.swift */,
+				FA314679276215E300FE997E /* UIView+Extension.swift */,
+				FA31467A276215E300FE997E /* UICollectionView+Extension.swift */,
+				FA31467B276215E300FE997E /* UITableView+Extension.swift */,
+				FA0445A22762586E00597761 /* UIFont+Extension.swift */,
+				FACF007D2764823F00A7F9EA /* LoadableErrorAlertController+Extension.swift */,
+				FA6476CF2765D26600519921 /* LoadableInfoAlertController+Extension.swift */,
+				FA11F2802766990500C61C87 /* UIDevice+Extension.swift */,
+				FA1B31F9276A0EF1007F6922 /* UIViewController+Extension.swift */,
+				FA8B72B22775BB1D0030693B /* Double+Extension.swift */,
+				FA8B72B42775D86D0030693B /* UITabBarController+Extension.swift */,
+				FA8B72BE2775F55F0030693B /* UIImageView+Extension.swift */,
+				FA8ABFEC27788ACC002656F6 /* UIScrollView+Extension.swift */,
+				FAA25214277AF17700D4CE8E /* UITableViewCell+Extension.swift */,
+				FAA2521C277B1B7D00D4CE8E /* UIImage+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FA31467C276215E300FE997E /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				FAB5DFA027733C2D0008BE67 /* ScreenFactory.swift */,
+				FA31467D276215E300FE997E /* RefreshControlFactory.swift */,
+				FAE026842762879700F59038 /* NasaCategoryFactory.swift */,
+				FAF467BE276310B200A04E1C /* HeaderViewLabelFactory.swift */,
+				FAE67F152763719200BBB2C1 /* AccessoryViewFactory.swift */,
+				FA5CE8202779F89D0083CD1C /* MusicFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		FA31469E27623EF500FE997E /* MusicManager */ = {
+			isa = PBXGroup;
+			children = (
+				FA3146A027623F7E00FE997E /* MusicService */,
+				FA31469F27623F6600FE997E /* Tracks */,
+			);
+			path = MusicManager;
+			sourceTree = "<group>";
+		};
+		FA31469F27623F6600FE997E /* Tracks */ = {
+			isa = PBXGroup;
+			children = (
+				FAA25216277AF5CF00D4CE8E /* S.T.A.Y. (Interstellar Main Theme).mp3 */,
+				FAA25218277AF8A200D4CE8E /* First Step(OST Interstellar).mp3 */,
+				FAA2521A277AF8A800D4CE8E /* Mountains(OST Interstellar).mp3 */,
+			);
+			path = Tracks;
+			sourceTree = "<group>";
+		};
+		FA3146A027623F7E00FE997E /* MusicService */ = {
+			isa = PBXGroup;
+			children = (
+				FA3146A327623FFF00FE997E /* MusicPlayer.swift */,
+			);
+			path = MusicService;
+			sourceTree = "<group>";
+		};
+		FA43D67727689CF8005B9C87 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA43D67927689D1A005B9C87 /* FavoritesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA43D67827689CFF005B9C87 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA43D67B27689D73005B9C87 /* FavoritesView.swift */,
+				FA43D67D27689EE8005B9C87 /* FavoritesCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA43D67F2768A237005B9C87 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA43D6802768A258005B9C87 /* FavoritesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA43D6822768CC86005B9C87 /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				FA43D6832768CD1A005B9C87 /* FavoriteSpaceOdyssey.xcdatamodeld */,
+				FA43D68A2768D94F005B9C87 /* CoreDataManagerImpl.swift */,
+			);
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
+		FA49D2EF2779D34C00BDF807 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				FA49D2F02779D76000BDF807 /* categoriesJSON.json */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		FA5CE81D2779F7FE0083CD1C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA5CE81E2779F80E0083CD1C /* Track.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA5CE8222779F9890083CD1C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA5CE8232779F9A50083CD1C /* MusicViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA6476D32765E7F400519921 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				FA6476D42765E81E00519921 /* Controller */,
+				FA6476D52765E82400519921 /* View */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		FA6476D42765E81E00519921 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA6476D62765E84F00519921 /* TabBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA6476D52765E82400519921 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA6476DB2765EB3500519921 /* NasaTabBarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA8ABFDD27786515002656F6 /* PhotoGalleryModule */ = {
+			isa = PBXGroup;
+			children = (
+				FA8ABFDE27786531002656F6 /* Controller */,
+				FA8ABFDF27786539002656F6 /* View */,
+				FA8ABFE2277868C9002656F6 /* ViewModel */,
+			);
+			path = PhotoGalleryModule;
+			sourceTree = "<group>";
+		};
+		FA8ABFDE27786531002656F6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA8ABFE02778672D002656F6 /* GalleryCollectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA8ABFDF27786539002656F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA8ABFE527786953002656F6 /* GalleryView.swift */,
+				FA8ABFE7277869F4002656F6 /* GalleryCell.swift */,
+				FA8ABFE927786E13002656F6 /* Subview */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA8ABFE2277868C9002656F6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FA8ABFE3277868DE002656F6 /* GalleryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FA8ABFE927786E13002656F6 /* Subview */ = {
+			isa = PBXGroup;
+			children = (
+				FA8ABFEA27786E43002656F6 /* ZoomAndSnapFlowLayout.swift */,
+			);
+			path = Subview;
+			sourceTree = "<group>";
+		};
+		FAA25211277AEAA200D4CE8E /* DateFormatters */ = {
+			isa = PBXGroup;
+			children = (
+				FAA25212277AEAC000D4CE8E /* DateFormatters.swift */,
+			);
+			path = DateFormatters;
+			sourceTree = "<group>";
+		};
+		FAA2521E277B1E4000D4CE8E /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2521F277B1E6900D4CE8E /* equaliser.gif */,
+			);
+			path = Gif;
+			sourceTree = "<group>";
+		};
+		FAA25223277B20B600D4CE8E /* DetailedMusicPlayerModule */ = {
+			isa = PBXGroup;
+			children = (
+				FAA25224277B20D900D4CE8E /* Controller */,
+				FAA25225277B20E000D4CE8E /* View */,
+				FAA25228277B23C800D4CE8E /* ViewModel */,
+			);
+			path = DetailedMusicPlayerModule;
+			sourceTree = "<group>";
+		};
+		FAA25224277B20D900D4CE8E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAA25226277B213300D4CE8E /* TrackInfoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FAA25225277B20E000D4CE8E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2522B277B242A00D4CE8E /* TrackInfoView.swift */,
+				FAA2522D277B255600D4CE8E /* TrackInfoCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAA25228277B23C800D4CE8E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAA25229277B23D400D4CE8E /* TrackInfoViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FAA8A93D278D5B1900CABA10 /* ImageCachingService */ = {
+			isa = PBXGroup;
+			children = (
+				FA314665276215E300FE997E /* ImageCachingService.swift */,
+			);
+			path = ImageCachingService;
+			sourceTree = "<group>";
+		};
+		FAA8A93E278D5B3100CABA10 /* InternetAvailabilityService */ = {
+			isa = PBXGroup;
+			children = (
+				FA6476D12765D9E400519921 /* InternetAvailabilityService.swift */,
+			);
+			path = InternetAvailabilityService;
+			sourceTree = "<group>";
+		};
+		FAAED16C2779AA4700EB0D07 /* FavoritesModule */ = {
+			isa = PBXGroup;
+			children = (
+				FA43D67727689CF8005B9C87 /* Controller */,
+				FA43D67827689CFF005B9C87 /* View */,
+				FA43D67F2768A237005B9C87 /* ViewModel */,
+			);
+			path = FavoritesModule;
+			sourceTree = "<group>";
+		};
+		FAB5DF9B277328200008BE67 /* AppCoordinator */ = {
+			isa = PBXGroup;
+			children = (
+				FAB5DF9C27732A2A0008BE67 /* Coordinator.swift */,
+				FAB5DF9E27732F8A0008BE67 /* MainCoordinator.swift */,
+			);
+			path = AppCoordinator;
+			sourceTree = "<group>";
+		};
+		FACEFFF7276B514000B0F2A1 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				FACEFFF9276B51A800B0F2A1 /* FileManager.swift */,
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
+		FACEFFF8276B517300B0F2A1 /* DesignPattern */ = {
+			isa = PBXGroup;
+			children = (
+				FAE67F172763B15C00BBB2C1 /* Decorator */,
+				FA31467C276215E300FE997E /* Factory */,
+			);
+			path = DesignPattern;
+			sourceTree = "<group>";
+		};
+		FACF00802764A5F400A7F9EA /* AsteroidsModule */ = {
+			isa = PBXGroup;
+			children = (
+				FACF00812764A62000A7F9EA /* Controller */,
+				FACF00822764A62800A7F9EA /* View */,
+				FACF00832764A62E00A7F9EA /* ViewModel */,
+				FACF00842764A63600A7F9EA /* Model */,
+			);
+			path = AsteroidsModule;
+			sourceTree = "<group>";
+		};
+		FACF00812764A62000A7F9EA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FACF00872764A97400A7F9EA /* AsteroidViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FACF00822764A62800A7F9EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FACF00892764AB7C00A7F9EA /* AsteroidView.swift */,
+				FACF008B2764ABF900A7F9EA /* AsteroidCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FACF00832764A62E00A7F9EA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FACF008D2764AD8B00A7F9EA /* AsteroidViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FACF00842764A63600A7F9EA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FACF00852764A65600A7F9EA /* AsteroidDTO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAE67EFF276320C000BBB2C1 /* APODModule */ = {
+			isa = PBXGroup;
+			children = (
+				FA31464D276215E300FE997E /* Controller */,
+				FA314651276215E300FE997E /* View */,
+				FA31464B276215E300FE997E /* ViewModel */,
+				FA31464F276215E300FE997E /* Model */,
+			);
+			path = APODModule;
+			sourceTree = "<group>";
+		};
+		FAE67F00276328A300BBB2C1 /* NasaSingleImageModule */ = {
+			isa = PBXGroup;
+			children = (
+				FA314644276215E300FE997E /* Controller */,
+				FA314646276215E300FE997E /* View */,
+				FAE67F0127632F9700BBB2C1 /* ViewModel */,
+				FA314648276215E300FE997E /* Protocols */,
+			);
+			path = NasaSingleImageModule;
+			sourceTree = "<group>";
+		};
+		FAE67F0127632F9700BBB2C1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAE67F0227632FC400BBB2C1 /* SingleImageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FAE67F0427633A7800BBB2C1 /* EPICModule */ = {
+			isa = PBXGroup;
+			children = (
+				FAE67F0527633A9100BBB2C1 /* Controller */,
+				FAE67F0627633A9800BBB2C1 /* View */,
+				FAE67F0727633A9E00BBB2C1 /* ViewModel */,
+				FAE67F0827633AA900BBB2C1 /* Model */,
+			);
+			path = EPICModule;
+			sourceTree = "<group>";
+		};
+		FAE67F0527633A9100BBB2C1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FAE67F0B27633CD800BBB2C1 /* EPICViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FAE67F0627633A9800BBB2C1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FAE67F0D27633D3300BBB2C1 /* EPICView.swift */,
+				FAE67F112763400A00BBB2C1 /* EPICCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAE67F0727633A9E00BBB2C1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FAE67F0F27633E4800BBB2C1 /* EPICViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FAE67F0827633AA900BBB2C1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAE67F0927633ACA00BBB2C1 /* EpicDTO.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAE67F172763B15C00BBB2C1 /* Decorator */ = {
+			isa = PBXGroup;
+			children = (
+				FAE67F182763B19F00BBB2C1 /* UILabelInsets.swift */,
+			);
+			path = Decorator;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FA31460E2762157100FE997E /* SpaceOdyssey */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA3146392762157400FE997E /* Build configuration list for PBXNativeTarget "SpaceOdyssey" */;
+			buildPhases = (
+				FA31460B2762157100FE997E /* Sources */,
+				FA31460C2762157100FE997E /* Frameworks */,
+				FA31460D2762157100FE997E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpaceOdyssey;
+			productName = SpaceOdyssey;
+			productReference = FA31460F2762157100FE997E /* SpaceOdyssey.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FA3146242762157400FE997E /* SpaceOdysseyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA31463C2762157400FE997E /* Build configuration list for PBXNativeTarget "SpaceOdysseyTests" */;
+			buildPhases = (
+				FA3146212762157400FE997E /* Sources */,
+				FA3146222762157400FE997E /* Frameworks */,
+				FA3146232762157400FE997E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA3146272762157400FE997E /* PBXTargetDependency */,
+			);
+			name = SpaceOdysseyTests;
+			productName = SpaceOdysseyTests;
+			productReference = FA3146252762157400FE997E /* SpaceOdysseyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FA31462E2762157400FE997E /* SpaceOdysseyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA31463F2762157400FE997E /* Build configuration list for PBXNativeTarget "SpaceOdysseyUITests" */;
+			buildPhases = (
+				FA31462B2762157400FE997E /* Sources */,
+				FA31462C2762157400FE997E /* Frameworks */,
+				FA31462D2762157400FE997E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA3146312762157400FE997E /* PBXTargetDependency */,
+			);
+			name = SpaceOdysseyUITests;
+			productName = SpaceOdysseyUITests;
+			productReference = FA31462F2762157400FE997E /* SpaceOdysseyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FA3146072762157100FE997E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					FA31460E2762157100FE997E = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					FA3146242762157400FE997E = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = FA31460E2762157100FE997E;
+					};
+					FA31462E2762157400FE997E = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = FA31460E2762157100FE997E;
+					};
+				};
+			};
+			buildConfigurationList = FA31460A2762157100FE997E /* Build configuration list for PBXProject "SpaceOdyssey" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ru,
+			);
+			mainGroup = FA3146062762157100FE997E;
+			productRefGroup = FA3146102762157100FE997E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FA31460E2762157100FE997E /* SpaceOdyssey */,
+				FA3146242762157400FE997E /* SpaceOdysseyTests */,
+				FA31462E2762157400FE997E /* SpaceOdysseyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FA31460D2762157100FE997E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA314692276215E400FE997E /* LaunchScreen.storyboard in Resources */,
+				FA314698276215E400FE997E /* Assets.xcassets in Resources */,
+				FA49D2F12779D76000BDF807 /* categoriesJSON.json in Resources */,
+				FA314693276215E400FE997E /* Localizable.strings in Resources */,
+				FAA25220277B1E6900D4CE8E /* equaliser.gif in Resources */,
+				FAA25219277AF8A200D4CE8E /* First Step(OST Interstellar).mp3 in Resources */,
+				FAA2521B277AF8A800D4CE8E /* Mountains(OST Interstellar).mp3 in Resources */,
+				FAA25217277AF5CF00D4CE8E /* S.T.A.Y. (Interstellar Main Theme).mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA3146232762157400FE997E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA31462D2762157400FE997E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FA31460B2762157100FE997E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA6476D22765D9E400519921 /* InternetAvailabilityService.swift in Sources */,
+				FA43D67E27689EE8005B9C87 /* FavoritesCell.swift in Sources */,
+				FA31467E276215E300FE997E /* SingleImageViewController.swift in Sources */,
+				FA8ABFE8277869F4002656F6 /* GalleryCell.swift in Sources */,
+				FA11B6CD2773224900E89634 /* SpaceOdysseyCellProtocol.swift in Sources */,
+				FA43D67A27689D1B005B9C87 /* FavoritesViewController.swift in Sources */,
+				FA314688276215E400FE997E /* MarsRoverCollectionViewController.swift in Sources */,
+				FA43D6852768CD1A005B9C87 /* FavoriteSpaceOdyssey.xcdatamodeld in Sources */,
+				FA6476D72765E84F00519921 /* TabBarController.swift in Sources */,
+				FAE67F0327632FC400BBB2C1 /* SingleImageViewModel.swift in Sources */,
+				FAE67F192763B19F00BBB2C1 /* UILabelInsets.swift in Sources */,
+				FA43D6812768A258005B9C87 /* FavoritesViewModel.swift in Sources */,
+				FA11F27D276632F500C61C87 /* MusicPlayerView.swift in Sources */,
+				FAE67F0C27633CD800BBB2C1 /* EPICViewController.swift in Sources */,
+				FA31468E276215E400FE997E /* ImageCachingService.swift in Sources */,
+				FA8ABFED27788ACC002656F6 /* UIScrollView+Extension.swift in Sources */,
+				FA8B72B52775D86D0030693B /* UITabBarController+Extension.swift in Sources */,
+				FA8B72B72775DCAB0030693B /* AppImage.swift in Sources */,
+				FA04459E27624F6800597761 /* CategoriesCell.swift in Sources */,
+				FA31468A276215E400FE997E /* MarsRoverCell.swift in Sources */,
+				FAF467BF276310B200A04E1C /* HeaderViewLabelFactory.swift in Sources */,
+				FA5CE8212779F89D0083CD1C /* MusicFactory.swift in Sources */,
+				FAA25227277B213300D4CE8E /* TrackInfoViewController.swift in Sources */,
+				FAB5DF9D27732A2A0008BE67 /* Coordinator.swift in Sources */,
+				FAE67F0E27633D3300BBB2C1 /* EPICView.swift in Sources */,
+				FA6476D02765D26600519921 /* LoadableInfoAlertController+Extension.swift in Sources */,
+				FA8B72B32775BB1D0030693B /* Double+Extension.swift in Sources */,
+				FAE026852762879700F59038 /* NasaCategoryFactory.swift in Sources */,
+				FA1B31FA276A0EF1007F6922 /* UIViewController+Extension.swift in Sources */,
+				FA314691276215E400FE997E /* NetworkDataFetcher.swift in Sources */,
+				FA314699276215E400FE997E /* String+Extension.swift in Sources */,
+				FAA2522A277B23D400D4CE8E /* TrackInfoViewModel.swift in Sources */,
+				FA31468F276215E400FE997E /* NetworkService.swift in Sources */,
+				FAA25222277B1F3800D4CE8E /* Gif.swift in Sources */,
+				FA49D2F62779D9D900BDF807 /* JSON.swift in Sources */,
+				FA31468C276215E400FE997E /* AppDelegate.swift in Sources */,
+				FA3146A427623FFF00FE997E /* MusicPlayer.swift in Sources */,
+				FA0445A12762518A00597761 /* CategoriesViewModel.swift in Sources */,
+				FAE67F0A27633ACA00BBB2C1 /* EpicDTO.swift in Sources */,
+				FAE67F122763400A00BBB2C1 /* EPICCell.swift in Sources */,
+				FA314680276215E400FE997E /* SingleImageViewDelegate.swift in Sources */,
+				FA314681276215E400FE997E /* APODViewModel.swift in Sources */,
+				FA43D67C27689D73005B9C87 /* FavoritesView.swift in Sources */,
+				FA43D68B2768D94F005B9C87 /* CoreDataManagerImpl.swift in Sources */,
+				FACEFFFA276B51A800B0F2A1 /* FileManager.swift in Sources */,
+				FAA25215277AF17700D4CE8E /* UITableViewCell+Extension.swift in Sources */,
+				FA314683276215E400FE997E /* ApodDTO.swift in Sources */,
+				FA8ABFE627786953002656F6 /* GalleryView.swift in Sources */,
+				FAA2522C277B242A00D4CE8E /* TrackInfoView.swift in Sources */,
+				FA5CE81F2779F80F0083CD1C /* Track.swift in Sources */,
+				FA31468D276215E400FE997E /* SceneDelegate.swift in Sources */,
+				FAA8A93C278D50A500CABA10 /* LocalDataFetcher.swift in Sources */,
+				FA04459A27624E3D00597761 /* CategoriesViewController.swift in Sources */,
+				FA314697276215E400FE997E /* StringURL.swift in Sources */,
+				FA8ABFEB27786E43002656F6 /* ZoomAndSnapFlowLayout.swift in Sources */,
+				FACF00862764A65600A7F9EA /* AsteroidDTO.swift in Sources */,
+				FA8B72B92775E1CF0030693B /* AppMusic.swift in Sources */,
+				FA04459C27624EF800597761 /* CategoriesView.swift in Sources */,
+				FA31469A276215E400FE997E /* UIView+Extension.swift in Sources */,
+				FA11F27B276632C000C61C87 /* MusicPlayerViewController.swift in Sources */,
+				FAA25213277AEAC000D4CE8E /* DateFormatters.swift in Sources */,
+				FA11F2812766990600C61C87 /* UIDevice+Extension.swift in Sources */,
+				FA314695276215E400FE997E /* Localization.swift in Sources */,
+				FA6476DC2765EB3500519921 /* NasaTabBarView.swift in Sources */,
+				FA314696276215E400FE997E /* AppError.swift in Sources */,
+				FA314684276215E400FE997E /* APODView.swift in Sources */,
+				FA31469B276215E400FE997E /* UICollectionView+Extension.swift in Sources */,
+				FA8B72BF2775F55F0030693B /* UIImageView+Extension.swift in Sources */,
+				FAB5DF9F27732F8A0008BE67 /* MainCoordinator.swift in Sources */,
+				FA31467F276215E300FE997E /* SingleImageView.swift in Sources */,
+				FAA2521D277B1B7D00D4CE8E /* UIImage+Extension.swift in Sources */,
+				FA314687276215E400FE997E /* MarsRoverViewModel.swift in Sources */,
+				FA5CE8262779FFD70083CD1C /* MusicPlayerCell.swift in Sources */,
+				FA5CE8242779F9A50083CD1C /* MusicViewModel.swift in Sources */,
+				FA314686276215E400FE997E /* ActivityIndicatorView.swift in Sources */,
+				FACF008A2764AB7C00A7F9EA /* AsteroidView.swift in Sources */,
+				FAE67F162763719200BBB2C1 /* AccessoryViewFactory.swift in Sources */,
+				FA8B72BB2775E2EE0030693B /* AppFont.swift in Sources */,
+				FA314685276215E400FE997E /* APODCell.swift in Sources */,
+				FACF00882764A97400A7F9EA /* AsteroidViewController.swift in Sources */,
+				FACF007E2764823F00A7F9EA /* LoadableErrorAlertController+Extension.swift in Sources */,
+				FA0445A32762586E00597761 /* UIFont+Extension.swift in Sources */,
+				FA31469C276215E400FE997E /* UITableView+Extension.swift in Sources */,
+				FACF008C2764ABF900A7F9EA /* AsteroidCell.swift in Sources */,
+				FA8ABFE4277868DE002656F6 /* GalleryViewModel.swift in Sources */,
+				FA31469D276215E400FE997E /* RefreshControlFactory.swift in Sources */,
+				FA314682276215E400FE997E /* APODViewController.swift in Sources */,
+				FAE67F1027633E4800BBB2C1 /* EPICViewModel.swift in Sources */,
+				FACF008E2764AD8B00A7F9EA /* AsteroidViewModel.swift in Sources */,
+				FA314690276215E400FE997E /* DataFetcherService.swift in Sources */,
+				FA31468B276215E400FE997E /* MarsRoverView.swift in Sources */,
+				FA8ABFE12778672D002656F6 /* GalleryCollectionViewController.swift in Sources */,
+				FAB5DFA127733C2E0008BE67 /* ScreenFactory.swift in Sources */,
+				FA0445A627625C3000597761 /* Category.swift in Sources */,
+				FAA2522E277B255600D4CE8E /* TrackInfoCell.swift in Sources */,
+				FA8B72BD2775E4B80030693B /* AppHeader.swift in Sources */,
+				FA314689276215E400FE997E /* MarsRoverDTO.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA3146212762157400FE997E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA31462A2762157400FE997E /* SpaceOdysseyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA31462B2762157400FE997E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA3146362762157400FE997E /* SpaceOdysseyUITestsLaunchTests.swift in Sources */,
+				FA3146342762157400FE997E /* SpaceOdysseyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA3146272762157400FE997E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA31460E2762157100FE997E /* SpaceOdyssey */;
+			targetProxy = FA3146262762157400FE997E /* PBXContainerItemProxy */;
+		};
+		FA3146312762157400FE997E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA31460E2762157100FE997E /* SpaceOdyssey */;
+			targetProxy = FA3146302762157400FE997E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FA31466A276215E300FE997E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA31466B276215E300FE997E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		FA31466E276215E300FE997E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA31466F276215E300FE997E /* en */,
+				FA314670276215E300FE997E /* ru */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FA3146372762157400FE997E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FA3146382762157400FE997E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FA31463A2762157400FE997E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KHK3PT3MZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpaceOdyssey/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SpaceOdyssey;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Nikolai.Borisov.SpaceOdyssey;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FA31463B2762157400FE997E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KHK3PT3MZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SpaceOdyssey/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SpaceOdyssey;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Nikolai.Borisov.SpaceOdyssey;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		FA31463D2762157400FE997E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KHK3PT3MZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Nikolai.Borisov.SpaceOdysseyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpaceOdyssey.app/SpaceOdyssey";
+			};
+			name = Debug;
+		};
+		FA31463E2762157400FE997E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KHK3PT3MZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Nikolai.Borisov.SpaceOdysseyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpaceOdyssey.app/SpaceOdyssey";
+			};
+			name = Release;
+		};
+		FA3146402762157400FE997E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KHK3PT3MZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Nikolai.Borisov.SpaceOdysseyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SpaceOdyssey;
+			};
+			name = Debug;
+		};
+		FA3146412762157400FE997E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KHK3PT3MZR;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Nikolai.Borisov.SpaceOdysseyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SpaceOdyssey;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FA31460A2762157100FE997E /* Build configuration list for PBXProject "SpaceOdyssey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA3146372762157400FE997E /* Debug */,
+				FA3146382762157400FE997E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA3146392762157400FE997E /* Build configuration list for PBXNativeTarget "SpaceOdyssey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA31463A2762157400FE997E /* Debug */,
+				FA31463B2762157400FE997E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA31463C2762157400FE997E /* Build configuration list for PBXNativeTarget "SpaceOdysseyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA31463D2762157400FE997E /* Debug */,
+				FA31463E2762157400FE997E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA31463F2762157400FE997E /* Build configuration list for PBXNativeTarget "SpaceOdysseyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA3146402762157400FE997E /* Debug */,
+				FA3146412762157400FE997E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FA43D6832768CD1A005B9C87 /* FavoriteSpaceOdyssey.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FA43D6842768CD1A005B9C87 /* FavoriteSpaceOdyssey.xcdatamodel */,
+			);
+			currentVersion = FA43D6842768CD1A005B9C87 /* FavoriteSpaceOdyssey.xcdatamodel */;
+			path = FavoriteSpaceOdyssey.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FA3146072762157100FE997E /* Project object */;
+}

@@ -1,0 +1,25 @@
+/* 
+ Localizable.strings
+ SpaceOdyssey
+ 
+ Created by NIKOLAI BORISOV on 09.12.2021.
+ 
+ */
+
+// MARK: - VCTitle
+
+"SpaceOdyssey" = "Космическая Одиссея";
+"SciFiMusic" = "Музыка";
+"Favorites" = "Избранное";
+"MarsGallery" = "Галерея «Марс»";
+"FavoritesGallery" = " Галерея «Избранное»";
+
+// MARK: - Errors
+
+"JSONParsingError" = "Ошибка парсинга JSON";
+"NoInternetConnection" = "Нет соединения с сетью";
+"ServerIsNotResponding" = "Сервер не отвечает";
+"URLIsNotValid" = "Недопустимый URL";
+"NoData" = "Нет данных";
+"SomethingWrongWithUrlSessionData" = "Что-то не так с данными URL-сессии";
+"NoLocalFileWithASuchName" = "Невозможно найти локальный файл с предоставляемым именем";
